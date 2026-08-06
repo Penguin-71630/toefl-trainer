@@ -48,7 +48,8 @@ def load():
     wym = json.load(open(INTER / "wym.json"))["entries"]
     toefl = json.load(open(INTER / "toefl_txt.json"))["entries"]
     l6 = json.load(open(INTER / "l6.json"))["entries"]
-    return wym, toefl, l6
+    barrons = json.load(open(INTER / "barrons.json"))["entries"]
+    return wym, toefl, l6, barrons
 
 
 def clean_word(w):
@@ -140,7 +141,7 @@ def stem(word):
 
 
 def main():
-    wym, toefl, l6 = load()
+    wym, toefl, l6, barrons = load()
     items = {}          # word -> item dict (senses merged)
     conflicts = []
 
@@ -213,6 +214,33 @@ def main():
                     "thesaurus": [], "_gloss_origin": "PENDING_AI",
                 })
 
+    # --- barrons (English definitions, curated synonyms, examples) ---
+    pending_syns = []
+    for e in barrons:
+        w = clean_word(e["word"])
+        it = get(w)
+        if "barrons" not in it["sources"]:
+            it["sources"].append("barrons")
+        target = next((s for s in it["senses"]
+                       if s["part_of_speech"] == e["pos"]),
+                      it["senses"][0] if it["senses"] else None)
+        if target is None:
+            target = {"part_of_speech": e["pos"] or
+                      ("phr" if " " in w else "n"),
+                      "gloss": None, "thesaurus": [],
+                      "_gloss_origin": "PENDING_AI"}
+            it["senses"].append(target)
+        target["definition_en"] = e["definition_en"]
+        target["examples"] = e["examples"]
+        pending_syns.append((target, w, e["synonyms"]))
+
+    # barrons synonyms are added only if in the union (deck-internal rule);
+    # wym's original thesaurus is kept as-is
+    for target, w, syns in pending_syns:
+        for syn in syns:
+            if syn != w and syn in items and syn not in target["thesaurus"]:
+                target["thesaurus"].append(syn)
+
     # items created from phrase columns may have no senses yet
     for it in items.values():
         if not it["senses"]:
@@ -259,6 +287,21 @@ def main():
             items[w]["word_family_id"] = fam_id
     for it in items.values():
         it.setdefault("word_family_id", None)
+
+    # barrons derived-form lists correct/extend the stem heuristic
+    for e in barrons:
+        members = [clean_word(e["word"])] + \
+                  [clean_word(d["form"]) for d in e["derived"]]
+        members = [m for m in members if m in items]
+        if len(members) < 2:
+            continue
+        fid = next((items[m]["word_family_id"] for m in members
+                    if items[m]["word_family_id"]), None)
+        if fid is None:
+            fam_id += 1
+            fid = fam_id
+        for m in members:
+            items[m]["word_family_id"] = fid
 
     # --- phrase attributes & exam tags & ids ---
     out = []

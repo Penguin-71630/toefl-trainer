@@ -2,44 +2,52 @@
 
 ## 總量統計
 
-- 總 item 數：**7324**（單字 7111、片語 213）
-- 總 sense 數：9139
+- 總 item 數：**7439**（單字 7217、片語 222）
+- 總 sense 數：9254
 
 ## 來源交集
 
-- toefl_txt + wym: 2383
-- wym: 2275
-- toefl_txt: 1654
-- l6: 402
-- l6 + toefl_txt + wym: 319
-- l6 + toefl_txt: 154
-- l6 + wym: 137
+- wym: 2219
+- toefl_txt + wym: 2167
+- toefl_txt: 1585
+- l6: 398
+- l6 + toefl_txt + wym: 288
+- barrons + toefl_txt + wym: 216
+- l6 + toefl_txt: 150
+- l6 + wym: 132
+- barrons: 115
+- barrons + toefl_txt: 69
+- barrons + wym: 56
+- barrons + l6 + toefl_txt + wym: 31
+- barrons + l6 + wym: 5
+- barrons + l6 + toefl_txt: 4
+- barrons + l6: 4
 
 ## 詞性分布
 
-- n: 4098
-- v: 2328
-- adj: 2256
-- adv: 230
-- phr: 216
+- n: 4116
+- v: 2340
+- adj: 2306
+- adv: 255
+- phr: 225
 - prep: 8
 - interj: 2
-- conj: 1
+- conj: 2
 
 ## difficulty
 
-- rank 來源：COCA 6137、wordfreq 校準 1149、查無（difficulty=NULL）38
-- 分布：min 6.13 / median 12.99 / max 15.68
+- rank 來源：COCA 6226、wordfreq 校準 1175、查無（difficulty=NULL）38
+- 分布：min 6.13 / median 13.0 / max 15.68
 - 校準方式：COCA∩wordfreq 交集字做 zipf-bin 中位數單調映射（非參數），尾端以 Zipf 定律斜率外插
 
 ## word family
 
-- 1198 個家族，涵蓋 3059 個單字（規則式 stem 啟發法，有少量誤併如 retail/tailor，之後可 AI 校正）
+- 1289 個家族，涵蓋 3297 個單字（規則式 stem 啟發法，有少量誤併如 retail/tailor，之後可 AI 校正）
 
 ## AI/WordNet 補全狀態
 
 - 缺 gloss：**0** 字（AI 生成已套用，生成清單見 gloss_fill_report.json 供抽查）
-- 缺 thesaurus：**1992** 字（WordNet 補全已套用且限字集宇集內，剩餘為 WordNet 無在集同義字者，保留空陣列，抽樣時過濾）
+- 缺 thesaurus：**1997** 字（WordNet 補全已套用且限字集宇集內，剩餘為 WordNet 無在集同義字者，保留空陣列，抽樣時過濾）
 
 ## 異常與損耗
 
