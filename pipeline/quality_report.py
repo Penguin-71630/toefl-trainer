@@ -12,7 +12,13 @@ INTER = BASE / "data" / "intermediate"
 
 def main():
     vocab = json.load(open(OUT / "vocabulary.json"))
-    todo = json.load(open(OUT / "ai_todo.json"))
+    todo = {
+        "need_meaning": [it["word"] for it in vocab
+                         if any(s["gloss"] is None for s in it["senses"])],
+        "need_thesaurus": [it["word"] for it in vocab
+                           if not it["phrase_attribute"]
+                           and all(not s["thesaurus"] for s in it["senses"])],
+    }
     conflicts = json.load(open(OUT / "merge_conflicts.json"))
     wym_anom = json.load(open(INTER / "wym.json"))["anomalies"]
     l6_anom = json.load(open(INTER / "l6.json"))["anomalies"]
@@ -50,10 +56,11 @@ def main():
         "", "## word family", "",
         f"- {fams} 個家族，涵蓋 {fam_words} 個單字（規則式 stem 啟發法，"
         "有少量誤併如 retail/tailor，之後可 AI 校正）",
-        "", "## 待 AI 生成（離線一次性）", "",
-        f"- 缺 gloss（need_meaning）：**{no_gloss}** 字（L6 獨有 + wym 片語欄）",
-        f"- 缺 thesaurus（need_thesaurus）：**{no_thes}** 字",
-        "- 清單見 `ai_todo.json`；生成後須過濾：同義字必須在字集宇集內",
+        "", "## AI/WordNet 補全狀態", "",
+        f"- 缺 gloss：**{no_gloss}** 字（AI 生成已套用，"
+        "生成清單見 gloss_fill_report.json 供抽查）",
+        f"- 缺 thesaurus：**{no_thes}** 字（WordNet 補全已套用且限字集宇集內，"
+        "剩餘為 WordNet 無在集同義字者，保留空陣列，抽樣時過濾）",
         "", "## 異常與損耗", "",
         f"- wym parse 異常行：{len(wym_anom)}（多為跨行折行的同義字/釋義，"
         "影響少數 entry 的 thesaurus 完整度）",

@@ -2,22 +2,22 @@
 
 ## 總量統計
 
-- 總 item 數：**7325**（單字 7112、片語 213）
-- 總 sense 數：9140
+- 總 item 數：**7324**（單字 7111、片語 213）
+- 總 sense 數：9139
 
 ## 來源交集
 
 - toefl_txt + wym: 2383
 - wym: 2275
 - toefl_txt: 1654
-- l6: 403
+- l6: 402
 - l6 + toefl_txt + wym: 319
 - l6 + toefl_txt: 154
 - l6 + wym: 137
 
 ## 詞性分布
 
-- n: 4099
+- n: 4098
 - v: 2328
 - adj: 2256
 - adv: 230
@@ -28,7 +28,7 @@
 
 ## difficulty
 
-- rank 來源：COCA 6137、wordfreq 校準 1150、查無（difficulty=NULL）38
+- rank 來源：COCA 6137、wordfreq 校準 1149、查無（difficulty=NULL）38
 - 分布：min 6.13 / median 12.99 / max 15.68
 - 校準方式：COCA∩wordfreq 交集字做 zipf-bin 中位數單調映射（非參數），尾端以 Zipf 定律斜率外插
 
@@ -36,11 +36,10 @@
 
 - 1198 個家族，涵蓋 3059 個單字（規則式 stem 啟發法，有少量誤併如 retail/tailor，之後可 AI 校正）
 
-## 待 AI 生成（離線一次性）
+## AI/WordNet 補全狀態
 
-- 缺 gloss（need_meaning）：**439** 字（L6 獨有 + wym 片語欄）
-- 缺 thesaurus（need_thesaurus）：**3859** 字
-- 清單見 `ai_todo.json`；生成後須過濾：同義字必須在字集宇集內
+- 缺 gloss：**0** 字（AI 生成已套用，生成清單見 gloss_fill_report.json 供抽查）
+- 缺 thesaurus：**1992** 字（WordNet 補全已套用且限字集宇集內，剩餘為 WordNet 無在集同義字者，保留空陣列，抽樣時過濾）
 
 ## 異常與損耗
 
