@@ -4107,21 +4107,66 @@
    "difficulty": 13.9
   }
  ],
- "unresolved": [
-  "antiquate",
-  "asperse",
-  "bereave",
-  "contemn",
-  "edentate",
-  "emaciate",
-  "endotherm",
-  "foreshorten",
-  "frowzy",
-  "kymograph",
-  "locomote",
-  "locoweed",
-  "rarefy",
-  "stereophotograph",
-  "weaverbird"
+ "manual": [
+  {
+   "word": "antiquate",
+   "difficulty": 13.0
+  },
+  {
+   "word": "asperse",
+   "difficulty": 15.0
+  },
+  {
+   "word": "bereave",
+   "difficulty": 15.0
+  },
+  {
+   "word": "contemn",
+   "difficulty": 15.0
+  },
+  {
+   "word": "edentate",
+   "difficulty": 15.0
+  },
+  {
+   "word": "emaciate",
+   "difficulty": 15.0
+  },
+  {
+   "word": "endotherm",
+   "difficulty": 15.0
+  },
+  {
+   "word": "foreshorten",
+   "difficulty": 15.0
+  },
+  {
+   "word": "frowzy",
+   "difficulty": 15.0
+  },
+  {
+   "word": "kymograph",
+   "difficulty": 15.0
+  },
+  {
+   "word": "locomote",
+   "difficulty": 15.0
+  },
+  {
+   "word": "locoweed",
+   "difficulty": 15.0
+  },
+  {
+   "word": "rarefy",
+   "difficulty": 15.0
+  },
+  {
+   "word": "stereophotograph",
+   "difficulty": 15.0
+  },
+  {
+   "word": "weaverbird",
+   "difficulty": 15.0
+  }
  ]
 }

@@ -11184,7 +11184,7 @@
     "_thesaurus_origin": "wordnet"
    }
   ],
-  "difficulty": null,
+  "difficulty": 13.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -11192,7 +11192,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "antiquated",
@@ -14422,7 +14423,7 @@
     "_thesaurus_origin": "wordnet"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -14430,7 +14431,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "aspersion",
@@ -21513,7 +21515,7 @@
     "_gloss_origin": "toefl_txt"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -21521,7 +21523,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "beset",
@@ -43633,7 +43636,7 @@
     "_thesaurus_origin": "wordnet"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": 293,
@@ -43641,7 +43644,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "contemplate",
@@ -66649,7 +66653,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -66657,7 +66661,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "edge",
@@ -68147,7 +68152,7 @@
     "_gloss_origin": "toefl_txt"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": 395,
@@ -68155,7 +68160,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "emaciated",
@@ -69948,7 +69954,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -69956,7 +69962,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "endotoxin",
@@ -83824,7 +83831,7 @@
     "_thesaurus_origin": "wordnet"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": 506,
@@ -83832,7 +83839,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "foresight",
@@ -86065,7 +86073,7 @@
     "_thesaurus_origin": "wordnet"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -86073,7 +86081,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "frugal",
@@ -113058,7 +113067,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -113066,7 +113075,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "label",
@@ -117489,7 +117499,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": 644,
@@ -117497,7 +117507,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "locomotion",
@@ -117585,7 +117596,7 @@
     "_thesaurus_origin": "wordnet"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -117593,7 +117604,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "lodge",
@@ -154843,7 +154855,7 @@
     "_thesaurus_origin": "wordnet"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -154851,7 +154863,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "rarely",
@@ -182793,7 +182806,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": 1033,
@@ -182801,7 +182814,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "sterile",
@@ -207822,7 +207836,7 @@
     "_thesaurus_origin": "wordnet"
    }
   ],
-  "difficulty": null,
+  "difficulty": 15.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -207830,7 +207844,8 @@
   "exam_tags": [
    "toefl_itp"
   ],
-  "phrase_attribute": null
+  "phrase_attribute": null,
+  "_difficulty_source": "manual"
  },
  {
   "word": "wed",

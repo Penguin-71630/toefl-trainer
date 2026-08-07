@@ -64,6 +64,11 @@ TRANSPARENT = {"non", "un", "semi", "multi", "over", "under", "pre", "post",
 MIN_BASE_LEN = 4
 MAX_DISCOUNT = 2.5      # a derivation is never credited more than this much
 
+# Hand-set values for words no corpus knows and no affix analysis reaches.
+# `antiquate` belongs to the `antique` family; the rest are genuinely rare.
+MANUAL = {"antiquate": 13.0}
+MANUAL_DEFAULT = 15.0
+
 
 def base_variants(stem):
     """Orthographic restorations after stripping a suffix."""
@@ -136,7 +141,7 @@ def main():
                 best = (derived, cand, pen)
         return best
 
-    report = {"discounted": [], "filled": [], "unresolved": []}
+    report = {"discounted": [], "filled": [], "manual": []}
     for item in vocab:
         word = item["word"]
         if " " in word or "-" in word:            # phrases keep their own value
@@ -145,7 +150,10 @@ def main():
         own = item.get("difficulty")
         if best is None:
             if own is None:
-                report["unresolved"].append(word)
+                value = MANUAL.get(word.lower(), MANUAL_DEFAULT)
+                item["difficulty"] = value
+                item["_difficulty_source"] = "manual"
+                report["manual"].append({"word": word, "difficulty": value})
             continue
         derived, cand, pen = best
         if own is None:
@@ -165,7 +173,9 @@ def main():
               ensure_ascii=False, indent=1)
     print(f"discounted: {len(report['discounted'])}, "
           f"filled (was null): {len(report['filled'])}, "
-          f"still null: {len(report['unresolved'])}")
+          f"hand-set: {len(report['manual'])}, "
+          f"remaining null: "
+          f"{sum(1 for x in vocab if x.get('difficulty') is None)}")
 
 
 if __name__ == "__main__":

@@ -47,14 +47,25 @@ toefl-trainer/
 
 ## 2. 資料庫（SQLite，`app.db`，runtime 生成）
 
-### difficulty 實際分佈（7,401 字有值、38 字 NULL）
+### difficulty 實際分佈（7,433 字全部有值）
 
-min 6.13、max 15.68、mean 12.77、median 13.00。八成的字集中在 11.1–14.1，
-因此所有與 difficulty 相關的常數都以 **11–15** 這個有效區間為基準（不是理論的 2–17）。
+min 6.13、max 15.68、median 12.85。八成的字集中在 11–14.5，因此所有與
+difficulty 相關的常數都以 **11–15** 這個有效區間為基準（不是理論的 2–17）。
 
 | 區間 | 6–9 | 9–10 | 10–11 | 11–12 | 12–13 | 13–14 | 14–15 | 15–16 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 字數 | 62 | 172 | 429 | 1,049 | 1,980 | 2,485 | 1,205 | 19 |
+| 字數 | 67 | 216 | 534 | 1,239 | 1,995 | 2,312 | 1,043 | 27 |
+
+三個已知限制與對策：
+
+1. **頻率飽和**：rank 以 COCA 20,000 校準，凡低於語料下限的字都被壓到
+   rank ≈ 2^14.1，所以 14 以上的排序解析度很差。要真正拉開需要更大的頻率語料。
+2. **構詞透明度**：純頻率會把 `nonrelevant`、`unbiased` 判成極難字，但會
+   `relevant` / `bias` 的人不需要另外學。`pipeline/morph_difficulty.py` 以
+   「字根 difficulty + 詞綴罰分」為上限修正（676 字），並用 WordNet 的屈折／
+   derivational 連結擋掉假字根（`wither` ≠ `with` + `er`）。
+3. **查不到的字**：15 個字在 COCA 與 wordfreq 都查不到且無法拆解，人工標定
+   （`antiquate` 13.0，其餘 15.0）。
 
 `vocabulary` 與 `grammar_points` 由 seed script 從 JSON 灌入，執行期唯讀。
 
@@ -63,7 +74,7 @@ min 6.13、max 15.68、mean 12.77、median 13.00。八成的字集中在 11.1–
 CREATE TABLE vocabulary (
     id             INTEGER PRIMARY KEY,
     word           TEXT    NOT NULL,
-    difficulty     REAL,                    -- log2(rank)，可為 NULL
+    difficulty     REAL    NOT NULL,         -- log2(rank)，含構詞折扣與人工標定
     rating         REAL    NOT NULL,         -- Elo（seed 時由 difficulty 百分位算出）
     word_family_id INTEGER,
     phrase_head    TEXT,                    -- phrase_attribute.head，單字為 NULL
@@ -197,10 +208,8 @@ rating_word = 1100 + 1150 * pct                        # 1100 ~ 2250
 
 | difficulty | 11 | 12 | 13（中位） | 13.5 | 14 | 14.5 | 15.68 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 百分位 | 9% | 23% | 50% | 67% | 84% | 99.5% | 100% |
-| rating | 1203 | 1366 | 1674 | 1868 | 2060 | 2245 | 2250 |
-
-difficulty 為 NULL 的 38 字用中位數 1674。
+| 百分位 | 11% | 28% | 55% | 71% | 86% | 99.4% | 100% |
+| rating | 1226 | 1418 | 1727 | 1913 | 2084 | 2243 | 2250 |
 
 **頂端為何是 2250（Master 上緣）而不是 2400（Grandmaster）**：現有詞庫學完
 約 10–11k 總詞彙量，而 677 / Grandmaster 本來就應該**超出這個詞庫**。
@@ -210,15 +219,15 @@ difficulty 為 NULL 的 38 字用中位數 1674。
 
 | rating | 段位 | 詞庫百分位 | 累計字數 |
 | --- | --- | --- | --- |
-| 1200 | Pupil | 8.7% | 644 |
-| 1400 | Specialist | 26% | 1,924 |
-| 1600 | Expert | 44% | 3,219 |
-| 1900 | Candidate Master | 70% | 5,151 |
-| **2100** | **Master（目標，≈ TOEFL 627）** | **87%** | **6,439** |
-| 2250 | Master 上緣 | 100% | 7,401（全詞庫） |
+| 1200 | Pupil | 8.7% | 646 |
+| 1400 | Specialist | 26% | 1,939 |
+| 1600 | Expert | 44% | 3,232 |
+| 1900 | Candidate Master | 70% | 5,171 |
+| **2100** | **Master（目標，≈ TOEFL 627）** | **87%** | **6,463** |
+| 2250 | Master 上緣 | 100% | 7,433（全詞庫） |
 | 2400 | Grandmaster（≈ 677） | — | 需擴詞庫 |
 
-2100 → 詞庫的 87%（6,439 字）加上一般基礎字彙 ≈ 10k words，大致落在
+2100 → 詞庫的 87%（6,463 字）加上一般基礎字彙 ≈ 10k words，大致落在
 CEFR C1 的 receptive vocabulary 量級（B2 ≈ 5,000 word families、C1 ≈ 8,000），
 且留有緩衝。
 
