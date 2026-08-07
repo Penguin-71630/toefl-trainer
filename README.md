@@ -14,6 +14,7 @@ toefl-trainer/
 │   ├── parse_barrons.py      # Barron's EPUB parser
 │   ├── merge.py              # 合併四來源 + 繁化 + difficulty + word family + phrase
 │   ├── cleanup.py            # 修 OCR 殘留：截斷詞、拼錯詞、gloss 尾端雜訊
+│   ├── morph_difficulty.py   # 構詞折扣：衍生字難度以字根 + 詞綴罰分為上限
 │   ├── enrich_thesaurus.py   # WordNet 補 thesaurus（限字集內）
 │   ├── apply_ai_gloss.py     # 套用 AI 生成的繁中 gloss
 │   └── quality_report.py     # 產出品質報告
@@ -53,6 +54,7 @@ python3 pipeline/parse_l6.py
 python3 pipeline/parse_barrons.py
 python3 pipeline/merge.py
 python3 pipeline/cleanup.py
+python3 pipeline/morph_difficulty.py
 python3 pipeline/enrich_thesaurus.py
 python3 pipeline/apply_ai_gloss.py
 python3 pipeline/quality_report.py

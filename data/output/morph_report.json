@@ -1,0 +1,4127 @@
+{
+ "discounted": [
+  {
+   "word": "abandoned",
+   "base": "abandon",
+   "from": 12.61,
+   "to": 11.4
+  },
+  {
+   "word": "abandonment",
+   "base": "abandon",
+   "from": 13.31,
+   "to": 11.7
+  },
+  {
+   "word": "abiding",
+   "base": "abide",
+   "from": 13.98,
+   "to": 13.37
+  },
+  {
+   "word": "absorbing",
+   "base": "absorb",
+   "from": 14.16,
+   "to": 11.92
+  },
+  {
+   "word": "abundantly",
+   "base": "abundant",
+   "from": 14.02,
+   "to": 12.93
+  },
+  {
+   "word": "accelerated",
+   "base": "accelerate",
+   "from": 13.44,
+   "to": 12.58
+  },
+  {
+   "word": "accelerating",
+   "base": "accelerate",
+   "from": 13.91,
+   "to": 12.58
+  },
+  {
+   "word": "acceptable",
+   "base": "accept",
+   "from": 11.75,
+   "to": 10.18
+  },
+  {
+   "word": "accessible",
+   "base": "access",
+   "from": 12.11,
+   "to": 10.93
+  },
+  {
+   "word": "accidental",
+   "base": "accident",
+   "from": 12.9,
+   "to": 11.45
+  },
+  {
+   "word": "accidentally",
+   "base": "accidental",
+   "from": 12.81,
+   "to": 11.75
+  },
+  {
+   "word": "accommodating",
+   "base": "accommodate",
+   "from": 13.66,
+   "to": 12.17
+  },
+  {
+   "word": "accompaniment",
+   "base": "accompany",
+   "from": 13.5,
+   "to": 11.86
+  },
+  {
+   "word": "accompanying",
+   "base": "accompany",
+   "from": 12.79,
+   "to": 11.56
+  },
+  {
+   "word": "accomplished",
+   "base": "accomplish",
+   "from": 13.16,
+   "to": 11.51
+  },
+  {
+   "word": "accountable",
+   "base": "account",
+   "from": 12.5,
+   "to": 10.67
+  },
+  {
+   "word": "accounting",
+   "base": "account",
+   "from": 11.95,
+   "to": 10.37
+  },
+  {
+   "word": "accumulated",
+   "base": "accumulate",
+   "from": 13.63,
+   "to": 12.63
+  },
+  {
+   "word": "accurately",
+   "base": "accurate",
+   "from": 12.27,
+   "to": 11.73
+  },
+  {
+   "word": "accusation",
+   "base": "accuse",
+   "from": 12.27,
+   "to": 11.9
+  },
+  {
+   "word": "acidity",
+   "base": "acid",
+   "from": 14.16,
+   "to": 12.57
+  },
+  {
+   "word": "actively",
+   "base": "active",
+   "from": 12.09,
+   "to": 10.8
+  },
+  {
+   "word": "adaptable",
+   "base": "adapt",
+   "from": 13.9,
+   "to": 12.13
+  },
+  {
+   "word": "adaptive",
+   "base": "adapt",
+   "from": 13.04,
+   "to": 12.33
+  },
+  {
+   "word": "admiring",
+   "base": "admire",
+   "from": 14.01,
+   "to": 11.99
+  },
+  {
+   "word": "adornment",
+   "base": "adorn",
+   "from": 14.29,
+   "to": 13.59
+  },
+  {
+   "word": "advancement",
+   "base": "advance",
+   "from": 12.72,
+   "to": 11.78
+  },
+  {
+   "word": "adventurer",
+   "base": "adventure",
+   "from": 13.75,
+   "to": 11.99
+  },
+  {
+   "word": "adventurous",
+   "base": "adventure",
+   "from": 13.45,
+   "to": 12.39
+  },
+  {
+   "word": "adversely",
+   "base": "adverse",
+   "from": 13.66,
+   "to": 12.94
+  },
+  {
+   "word": "advisable",
+   "base": "advise",
+   "from": 14.25,
+   "to": 11.93
+  },
+  {
+   "word": "affected",
+   "base": "affect",
+   "from": 13.17,
+   "to": 10.67
+  },
+  {
+   "word": "affective",
+   "base": "affect",
+   "from": 13.1,
+   "to": 10.72
+  },
+  {
+   "word": "afflicting",
+   "base": "afflict",
+   "from": 14.09,
+   "to": 13.57
+  },
+  {
+   "word": "affordable",
+   "base": "afford",
+   "from": 12.37,
+   "to": 11.46
+  },
+  {
+   "word": "aggressiveness",
+   "base": "aggressive",
+   "from": 13.93,
+   "to": 11.71
+  },
+  {
+   "word": "agreeable",
+   "base": "agree",
+   "from": 13.79,
+   "to": 11.29
+  },
+  {
+   "word": "alteration",
+   "base": "alter",
+   "from": 13.17,
+   "to": 12.41
+  },
+  {
+   "word": "announcement",
+   "base": "announce",
+   "from": 11.83,
+   "to": 10.79
+  },
+  {
+   "word": "announcer",
+   "base": "announce",
+   "from": 13.09,
+   "to": 10.69
+  },
+  {
+   "word": "annually",
+   "base": "annual",
+   "from": 11.99,
+   "to": 10.72
+  },
+  {
+   "word": "anxiously",
+   "base": "anxious",
+   "from": 13.41,
+   "to": 12.22
+  },
+  {
+   "word": "appealing",
+   "base": "appeal",
+   "from": 12.8,
+   "to": 11.17
+  },
+  {
+   "word": "approaching",
+   "base": "approach",
+   "from": 13.71,
+   "to": 11.21
+  },
+  {
+   "word": "appropriately",
+   "base": "appropriate",
+   "from": 12.68,
+   "to": 10.85
+  },
+  {
+   "word": "artificially",
+   "base": "artificial",
+   "from": 13.51,
+   "to": 12.28
+  },
+  {
+   "word": "artistic",
+   "base": "artist",
+   "from": 11.68,
+   "to": 10.33
+  },
+  {
+   "word": "ascending",
+   "base": "ascend",
+   "from": 13.92,
+   "to": 13.55
+  },
+  {
+   "word": "assistantship",
+   "base": "assistant",
+   "from": 14.11,
+   "to": 12.01
+  },
+  {
+   "word": "assuredly",
+   "base": "assured",
+   "from": 14.03,
+   "to": 11.94
+  },
+  {
+   "word": "attached",
+   "base": "attach",
+   "from": 13.89,
+   "to": 11.49
+  },
+  {
+   "word": "attachment",
+   "base": "attach",
+   "from": 12.49,
+   "to": 11.79
+  },
+  {
+   "word": "attainment",
+   "base": "attain",
+   "from": 13.44,
+   "to": 13.0
+  },
+  {
+   "word": "attendance",
+   "base": "attend",
+   "from": 12.13,
+   "to": 11.09
+  },
+  {
+   "word": "avocational",
+   "base": "avocation",
+   "from": 15.28,
+   "to": 14.81
+  },
+  {
+   "word": "avoidable",
+   "base": "avoid",
+   "from": 13.92,
+   "to": 11.42
+  },
+  {
+   "word": "avoidance",
+   "base": "avoid",
+   "from": 13.19,
+   "to": 10.73
+  },
+  {
+   "word": "awareness",
+   "base": "aware",
+   "from": 11.46,
+   "to": 10.9
+  },
+  {
+   "word": "awkwardly",
+   "base": "awkward",
+   "from": 13.41,
+   "to": 12.6
+  },
+  {
+   "word": "balanced",
+   "base": "balance",
+   "from": 12.27,
+   "to": 10.98
+  },
+  {
+   "word": "balloonist",
+   "base": "balloon",
+   "from": 14.12,
+   "to": 12.84
+  },
+  {
+   "word": "banker",
+   "base": "bank",
+   "from": 12.13,
+   "to": 9.87
+  },
+  {
+   "word": "barrenness",
+   "base": "barren",
+   "from": 14.11,
+   "to": 13.53
+  },
+  {
+   "word": "batter",
+   "base": "bat",
+   "from": 12.84,
+   "to": 12.36
+  },
+  {
+   "word": "beaded",
+   "base": "bead",
+   "from": 13.84,
+   "to": 12.71
+  },
+  {
+   "word": "becoming",
+   "base": "become",
+   "from": 10.77,
+   "to": 8.27
+  },
+  {
+   "word": "believer",
+   "base": "believe",
+   "from": 12.41,
+   "to": 9.91
+  },
+  {
+   "word": "bidding",
+   "base": "bid",
+   "from": 13.29,
+   "to": 12.3
+  },
+  {
+   "word": "bitterness",
+   "base": "bitter",
+   "from": 13.05,
+   "to": 12.16
+  },
+  {
+   "word": "blazing",
+   "base": "blaze",
+   "from": 13.94,
+   "to": 13.3
+  },
+  {
+   "word": "blessed",
+   "base": "bless",
+   "from": 13.0,
+   "to": 12.34
+  },
+  {
+   "word": "blues",
+   "base": "blue",
+   "from": 11.8,
+   "to": 9.92
+  },
+  {
+   "word": "boarder",
+   "base": "board",
+   "from": 14.21,
+   "to": 11.71
+  },
+  {
+   "word": "bodily",
+   "base": "body",
+   "from": 13.07,
+   "to": 10.57
+  },
+  {
+   "word": "breathing",
+   "base": "breathe",
+   "from": 12.15,
+   "to": 11.46
+  },
+  {
+   "word": "brilliantly",
+   "base": "brilliant",
+   "from": 13.37,
+   "to": 11.94
+  },
+  {
+   "word": "briskness",
+   "base": "brisk",
+   "from": 14.82,
+   "to": 13.59
+  },
+  {
+   "word": "brotherhood",
+   "base": "brother",
+   "from": 13.79,
+   "to": 11.29
+  },
+  {
+   "word": "burning",
+   "base": "burn",
+   "from": 11.99,
+   "to": 10.78
+  },
+  {
+   "word": "calculator",
+   "base": "calculate",
+   "from": 13.53,
+   "to": 12.18
+  },
+  {
+   "word": "cancellation",
+   "base": "cancel",
+   "from": 13.58,
+   "to": 12.85
+  },
+  {
+   "word": "candidly",
+   "base": "candid",
+   "from": 14.1,
+   "to": 13.54
+  },
+  {
+   "word": "carelessly",
+   "base": "careless",
+   "from": 14.07,
+   "to": 13.61
+  },
+  {
+   "word": "carver",
+   "base": "carve",
+   "from": 13.98,
+   "to": 12.41
+  },
+  {
+   "word": "carving",
+   "base": "carve",
+   "from": 13.03,
+   "to": 12.21
+  },
+  {
+   "word": "casting",
+   "base": "cast",
+   "from": 12.98,
+   "to": 11.3
+  },
+  {
+   "word": "catching",
+   "base": "catch",
+   "from": 12.09,
+   "to": 9.59
+  },
+  {
+   "word": "celebrated",
+   "base": "celebrate",
+   "from": 12.98,
+   "to": 11.29
+  },
+  {
+   "word": "ceremonial",
+   "base": "ceremony",
+   "from": 13.17,
+   "to": 12.1
+  },
+  {
+   "word": "ceremonious",
+   "base": "ceremony",
+   "from": 14.11,
+   "to": 12.3
+  },
+  {
+   "word": "characterize",
+   "base": "character",
+   "from": 11.51,
+   "to": 10.22
+  },
+  {
+   "word": "checked",
+   "base": "check",
+   "from": 14.27,
+   "to": 11.77
+  },
+  {
+   "word": "chiefly",
+   "base": "chief",
+   "from": 13.46,
+   "to": 10.96
+  },
+  {
+   "word": "chilled",
+   "base": "chill",
+   "from": 13.58,
+   "to": 12.49
+  },
+  {
+   "word": "chronical",
+   "base": "chronic",
+   "from": 14.92,
+   "to": 12.55
+  },
+  {
+   "word": "citizenship",
+   "base": "citizen",
+   "from": 12.26,
+   "to": 10.69
+  },
+  {
+   "word": "civility",
+   "base": "civil",
+   "from": 13.62,
+   "to": 11.12
+  },
+  {
+   "word": "clearance",
+   "base": "clear",
+   "from": 13.16,
+   "to": 10.66
+  },
+  {
+   "word": "climatic",
+   "base": "climate",
+   "from": 13.75,
+   "to": 11.85
+  },
+  {
+   "word": "clipper",
+   "base": "clip",
+   "from": 14.27,
+   "to": 12.55
+  },
+  {
+   "word": "clockwise",
+   "base": "clock",
+   "from": 13.53,
+   "to": 11.88
+  },
+  {
+   "word": "collectively",
+   "base": "collective",
+   "from": 12.91,
+   "to": 12.02
+  },
+  {
+   "word": "cometary",
+   "base": "comet",
+   "from": 14.11,
+   "to": 13.27
+  },
+  {
+   "word": "commentary",
+   "base": "comment",
+   "from": 12.31,
+   "to": 11.32
+  },
+  {
+   "word": "commissioner",
+   "base": "commission",
+   "from": 12.09,
+   "to": 11.73
+  },
+  {
+   "word": "committed",
+   "base": "commit",
+   "from": 12.67,
+   "to": 10.75
+  },
+  {
+   "word": "communicative",
+   "base": "communicate",
+   "from": 13.98,
+   "to": 12.2
+  },
+  {
+   "word": "comparatively",
+   "base": "comparative",
+   "from": 13.33,
+   "to": 12.94
+  },
+  {
+   "word": "competing",
+   "base": "compete",
+   "from": 12.5,
+   "to": 11.32
+  },
+  {
+   "word": "competitiveness",
+   "base": "competitive",
+   "from": 13.02,
+   "to": 11.58
+  },
+  {
+   "word": "complexity",
+   "base": "complex",
+   "from": 11.89,
+   "to": 11.55
+  },
+  {
+   "word": "computerize",
+   "base": "computer",
+   "from": 14.19,
+   "to": 11.69
+  },
+  {
+   "word": "concerned",
+   "base": "concern",
+   "from": 10.14,
+   "to": 9.79
+  },
+  {
+   "word": "concerted",
+   "base": "concert",
+   "from": 13.5,
+   "to": 11.61
+  },
+  {
+   "word": "condemnation",
+   "base": "condemn",
+   "from": 13.3,
+   "to": 12.93
+  },
+  {
+   "word": "conditioning",
+   "base": "condition",
+   "from": 12.64,
+   "to": 10.14
+  },
+  {
+   "word": "conductivity",
+   "base": "conductive",
+   "from": 13.77,
+   "to": 11.89
+  },
+  {
+   "word": "conductor",
+   "base": "conduct",
+   "from": 12.55,
+   "to": 10.79
+  },
+  {
+   "word": "confinement",
+   "base": "confine",
+   "from": 13.42,
+   "to": 13.0
+  },
+  {
+   "word": "confining",
+   "base": "confine",
+   "from": 14.06,
+   "to": 12.7
+  },
+  {
+   "word": "confirmation",
+   "base": "confirm",
+   "from": 12.41,
+   "to": 11.76
+  },
+  {
+   "word": "conflicting",
+   "base": "conflict",
+   "from": 12.69,
+   "to": 10.51
+  },
+  {
+   "word": "consciously",
+   "base": "conscious",
+   "from": 13.01,
+   "to": 12.22
+  },
+  {
+   "word": "conservationist",
+   "base": "conservation",
+   "from": 13.59,
+   "to": 12.71
+  },
+  {
+   "word": "consideration",
+   "base": "consider",
+   "from": 11.29,
+   "to": 9.53
+  },
+  {
+   "word": "consistently",
+   "base": "consistent",
+   "from": 11.83,
+   "to": 11.43
+  },
+  {
+   "word": "conspicuously",
+   "base": "conspicuous",
+   "from": 13.86,
+   "to": 13.53
+  },
+  {
+   "word": "container",
+   "base": "contain",
+   "from": 11.73,
+   "to": 10.37
+  },
+  {
+   "word": "contender",
+   "base": "contend",
+   "from": 12.73,
+   "to": 12.31
+  },
+  {
+   "word": "contented",
+   "base": "content",
+   "from": 14.28,
+   "to": 11.78
+  },
+  {
+   "word": "continental",
+   "base": "continent",
+   "from": 13.16,
+   "to": 12.69
+  },
+  {
+   "word": "continuation",
+   "base": "continue",
+   "from": 13.14,
+   "to": 10.64
+  },
+  {
+   "word": "contractor",
+   "base": "contract",
+   "from": 11.88,
+   "to": 10.92
+  },
+  {
+   "word": "conventionally",
+   "base": "conventional",
+   "from": 13.97,
+   "to": 11.63
+  },
+  {
+   "word": "conversational",
+   "base": "conversation",
+   "from": 13.77,
+   "to": 11.27
+  },
+  {
+   "word": "converter",
+   "base": "convert",
+   "from": 13.96,
+   "to": 12.01
+  },
+  {
+   "word": "convinced",
+   "base": "convince",
+   "from": 11.87,
+   "to": 11.31
+  },
+  {
+   "word": "convincing",
+   "base": "convince",
+   "from": 12.6,
+   "to": 11.31
+  },
+  {
+   "word": "coordinated",
+   "base": "coordinate",
+   "from": 13.33,
+   "to": 12.56
+  },
+  {
+   "word": "correlated",
+   "base": "correlate",
+   "from": 13.32,
+   "to": 12.68
+  },
+  {
+   "word": "counterbalance",
+   "base": "balance",
+   "from": 14.18,
+   "to": 11.68
+  },
+  {
+   "word": "counterclockwise",
+   "base": "clockwise",
+   "from": 14.06,
+   "to": 12.48
+  },
+  {
+   "word": "counterpart",
+   "base": "part",
+   "from": 11.91,
+   "to": 9.41
+  },
+  {
+   "word": "courtly",
+   "base": "court",
+   "from": 14.13,
+   "to": 11.63
+  },
+  {
+   "word": "cracker",
+   "base": "crack",
+   "from": 12.93,
+   "to": 12.07
+  },
+  {
+   "word": "creativity",
+   "base": "creative",
+   "from": 12.07,
+   "to": 10.08
+  },
+  {
+   "word": "creditor",
+   "base": "credit",
+   "from": 13.04,
+   "to": 10.74
+  },
+  {
+   "word": "crossing",
+   "base": "cross",
+   "from": 12.64,
+   "to": 10.75
+  },
+  {
+   "word": "crystallization",
+   "base": "crystallize",
+   "from": 14.06,
+   "to": 13.32
+  },
+  {
+   "word": "crystallize",
+   "base": "crystal",
+   "from": 13.92,
+   "to": 12.42
+  },
+  {
+   "word": "crystallized",
+   "base": "crystallize",
+   "from": 14.05,
+   "to": 12.72
+  },
+  {
+   "word": "cultivated",
+   "base": "cultivate",
+   "from": 13.75,
+   "to": 12.76
+  },
+  {
+   "word": "currently",
+   "base": "current",
+   "from": 10.74,
+   "to": 9.65
+  },
+  {
+   "word": "customarily",
+   "base": "customary",
+   "from": 14.06,
+   "to": 12.76
+  },
+  {
+   "word": "customary",
+   "base": "custom",
+   "from": 13.08,
+   "to": 12.46
+  },
+  {
+   "word": "dawning",
+   "base": "dawn",
+   "from": 14.02,
+   "to": 12.28
+  },
+  {
+   "word": "deadly",
+   "base": "dead",
+   "from": 11.79,
+   "to": 9.81
+  },
+  {
+   "word": "dealer",
+   "base": "deal",
+   "from": 11.34,
+   "to": 9.9
+  },
+  {
+   "word": "debatable",
+   "base": "debate",
+   "from": 14.11,
+   "to": 11.61
+  },
+  {
+   "word": "declaration",
+   "base": "declare",
+   "from": 12.47,
+   "to": 11.67
+  },
+  {
+   "word": "demanding",
+   "base": "demand",
+   "from": 13.18,
+   "to": 10.68
+  },
+  {
+   "word": "depositor",
+   "base": "deposit",
+   "from": 14.11,
+   "to": 12.81
+  },
+  {
+   "word": "deserted",
+   "base": "desert",
+   "from": 13.32,
+   "to": 11.41
+  },
+  {
+   "word": "designing",
+   "base": "design",
+   "from": 12.67,
+   "to": 10.17
+  },
+  {
+   "word": "desirous",
+   "base": "desire",
+   "from": 14.07,
+   "to": 11.57
+  },
+  {
+   "word": "despoiler",
+   "base": "despoil",
+   "from": 15.22,
+   "to": 14.62
+  },
+  {
+   "word": "determination",
+   "base": "determine",
+   "from": 11.92,
+   "to": 10.5
+  },
+  {
+   "word": "determined",
+   "base": "determine",
+   "from": 12.55,
+   "to": 10.05
+  },
+  {
+   "word": "determinedly",
+   "base": "determined",
+   "from": 14.1,
+   "to": 11.6
+  },
+  {
+   "word": "devoted",
+   "base": "devote",
+   "from": 12.34,
+   "to": 11.97
+  },
+  {
+   "word": "dietary",
+   "base": "diet",
+   "from": 12.66,
+   "to": 11.98
+  },
+  {
+   "word": "dieter",
+   "base": "diet",
+   "from": 13.89,
+   "to": 11.58
+  },
+  {
+   "word": "dimensional",
+   "base": "dimension",
+   "from": 14.26,
+   "to": 11.95
+  },
+  {
+   "word": "directive",
+   "base": "direct",
+   "from": 12.92,
+   "to": 11.34
+  },
+  {
+   "word": "disarming",
+   "base": "disarm",
+   "from": 13.99,
+   "to": 13.43
+  },
+  {
+   "word": "discerning",
+   "base": "discern",
+   "from": 14.11,
+   "to": 13.24
+  },
+  {
+   "word": "disciplinary",
+   "base": "discipline",
+   "from": 13.02,
+   "to": 12.07
+  },
+  {
+   "word": "disciplined",
+   "base": "discipline",
+   "from": 13.41,
+   "to": 11.47
+  },
+  {
+   "word": "discontented",
+   "base": "discontent",
+   "from": 14.08,
+   "to": 13.57
+  },
+  {
+   "word": "discouraging",
+   "base": "discourage",
+   "from": 13.9,
+   "to": 12.35
+  },
+  {
+   "word": "dispersal",
+   "base": "disperse",
+   "from": 13.96,
+   "to": 13.58
+  },
+  {
+   "word": "dissenter",
+   "base": "dissent",
+   "from": 13.97,
+   "to": 13.52
+  },
+  {
+   "word": "dissenting",
+   "base": "dissent",
+   "from": 14.28,
+   "to": 13.32
+  },
+  {
+   "word": "distinctively",
+   "base": "distinctive",
+   "from": 14.17,
+   "to": 12.52
+  },
+  {
+   "word": "distinctly",
+   "base": "distinct",
+   "from": 13.0,
+   "to": 11.98
+  },
+  {
+   "word": "distinguished",
+   "base": "distinguish",
+   "from": 12.46,
+   "to": 11.98
+  },
+  {
+   "word": "distressed",
+   "base": "distress",
+   "from": 13.78,
+   "to": 12.66
+  },
+  {
+   "word": "diversified",
+   "base": "diversify",
+   "from": 13.93,
+   "to": 13.39
+  },
+  {
+   "word": "dizziness",
+   "base": "dizzy",
+   "from": 13.9,
+   "to": 13.52
+  },
+  {
+   "word": "documentary",
+   "base": "document",
+   "from": 12.06,
+   "to": 11.35
+  },
+  {
+   "word": "documentation",
+   "base": "document",
+   "from": 12.75,
+   "to": 11.35
+  },
+  {
+   "word": "documented",
+   "base": "document",
+   "from": 13.9,
+   "to": 11.4
+  },
+  {
+   "word": "dogged",
+   "base": "dog",
+   "from": 14.29,
+   "to": 11.79
+  },
+  {
+   "word": "doomed",
+   "base": "doom",
+   "from": 14.04,
+   "to": 13.19
+  },
+  {
+   "word": "drawer",
+   "base": "draw",
+   "from": 12.05,
+   "to": 9.71
+  },
+  {
+   "word": "drawing",
+   "base": "draw",
+   "from": 11.31,
+   "to": 9.51
+  },
+  {
+   "word": "dreadfully",
+   "base": "dreadful",
+   "from": 14.05,
+   "to": 13.51
+  },
+  {
+   "word": "dresser",
+   "base": "dress",
+   "from": 13.08,
+   "to": 10.99
+  },
+  {
+   "word": "dressing",
+   "base": "dress",
+   "from": 12.57,
+   "to": 10.79
+  },
+  {
+   "word": "educable",
+   "base": "educ",
+   "from": 15.18,
+   "to": 14.7
+  },
+  {
+   "word": "educated",
+   "base": "educate",
+   "from": 12.56,
+   "to": 11.88
+  },
+  {
+   "word": "effective",
+   "base": "effect",
+   "from": 10.15,
+   "to": 9.54
+  },
+  {
+   "word": "effectiveness",
+   "base": "effective",
+   "from": 11.8,
+   "to": 9.94
+  },
+  {
+   "word": "elaborately",
+   "base": "elaborate",
+   "from": 14.04,
+   "to": 12.49
+  },
+  {
+   "word": "elective",
+   "base": "elect",
+   "from": 13.58,
+   "to": 11.96
+  },
+  {
+   "word": "embedded",
+   "base": "embed",
+   "from": 13.73,
+   "to": 12.87
+  },
+  {
+   "word": "emergence",
+   "base": "emerge",
+   "from": 12.5,
+   "to": 11.25
+  },
+  {
+   "word": "emerging",
+   "base": "emerge",
+   "from": 12.14,
+   "to": 10.65
+  },
+  {
+   "word": "enactment",
+   "base": "enact",
+   "from": 13.67,
+   "to": 12.82
+  },
+  {
+   "word": "endlessly",
+   "base": "endless",
+   "from": 13.13,
+   "to": 12.18
+  },
+  {
+   "word": "enduring",
+   "base": "endure",
+   "from": 12.74,
+   "to": 12.15
+  },
+  {
+   "word": "engaging",
+   "base": "engage",
+   "from": 13.33,
+   "to": 10.83
+  },
+  {
+   "word": "entirely",
+   "base": "entire",
+   "from": 10.87,
+   "to": 10.07
+  },
+  {
+   "word": "equality",
+   "base": "equal",
+   "from": 12.18,
+   "to": 11.75
+  },
+  {
+   "word": "escapist",
+   "base": "escape",
+   "from": 14.07,
+   "to": 11.6
+  },
+  {
+   "word": "eternally",
+   "base": "eternal",
+   "from": 13.97,
+   "to": 12.78
+  },
+  {
+   "word": "ethically",
+   "base": "ethical",
+   "from": 13.82,
+   "to": 12.07
+  },
+  {
+   "word": "exacting",
+   "base": "exact",
+   "from": 13.97,
+   "to": 12.02
+  },
+  {
+   "word": "examiner",
+   "base": "examine",
+   "from": 12.87,
+   "to": 10.69
+  },
+  {
+   "word": "exceptional",
+   "base": "exception",
+   "from": 12.57,
+   "to": 11.94
+  },
+  {
+   "word": "exceptionally",
+   "base": "exceptional",
+   "from": 13.12,
+   "to": 12.24
+  },
+  {
+   "word": "exhausted",
+   "base": "exhaust",
+   "from": 13.0,
+   "to": 12.52
+  },
+  {
+   "word": "exhausting",
+   "base": "exhaust",
+   "from": 13.92,
+   "to": 12.52
+  },
+  {
+   "word": "expanding",
+   "base": "expand",
+   "from": 12.67,
+   "to": 10.93
+  },
+  {
+   "word": "experienced",
+   "base": "experience",
+   "from": 12.1,
+   "to": 9.6
+  },
+  {
+   "word": "expertise",
+   "base": "expert",
+   "from": 11.94,
+   "to": 10.42
+  },
+  {
+   "word": "expiration",
+   "base": "expire",
+   "from": 14.03,
+   "to": 13.62
+  },
+  {
+   "word": "exploration",
+   "base": "explore",
+   "from": 11.94,
+   "to": 11.55
+  },
+  {
+   "word": "explorer",
+   "base": "explore",
+   "from": 12.95,
+   "to": 11.15
+  },
+  {
+   "word": "exports",
+   "base": "export",
+   "from": 12.3,
+   "to": 11.97
+  },
+  {
+   "word": "expressive",
+   "base": "express",
+   "from": 12.99,
+   "to": 11.12
+  },
+  {
+   "word": "expressly",
+   "base": "express",
+   "from": 13.78,
+   "to": 11.28
+  },
+  {
+   "word": "extended",
+   "base": "extend",
+   "from": 12.01,
+   "to": 10.8
+  },
+  {
+   "word": "extraordinarily",
+   "base": "extraordinary",
+   "from": 12.86,
+   "to": 11.67
+  },
+  {
+   "word": "extremity",
+   "base": "extreme",
+   "from": 13.77,
+   "to": 12.21
+  },
+  {
+   "word": "faintly",
+   "base": "faint",
+   "from": 13.28,
+   "to": 12.32
+  },
+  {
+   "word": "faithfulness",
+   "base": "faithful",
+   "from": 13.91,
+   "to": 12.71
+  },
+  {
+   "word": "familiarity",
+   "base": "familiar",
+   "from": 13.0,
+   "to": 11.45
+  },
+  {
+   "word": "favored",
+   "base": "favor",
+   "from": 13.31,
+   "to": 11.6
+  },
+  {
+   "word": "feeder",
+   "base": "feed",
+   "from": 13.45,
+   "to": 10.95
+  },
+  {
+   "word": "fellowship",
+   "base": "fellow",
+   "from": 13.21,
+   "to": 11.85
+  },
+  {
+   "word": "fencing",
+   "base": "fence",
+   "from": 13.57,
+   "to": 11.69
+  },
+  {
+   "word": "fictional",
+   "base": "fiction",
+   "from": 12.65,
+   "to": 12.14
+  },
+  {
+   "word": "financing",
+   "base": "finance",
+   "from": 12.47,
+   "to": 11.77
+  },
+  {
+   "word": "firmly",
+   "base": "firm",
+   "from": 11.91,
+   "to": 10.12
+  },
+  {
+   "word": "fitting",
+   "base": "fit",
+   "from": 13.33,
+   "to": 10.83
+  },
+  {
+   "word": "flatter",
+   "base": "flat",
+   "from": 13.31,
+   "to": 11.84
+  },
+  {
+   "word": "flavoring",
+   "base": "flavor",
+   "from": 14.03,
+   "to": 11.93
+  },
+  {
+   "word": "fleeting",
+   "base": "fleet",
+   "from": 13.4,
+   "to": 12.43
+  },
+  {
+   "word": "flickering",
+   "base": "flicker",
+   "from": 13.66,
+   "to": 13.3
+  },
+  {
+   "word": "flourishing",
+   "base": "flourish",
+   "from": 13.97,
+   "to": 12.92
+  },
+  {
+   "word": "fogged",
+   "base": "fog",
+   "from": 14.1,
+   "to": 12.58
+  },
+  {
+   "word": "folding",
+   "base": "fold",
+   "from": 13.34,
+   "to": 12.08
+  },
+  {
+   "word": "formation",
+   "base": "form",
+   "from": 11.58,
+   "to": 9.93
+  },
+  {
+   "word": "fossilize",
+   "base": "fossil",
+   "from": 14.39,
+   "to": 12.92
+  },
+  {
+   "word": "fossilized",
+   "base": "fossilize",
+   "from": 14.05,
+   "to": 13.22
+  },
+  {
+   "word": "fragility",
+   "base": "fragile",
+   "from": 14.01,
+   "to": 13.13
+  },
+  {
+   "word": "fragmentary",
+   "base": "fragment",
+   "from": 14.26,
+   "to": 13.13
+  },
+  {
+   "word": "freshly",
+   "base": "fresh",
+   "from": 12.4,
+   "to": 10.42
+  },
+  {
+   "word": "freshness",
+   "base": "fresh",
+   "from": 13.89,
+   "to": 11.39
+  },
+  {
+   "word": "functional",
+   "base": "function",
+   "from": 12.06,
+   "to": 11.2
+  },
+  {
+   "word": "functioning",
+   "base": "function",
+   "from": 12.99,
+   "to": 10.8
+  },
+  {
+   "word": "funding",
+   "base": "fund",
+   "from": 11.08,
+   "to": 9.86
+  },
+  {
+   "word": "generously",
+   "base": "generous",
+   "from": 13.4,
+   "to": 12.24
+  },
+  {
+   "word": "genetics",
+   "base": "genetic",
+   "from": 12.93,
+   "to": 11.62
+  },
+  {
+   "word": "glaring",
+   "base": "glare",
+   "from": 13.67,
+   "to": 12.96
+  },
+  {
+   "word": "glazed",
+   "base": "glaze",
+   "from": 13.83,
+   "to": 13.49
+  },
+  {
+   "word": "glider",
+   "base": "glide",
+   "from": 14.06,
+   "to": 13.31
+  },
+  {
+   "word": "grading",
+   "base": "grade",
+   "from": 13.9,
+   "to": 11.4
+  },
+  {
+   "word": "grazing",
+   "base": "graze",
+   "from": 13.7,
+   "to": 13.2
+  },
+  {
+   "word": "grieved",
+   "base": "grieve",
+   "from": 14.05,
+   "to": 13.59
+  },
+  {
+   "word": "grimly",
+   "base": "grim",
+   "from": 13.62,
+   "to": 12.7
+  },
+  {
+   "word": "harmonious",
+   "base": "harmony",
+   "from": 13.65,
+   "to": 13.11
+  },
+  {
+   "word": "harshness",
+   "base": "harsh",
+   "from": 14.05,
+   "to": 12.17
+  },
+  {
+   "word": "haunted",
+   "base": "haunt",
+   "from": 13.62,
+   "to": 12.61
+  },
+  {
+   "word": "heading",
+   "base": "head",
+   "from": 13.29,
+   "to": 10.79
+  },
+  {
+   "word": "heavenly",
+   "base": "heaven",
+   "from": 13.22,
+   "to": 11.67
+  },
+  {
+   "word": "heirship",
+   "base": "heir",
+   "from": 15.08,
+   "to": 13.21
+  },
+  {
+   "word": "helper",
+   "base": "help",
+   "from": 13.15,
+   "to": 10.65
+  },
+  {
+   "word": "herder",
+   "base": "herd",
+   "from": 14.24,
+   "to": 12.85
+  },
+  {
+   "word": "heroic",
+   "base": "hero",
+   "from": 12.61,
+   "to": 11.71
+  },
+  {
+   "word": "honorary",
+   "base": "honor",
+   "from": 13.36,
+   "to": 11.93
+  },
+  {
+   "word": "horned",
+   "base": "horn",
+   "from": 13.87,
+   "to": 12.15
+  },
+  {
+   "word": "hospitalize",
+   "base": "hospital",
+   "from": 13.33,
+   "to": 10.83
+  },
+  {
+   "word": "humanity",
+   "base": "human",
+   "from": 11.79,
+   "to": 9.54
+  },
+  {
+   "word": "humorous",
+   "base": "humor",
+   "from": 13.3,
+   "to": 12.51
+  },
+  {
+   "word": "idealize",
+   "base": "ideal",
+   "from": 14.15,
+   "to": 12.07
+  },
+  {
+   "word": "identifiable",
+   "base": "identify",
+   "from": 13.4,
+   "to": 10.9
+  },
+  {
+   "word": "idiotic",
+   "base": "idiot",
+   "from": 14.14,
+   "to": 13.36
+  },
+  {
+   "word": "ignorance",
+   "base": "ignore",
+   "from": 12.52,
+   "to": 11.33
+  },
+  {
+   "word": "imagist",
+   "base": "image",
+   "from": 14.12,
+   "to": 11.62
+  },
+  {
+   "word": "imposing",
+   "base": "impose",
+   "from": 13.18,
+   "to": 11.5
+  },
+  {
+   "word": "impressively",
+   "base": "impressive",
+   "from": 14.24,
+   "to": 11.98
+  },
+  {
+   "word": "improviser",
+   "base": "improvise",
+   "from": 14.11,
+   "to": 13.63
+  },
+  {
+   "word": "indicative",
+   "base": "indicate",
+   "from": 13.3,
+   "to": 10.8
+  },
+  {
+   "word": "inducible",
+   "base": "induce",
+   "from": 14.1,
+   "to": 13.18
+  },
+  {
+   "word": "industrial",
+   "base": "industry",
+   "from": 10.91,
+   "to": 9.81
+  },
+  {
+   "word": "industrious",
+   "base": "industry",
+   "from": 14.27,
+   "to": 11.77
+  },
+  {
+   "word": "informed",
+   "base": "inform",
+   "from": 12.94,
+   "to": 11.4
+  },
+  {
+   "word": "ingredients",
+   "base": "ingredient",
+   "from": 12.21,
+   "to": 11.55
+  },
+  {
+   "word": "injurious",
+   "base": "injury",
+   "from": 14.06,
+   "to": 11.56
+  },
+  {
+   "word": "insistence",
+   "base": "insist",
+   "from": 12.86,
+   "to": 11.32
+  },
+  {
+   "word": "inspiring",
+   "base": "inspire",
+   "from": 13.36,
+   "to": 11.48
+  },
+  {
+   "word": "installment",
+   "base": "install",
+   "from": 13.36,
+   "to": 11.9
+  },
+  {
+   "word": "instructive",
+   "base": "instruct",
+   "from": 13.54,
+   "to": 12.87
+  },
+  {
+   "word": "instrumental",
+   "base": "instrument",
+   "from": 12.48,
+   "to": 11.36
+  },
+  {
+   "word": "insulting",
+   "base": "insult",
+   "from": 13.66,
+   "to": 13.0
+  },
+  {
+   "word": "intentionally",
+   "base": "intentional",
+   "from": 12.95,
+   "to": 12.31
+  },
+  {
+   "word": "interpreter",
+   "base": "interpret",
+   "from": 12.48,
+   "to": 11.94
+  },
+  {
+   "word": "intersected",
+   "base": "intersect",
+   "from": 14.06,
+   "to": 13.75
+  },
+  {
+   "word": "intricately",
+   "base": "intricate",
+   "from": 14.11,
+   "to": 13.15
+  },
+  {
+   "word": "intruding",
+   "base": "intrude",
+   "from": 14.05,
+   "to": 13.65
+  },
+  {
+   "word": "invader",
+   "base": "invade",
+   "from": 13.29,
+   "to": 12.65
+  },
+  {
+   "word": "invitation",
+   "base": "invite",
+   "from": 12.0,
+   "to": 11.55
+  },
+  {
+   "word": "inviting",
+   "base": "invite",
+   "from": 13.29,
+   "to": 10.95
+  },
+  {
+   "word": "irregularly",
+   "base": "irregular",
+   "from": 13.98,
+   "to": 13.37
+  },
+  {
+   "word": "jeweler",
+   "base": "jewel",
+   "from": 13.77,
+   "to": 13.09
+  },
+  {
+   "word": "jogging",
+   "base": "jog",
+   "from": 13.92,
+   "to": 13.35
+  },
+  {
+   "word": "jolting",
+   "base": "jolt",
+   "from": 14.1,
+   "to": 13.74
+  },
+  {
+   "word": "justly",
+   "base": "just",
+   "from": 14.11,
+   "to": 11.61
+  },
+  {
+   "word": "laborer",
+   "base": "labor",
+   "from": 12.78,
+   "to": 10.68
+  },
+  {
+   "word": "landing",
+   "base": "land",
+   "from": 11.86,
+   "to": 9.45
+  },
+  {
+   "word": "lasting",
+   "base": "last",
+   "from": 12.62,
+   "to": 10.12
+  },
+  {
+   "word": "layering",
+   "base": "layer",
+   "from": 14.09,
+   "to": 11.59
+  },
+  {
+   "word": "leadership",
+   "base": "leader",
+   "from": 10.36,
+   "to": 9.42
+  },
+  {
+   "word": "leading",
+   "base": "lead",
+   "from": 11.11,
+   "to": 8.62
+  },
+  {
+   "word": "leisurely",
+   "base": "leisure",
+   "from": 13.75,
+   "to": 12.93
+  },
+  {
+   "word": "liberally",
+   "base": "liberal",
+   "from": 14.08,
+   "to": 11.58
+  },
+  {
+   "word": "licensed",
+   "base": "license",
+   "from": 13.19,
+   "to": 11.8
+  },
+  {
+   "word": "likewise",
+   "base": "like",
+   "from": 12.16,
+   "to": 9.66
+  },
+  {
+   "word": "linguistics",
+   "base": "linguistic",
+   "from": 13.99,
+   "to": 12.93
+  },
+  {
+   "word": "locality",
+   "base": "local",
+   "from": 13.47,
+   "to": 10.97
+  },
+  {
+   "word": "locally",
+   "base": "local",
+   "from": 12.54,
+   "to": 10.04
+  },
+  {
+   "word": "locker",
+   "base": "lock",
+   "from": 12.31,
+   "to": 11.63
+  },
+  {
+   "word": "lodging",
+   "base": "lodge",
+   "from": 13.71,
+   "to": 13.06
+  },
+  {
+   "word": "lumbering",
+   "base": "lumber",
+   "from": 14.19,
+   "to": 13.09
+  },
+  {
+   "word": "magnetize",
+   "base": "magnet",
+   "from": 14.11,
+   "to": 13.24
+  },
+  {
+   "word": "majority",
+   "base": "major",
+   "from": 10.09,
+   "to": 9.7
+  },
+  {
+   "word": "multifunctional",
+   "base": "functional",
+   "from": 14.08,
+   "to": 11.7
+  },
+  {
+   "word": "manually",
+   "base": "manual",
+   "from": 13.7,
+   "to": 12.59
+  },
+  {
+   "word": "marked",
+   "base": "mark",
+   "from": 12.68,
+   "to": 11.02
+  },
+  {
+   "word": "markedly",
+   "base": "marked",
+   "from": 13.32,
+   "to": 11.32
+  },
+  {
+   "word": "matching",
+   "base": "match",
+   "from": 12.71,
+   "to": 11.26
+  },
+  {
+   "word": "means",
+   "base": "mean",
+   "from": 8.8,
+   "to": 7.47
+  },
+  {
+   "word": "measures",
+   "base": "measure",
+   "from": 11.09,
+   "to": 10.08
+  },
+  {
+   "word": "melodious",
+   "base": "melody",
+   "from": 14.06,
+   "to": 13.36
+  },
+  {
+   "word": "melting",
+   "base": "melt",
+   "from": 13.39,
+   "to": 12.07
+  },
+  {
+   "word": "mentality",
+   "base": "mental",
+   "from": 12.7,
+   "to": 11.54
+  },
+  {
+   "word": "metallic",
+   "base": "metal",
+   "from": 13.08,
+   "to": 11.43
+  },
+  {
+   "word": "methodical",
+   "base": "method",
+   "from": 13.9,
+   "to": 11.4
+  },
+  {
+   "word": "methodically",
+   "base": "methodical",
+   "from": 13.78,
+   "to": 11.28
+  },
+  {
+   "word": "microorganism",
+   "base": "organism",
+   "from": 13.53,
+   "to": 12.71
+  },
+  {
+   "word": "microprocessor",
+   "base": "processor",
+   "from": 13.68,
+   "to": 11.18
+  },
+  {
+   "word": "microscope",
+   "base": "scope",
+   "from": 13.05,
+   "to": 12.21
+  },
+  {
+   "word": "microwave",
+   "base": "wave",
+   "from": 12.54,
+   "to": 11.06
+  },
+  {
+   "word": "mingling",
+   "base": "mingle",
+   "from": 13.98,
+   "to": 13.36
+  },
+  {
+   "word": "modeling",
+   "base": "model",
+   "from": 12.73,
+   "to": 10.23
+  },
+  {
+   "word": "momentous",
+   "base": "moment",
+   "from": 13.67,
+   "to": 11.17
+  },
+  {
+   "word": "monumental",
+   "base": "monument",
+   "from": 13.04,
+   "to": 12.7
+  },
+  {
+   "word": "mostly",
+   "base": "most",
+   "from": 10.38,
+   "to": 7.88
+  },
+  {
+   "word": "motherhood",
+   "base": "mother",
+   "from": 13.2,
+   "to": 10.7
+  },
+  {
+   "word": "mountainous",
+   "base": "mountain",
+   "from": 13.63,
+   "to": 11.18
+  },
+  {
+   "word": "multicellular",
+   "base": "cellular",
+   "from": 14.08,
+   "to": 13.02
+  },
+  {
+   "word": "multistory",
+   "base": "story",
+   "from": 14.11,
+   "to": 11.61
+  },
+  {
+   "word": "musical",
+   "base": "music",
+   "from": 11.05,
+   "to": 9.32
+  },
+  {
+   "word": "mythical",
+   "base": "myth",
+   "from": 13.46,
+   "to": 12.4
+  },
+  {
+   "word": "nationality",
+   "base": "national",
+   "from": 12.95,
+   "to": 10.45
+  },
+  {
+   "word": "nonfiction",
+   "base": "fiction",
+   "from": 13.65,
+   "to": 11.84
+  },
+  {
+   "word": "nonhuman",
+   "base": "human",
+   "from": 14.07,
+   "to": 11.57
+  },
+  {
+   "word": "nonsense",
+   "base": "sense",
+   "from": 12.56,
+   "to": 10.06
+  },
+  {
+   "word": "nontraditional",
+   "base": "traditional",
+   "from": 14.06,
+   "to": 11.56
+  },
+  {
+   "word": "nonverbal",
+   "base": "verbal",
+   "from": 13.7,
+   "to": 12.39
+  },
+  {
+   "word": "nonviolence",
+   "base": "violence",
+   "from": 14.05,
+   "to": 11.55
+  },
+  {
+   "word": "noticeable",
+   "base": "notice",
+   "from": 13.08,
+   "to": 10.63
+  },
+  {
+   "word": "nourishing",
+   "base": "nourish",
+   "from": 14.0,
+   "to": 13.66
+  },
+  {
+   "word": "obliging",
+   "base": "oblige",
+   "from": 14.06,
+   "to": 13.03
+  },
+  {
+   "word": "observance",
+   "base": "observe",
+   "from": 13.74,
+   "to": 11.25
+  },
+  {
+   "word": "obtainable",
+   "base": "obtain",
+   "from": 13.84,
+   "to": 11.34
+  },
+  {
+   "word": "operative",
+   "base": "operate",
+   "from": 13.36,
+   "to": 11.16
+  },
+  {
+   "word": "operator",
+   "base": "operate",
+   "from": 11.66,
+   "to": 10.96
+  },
+  {
+   "word": "opposed",
+   "base": "oppose",
+   "from": 12.04,
+   "to": 11.24
+  },
+  {
+   "word": "opposing",
+   "base": "oppose",
+   "from": 12.7,
+   "to": 11.24
+  },
+  {
+   "word": "orbital",
+   "base": "orbit",
+   "from": 13.28,
+   "to": 12.74
+  },
+  {
+   "word": "orderly",
+   "base": "order",
+   "from": 12.95,
+   "to": 10.45
+  },
+  {
+   "word": "organizer",
+   "base": "organize",
+   "from": 12.34,
+   "to": 11.2
+  },
+  {
+   "word": "originality",
+   "base": "original",
+   "from": 13.63,
+   "to": 11.13
+  },
+  {
+   "word": "originally",
+   "base": "original",
+   "from": 11.49,
+   "to": 10.45
+  },
+  {
+   "word": "outrageously",
+   "base": "outrageous",
+   "from": 14.01,
+   "to": 12.89
+  },
+  {
+   "word": "overbalance",
+   "base": "balance",
+   "from": 14.22,
+   "to": 11.72
+  },
+  {
+   "word": "overbearing",
+   "base": "bearing",
+   "from": 14.29,
+   "to": 11.79
+  },
+  {
+   "word": "overburden",
+   "base": "burden",
+   "from": 14.1,
+   "to": 11.89
+  },
+  {
+   "word": "overcast",
+   "base": "cast",
+   "from": 14.13,
+   "to": 11.63
+  },
+  {
+   "word": "overcharge",
+   "base": "charge",
+   "from": 14.08,
+   "to": 11.58
+  },
+  {
+   "word": "overcome",
+   "base": "come",
+   "from": 11.41,
+   "to": 8.91
+  },
+  {
+   "word": "overconfident",
+   "base": "confident",
+   "from": 14.08,
+   "to": 12.0
+  },
+  {
+   "word": "overcrowd",
+   "base": "crowd",
+   "from": 14.12,
+   "to": 11.62
+  },
+  {
+   "word": "overestimate",
+   "base": "estimate",
+   "from": 13.71,
+   "to": 11.32
+  },
+  {
+   "word": "overflow",
+   "base": "flow",
+   "from": 13.21,
+   "to": 11.46
+  },
+  {
+   "word": "overhaul",
+   "base": "haul",
+   "from": 13.46,
+   "to": 12.55
+  },
+  {
+   "word": "overhear",
+   "base": "hear",
+   "from": 13.09,
+   "to": 10.59
+  },
+  {
+   "word": "overlapping",
+   "base": "lapping",
+   "from": 13.47,
+   "to": 12.53
+  },
+  {
+   "word": "overload",
+   "base": "load",
+   "from": 13.85,
+   "to": 12.01
+  },
+  {
+   "word": "overlook",
+   "base": "look",
+   "from": 11.63,
+   "to": 9.13
+  },
+  {
+   "word": "oversight",
+   "base": "sight",
+   "from": 12.59,
+   "to": 11.18
+  },
+  {
+   "word": "overtaxed",
+   "base": "taxed",
+   "from": 14.11,
+   "to": 13.79
+  },
+  {
+   "word": "overtime",
+   "base": "time",
+   "from": 13.05,
+   "to": 10.55
+  },
+  {
+   "word": "overturn",
+   "base": "turn",
+   "from": 12.62,
+   "to": 10.12
+  },
+  {
+   "word": "overwhelmingly",
+   "base": "overwhelming",
+   "from": 12.77,
+   "to": 12.12
+  },
+  {
+   "word": "overwork",
+   "base": "work",
+   "from": 14.06,
+   "to": 11.56
+  },
+  {
+   "word": "packaging",
+   "base": "package",
+   "from": 12.93,
+   "to": 11.03
+  },
+  {
+   "word": "packed",
+   "base": "pack",
+   "from": 13.05,
+   "to": 11.46
+  },
+  {
+   "word": "packer",
+   "base": "pack",
+   "from": 13.65,
+   "to": 11.66
+  },
+  {
+   "word": "paddler",
+   "base": "paddle",
+   "from": 14.11,
+   "to": 13.7
+  },
+  {
+   "word": "patroller",
+   "base": "patrol",
+   "from": 14.12,
+   "to": 12.54
+  },
+  {
+   "word": "patronizing",
+   "base": "patronize",
+   "from": 14.09,
+   "to": 13.1
+  },
+  {
+   "word": "peculiarity",
+   "base": "peculiar",
+   "from": 14.07,
+   "to": 13.35
+  },
+  {
+   "word": "penetrating",
+   "base": "penetrate",
+   "from": 13.79,
+   "to": 12.71
+  },
+  {
+   "word": "perennially",
+   "base": "perennial",
+   "from": 14.08,
+   "to": 13.44
+  },
+  {
+   "word": "performer",
+   "base": "perform",
+   "from": 11.97,
+   "to": 10.4
+  },
+  {
+   "word": "periodical",
+   "base": "period",
+   "from": 13.71,
+   "to": 11.21
+  },
+  {
+   "word": "personality",
+   "base": "personal",
+   "from": 11.03,
+   "to": 10.03
+  },
+  {
+   "word": "phenomenally",
+   "base": "phenomenal",
+   "from": 14.06,
+   "to": 13.48
+  },
+  {
+   "word": "pioneering",
+   "base": "pioneer",
+   "from": 13.28,
+   "to": 12.44
+  },
+  {
+   "word": "plainly",
+   "base": "plain",
+   "from": 13.26,
+   "to": 12.11
+  },
+  {
+   "word": "pleasing",
+   "base": "please",
+   "from": 13.25,
+   "to": 10.75
+  },
+  {
+   "word": "pointed",
+   "base": "point",
+   "from": 13.17,
+   "to": 10.67
+  },
+  {
+   "word": "popularity",
+   "base": "popular",
+   "from": 11.97,
+   "to": 10.76
+  },
+  {
+   "word": "porter",
+   "base": "port",
+   "from": 13.71,
+   "to": 11.92
+  },
+  {
+   "word": "portrayal",
+   "base": "portray",
+   "from": 12.98,
+   "to": 12.38
+  },
+  {
+   "word": "postal",
+   "base": "post",
+   "from": 12.81,
+   "to": 11.78
+  },
+  {
+   "word": "postcard",
+   "base": "card",
+   "from": 12.78,
+   "to": 10.41
+  },
+  {
+   "word": "postdate",
+   "base": "date",
+   "from": 14.29,
+   "to": 11.79
+  },
+  {
+   "word": "poster",
+   "base": "post",
+   "from": 11.92,
+   "to": 11.58
+  },
+  {
+   "word": "postgraduate",
+   "base": "graduate",
+   "from": 13.62,
+   "to": 11.66
+  },
+  {
+   "word": "postmaster",
+   "base": "master",
+   "from": 13.77,
+   "to": 11.49
+  },
+  {
+   "word": "postoperative",
+   "base": "operative",
+   "from": 13.59,
+   "to": 11.76
+  },
+  {
+   "word": "potentiality",
+   "base": "potential",
+   "from": 14.1,
+   "to": 11.6
+  },
+  {
+   "word": "potted",
+   "base": "pot",
+   "from": 13.92,
+   "to": 11.44
+  },
+  {
+   "word": "practical",
+   "base": "practice",
+   "from": 11.17,
+   "to": 9.84
+  },
+  {
+   "word": "practicality",
+   "base": "practical",
+   "from": 13.86,
+   "to": 11.36
+  },
+  {
+   "word": "practically",
+   "base": "practical",
+   "from": 11.94,
+   "to": 10.14
+  },
+  {
+   "word": "preconception",
+   "base": "conception",
+   "from": 14.25,
+   "to": 12.79
+  },
+  {
+   "word": "predictive",
+   "base": "predict",
+   "from": 13.38,
+   "to": 11.46
+  },
+  {
+   "word": "predominant",
+   "base": "dominant",
+   "from": 13.54,
+   "to": 12.25
+  },
+  {
+   "word": "predominate",
+   "base": "dominate",
+   "from": 13.82,
+   "to": 11.79
+  },
+  {
+   "word": "prehistoric",
+   "base": "historic",
+   "from": 13.37,
+   "to": 11.9
+  },
+  {
+   "word": "preoccupation",
+   "base": "occupation",
+   "from": 13.13,
+   "to": 12.32
+  },
+  {
+   "word": "prescribed",
+   "base": "prescribe",
+   "from": 13.28,
+   "to": 12.71
+  },
+  {
+   "word": "preservation",
+   "base": "preserve",
+   "from": 12.37,
+   "to": 10.15
+  },
+  {
+   "word": "preserve",
+   "base": "serve",
+   "from": 11.12,
+   "to": 9.25
+  },
+  {
+   "word": "preside",
+   "base": "side",
+   "from": 12.75,
+   "to": 10.25
+  },
+  {
+   "word": "pretend",
+   "base": "tend",
+   "from": 11.52,
+   "to": 10.63
+  },
+  {
+   "word": "pretension",
+   "base": "tension",
+   "from": 13.88,
+   "to": 11.71
+  },
+  {
+   "word": "preventive",
+   "base": "prevent",
+   "from": 12.92,
+   "to": 10.89
+  },
+  {
+   "word": "preview",
+   "base": "view",
+   "from": 12.9,
+   "to": 10.4
+  },
+  {
+   "word": "proceeding",
+   "base": "proceed",
+   "from": 13.07,
+   "to": 11.71
+  },
+  {
+   "word": "proceeds",
+   "base": "proceed",
+   "from": 12.98,
+   "to": 11.61
+  },
+  {
+   "word": "profoundly",
+   "base": "profound",
+   "from": 12.68,
+   "to": 12.18
+  },
+  {
+   "word": "projecting",
+   "base": "project",
+   "from": 14.08,
+   "to": 11.58
+  },
+  {
+   "word": "projector",
+   "base": "project",
+   "from": 13.37,
+   "to": 10.87
+  },
+  {
+   "word": "promising",
+   "base": "promise",
+   "from": 11.92,
+   "to": 10.8
+  },
+  {
+   "word": "promoter",
+   "base": "promote",
+   "from": 13.07,
+   "to": 10.88
+  },
+  {
+   "word": "proportions",
+   "base": "proportion",
+   "from": 13.07,
+   "to": 11.79
+  },
+  {
+   "word": "prospecting",
+   "base": "prospect",
+   "from": 13.93,
+   "to": 11.49
+  },
+  {
+   "word": "prospector",
+   "base": "prospect",
+   "from": 14.2,
+   "to": 11.79
+  },
+  {
+   "word": "prototypical",
+   "base": "prototype",
+   "from": 14.07,
+   "to": 13.44
+  },
+  {
+   "word": "publicity",
+   "base": "public",
+   "from": 12.16,
+   "to": 9.66
+  },
+  {
+   "word": "puzzling",
+   "base": "puzzle",
+   "from": 13.77,
+   "to": 12.37
+  },
+  {
+   "word": "qualified",
+   "base": "qualify",
+   "from": 12.57,
+   "to": 11.89
+  },
+  {
+   "word": "quarterly",
+   "base": "quarter",
+   "from": 13.52,
+   "to": 11.02
+  },
+  {
+   "word": "quilter",
+   "base": "quilt",
+   "from": 14.11,
+   "to": 13.1
+  },
+  {
+   "word": "quotation",
+   "base": "quote",
+   "from": 13.14,
+   "to": 12.05
+  },
+  {
+   "word": "radically",
+   "base": "radical",
+   "from": 12.69,
+   "to": 11.83
+  },
+  {
+   "word": "rancher",
+   "base": "ranch",
+   "from": 12.89,
+   "to": 12.49
+  },
+  {
+   "word": "ranching",
+   "base": "ranch",
+   "from": 13.86,
+   "to": 12.29
+  },
+  {
+   "word": "rashly",
+   "base": "rash",
+   "from": 14.09,
+   "to": 13.46
+  },
+  {
+   "word": "realization",
+   "base": "realize",
+   "from": 12.47,
+   "to": 10.18
+  },
+  {
+   "word": "receiver",
+   "base": "receive",
+   "from": 11.74,
+   "to": 9.46
+  },
+  {
+   "word": "receptionist",
+   "base": "reception",
+   "from": 13.36,
+   "to": 12.56
+  },
+  {
+   "word": "recompose",
+   "base": "compose",
+   "from": 14.12,
+   "to": 12.53
+  },
+  {
+   "word": "reflective",
+   "base": "reflect",
+   "from": 12.77,
+   "to": 10.78
+  },
+  {
+   "word": "reformer",
+   "base": "reform",
+   "from": 12.73,
+   "to": 10.62
+  },
+  {
+   "word": "reigning",
+   "base": "reign",
+   "from": 13.87,
+   "to": 13.22
+  },
+  {
+   "word": "relaxation",
+   "base": "relax",
+   "from": 13.0,
+   "to": 12.39
+  },
+  {
+   "word": "relaxed",
+   "base": "relax",
+   "from": 12.6,
+   "to": 11.79
+  },
+  {
+   "word": "reliance",
+   "base": "rely",
+   "from": 12.78,
+   "to": 11.77
+  },
+  {
+   "word": "relieved",
+   "base": "relieve",
+   "from": 13.51,
+   "to": 12.19
+  },
+  {
+   "word": "reluctantly",
+   "base": "reluctant",
+   "from": 12.82,
+   "to": 12.24
+  },
+  {
+   "word": "remaining",
+   "base": "remain",
+   "from": 11.09,
+   "to": 9.04
+  },
+  {
+   "word": "remains",
+   "base": "remain",
+   "from": 12.39,
+   "to": 9.89
+  },
+  {
+   "word": "reminder",
+   "base": "remind",
+   "from": 12.12,
+   "to": 11.02
+  },
+  {
+   "word": "removal",
+   "base": "remove",
+   "from": 12.22,
+   "to": 10.48
+  },
+  {
+   "word": "rendering",
+   "base": "render",
+   "from": 13.44,
+   "to": 12.1
+  },
+  {
+   "word": "reportedly",
+   "base": "reported",
+   "from": 12.12,
+   "to": 9.62
+  },
+  {
+   "word": "representation",
+   "base": "represent",
+   "from": 11.52,
+   "to": 10.33
+  },
+  {
+   "word": "resemblance",
+   "base": "resemble",
+   "from": 12.91,
+   "to": 12.49
+  },
+  {
+   "word": "resolved",
+   "base": "resolve",
+   "from": 12.29,
+   "to": 11.44
+  },
+  {
+   "word": "responsive",
+   "base": "response",
+   "from": 12.78,
+   "to": 10.3
+  },
+  {
+   "word": "restricted",
+   "base": "restrict",
+   "from": 13.13,
+   "to": 12.1
+  },
+  {
+   "word": "restrictive",
+   "base": "restrict",
+   "from": 13.08,
+   "to": 12.6
+  },
+  {
+   "word": "retriever",
+   "base": "retrieve",
+   "from": 13.95,
+   "to": 12.79
+  },
+  {
+   "word": "revered",
+   "base": "revere",
+   "from": 14.09,
+   "to": 13.71
+  },
+  {
+   "word": "reversible",
+   "base": "reverse",
+   "from": 14.13,
+   "to": 12.59
+  },
+  {
+   "word": "revolutionize",
+   "base": "revolution",
+   "from": 13.47,
+   "to": 12.04
+  },
+  {
+   "word": "rhythmic",
+   "base": "rhythm",
+   "from": 13.13,
+   "to": 12.49
+  },
+  {
+   "word": "rhythmical",
+   "base": "rhythm",
+   "from": 14.1,
+   "to": 12.49
+  },
+  {
+   "word": "rigidity",
+   "base": "rigid",
+   "from": 13.91,
+   "to": 13.34
+  },
+  {
+   "word": "saltiness",
+   "base": "salty",
+   "from": 14.1,
+   "to": 13.63
+  },
+  {
+   "word": "scaled",
+   "base": "scale",
+   "from": 13.24,
+   "to": 10.74
+  },
+  {
+   "word": "scattered",
+   "base": "scatter",
+   "from": 12.96,
+   "to": 12.19
+  },
+  {
+   "word": "scenic",
+   "base": "scene",
+   "from": 13.02,
+   "to": 10.52
+  },
+  {
+   "word": "scholarly",
+   "base": "scholar",
+   "from": 12.64,
+   "to": 11.35
+  },
+  {
+   "word": "scraping",
+   "base": "scrape",
+   "from": 13.55,
+   "to": 12.74
+  },
+  {
+   "word": "sculptural",
+   "base": "sculpture",
+   "from": 13.85,
+   "to": 12.46
+  },
+  {
+   "word": "seasoning",
+   "base": "season",
+   "from": 13.18,
+   "to": 10.68
+  },
+  {
+   "word": "sectional",
+   "base": "section",
+   "from": 14.17,
+   "to": 11.67
+  },
+  {
+   "word": "securely",
+   "base": "secure",
+   "from": 13.65,
+   "to": 11.59
+  },
+  {
+   "word": "seemingly",
+   "base": "seeming",
+   "from": 11.8,
+   "to": 9.3
+  },
+  {
+   "word": "selective",
+   "base": "select",
+   "from": 12.62,
+   "to": 11.57
+  },
+  {
+   "word": "sensation",
+   "base": "sense",
+   "from": 12.11,
+   "to": 9.61
+  },
+  {
+   "word": "sensational",
+   "base": "sensation",
+   "from": 13.31,
+   "to": 10.81
+  },
+  {
+   "word": "sensible",
+   "base": "sense",
+   "from": 12.6,
+   "to": 10.1
+  },
+  {
+   "word": "sentimental",
+   "base": "sentiment",
+   "from": 13.04,
+   "to": 12.7
+  },
+  {
+   "word": "seriously",
+   "base": "serious",
+   "from": 10.91,
+   "to": 9.86
+  },
+  {
+   "word": "serving",
+   "base": "serve",
+   "from": 11.76,
+   "to": 9.26
+  },
+  {
+   "word": "setting",
+   "base": "set",
+   "from": 10.78,
+   "to": 8.5
+  },
+  {
+   "word": "sharply",
+   "base": "sharp",
+   "from": 11.95,
+   "to": 11.31
+  },
+  {
+   "word": "shaver",
+   "base": "shave",
+   "from": 14.02,
+   "to": 13.02
+  },
+  {
+   "word": "sheltered",
+   "base": "shelter",
+   "from": 13.74,
+   "to": 11.8
+  },
+  {
+   "word": "shifting",
+   "base": "shift",
+   "from": 12.87,
+   "to": 11.02
+  },
+  {
+   "word": "shining",
+   "base": "shine",
+   "from": 12.85,
+   "to": 12.04
+  },
+  {
+   "word": "shipment",
+   "base": "ship",
+   "from": 12.79,
+   "to": 10.86
+  },
+  {
+   "word": "shocked",
+   "base": "shock",
+   "from": 12.49,
+   "to": 11.48
+  },
+  {
+   "word": "shocking",
+   "base": "shock",
+   "from": 12.58,
+   "to": 11.48
+  },
+  {
+   "word": "shortly",
+   "base": "short",
+   "from": 11.49,
+   "to": 9.59
+  },
+  {
+   "word": "shutter",
+   "base": "shut",
+   "from": 13.17,
+   "to": 11.1
+  },
+  {
+   "word": "sickness",
+   "base": "sick",
+   "from": 12.88,
+   "to": 11.18
+  },
+  {
+   "word": "significantly",
+   "base": "significant",
+   "from": 10.83,
+   "to": 9.79
+  },
+  {
+   "word": "sloping",
+   "base": "slope",
+   "from": 13.79,
+   "to": 12.06
+  },
+  {
+   "word": "smoothly",
+   "base": "smooth",
+   "from": 12.61,
+   "to": 11.56
+  },
+  {
+   "word": "solicitor",
+   "base": "solicit",
+   "from": 14.15,
+   "to": 13.54
+  },
+  {
+   "word": "solidly",
+   "base": "solid",
+   "from": 13.54,
+   "to": 11.29
+  },
+  {
+   "word": "soloist",
+   "base": "solo",
+   "from": 13.89,
+   "to": 12.95
+  },
+  {
+   "word": "sparingly",
+   "base": "sparing",
+   "from": 14.14,
+   "to": 12.78
+  },
+  {
+   "word": "specified",
+   "base": "specify",
+   "from": 13.45,
+   "to": 12.56
+  },
+  {
+   "word": "spectacularly",
+   "base": "spectacular",
+   "from": 13.93,
+   "to": 12.35
+  },
+  {
+   "word": "spherical",
+   "base": "sphere",
+   "from": 13.89,
+   "to": 12.96
+  },
+  {
+   "word": "spined",
+   "base": "spin",
+   "from": 14.11,
+   "to": 11.68
+  },
+  {
+   "word": "spinning",
+   "base": "spin",
+   "from": 13.89,
+   "to": 11.68
+  },
+  {
+   "word": "spontaneously",
+   "base": "spontaneous",
+   "from": 13.48,
+   "to": 13.0
+  },
+  {
+   "word": "squarely",
+   "base": "square",
+   "from": 13.28,
+   "to": 11.74
+  },
+  {
+   "word": "staggered",
+   "base": "stagger",
+   "from": 13.7,
+   "to": 13.24
+  },
+  {
+   "word": "standardize",
+   "base": "standard",
+   "from": 13.74,
+   "to": 11.24
+  },
+  {
+   "word": "standardized",
+   "base": "standardize",
+   "from": 12.65,
+   "to": 10.56
+  },
+  {
+   "word": "standing",
+   "base": "stand",
+   "from": 11.6,
+   "to": 9.1
+  },
+  {
+   "word": "striking",
+   "base": "strike",
+   "from": 12.18,
+   "to": 10.46
+  },
+  {
+   "word": "strikingly",
+   "base": "striking",
+   "from": 13.48,
+   "to": 10.98
+  },
+  {
+   "word": "strings",
+   "base": "string",
+   "from": 12.4,
+   "to": 11.59
+  },
+  {
+   "word": "stubbornness",
+   "base": "stubborn",
+   "from": 14.24,
+   "to": 13.31
+  },
+  {
+   "word": "stylized",
+   "base": "stylize",
+   "from": 13.85,
+   "to": 11.35
+  },
+  {
+   "word": "subdiscipline",
+   "base": "discipline",
+   "from": 14.29,
+   "to": 11.97
+  },
+  {
+   "word": "subjected",
+   "base": "subject",
+   "from": 12.73,
+   "to": 10.23
+  },
+  {
+   "word": "subsequently",
+   "base": "subsequent",
+   "from": 12.31,
+   "to": 11.99
+  },
+  {
+   "word": "substantially",
+   "base": "substantial",
+   "from": 12.25,
+   "to": 11.63
+  },
+  {
+   "word": "sufficiently",
+   "base": "sufficient",
+   "from": 12.56,
+   "to": 11.91
+  },
+  {
+   "word": "suited",
+   "base": "suit",
+   "from": 12.42,
+   "to": 10.77
+  },
+  {
+   "word": "supercontinent",
+   "base": "continent",
+   "from": 14.11,
+   "to": 12.59
+  },
+  {
+   "word": "superficially",
+   "base": "superficial",
+   "from": 14.29,
+   "to": 13.34
+  },
+  {
+   "word": "supplementary",
+   "base": "supplement",
+   "from": 14.05,
+   "to": 13.26
+  },
+  {
+   "word": "supplementation",
+   "base": "supplement",
+   "from": 14.21,
+   "to": 13.26
+  },
+  {
+   "word": "supremely",
+   "base": "supreme",
+   "from": 14.11,
+   "to": 11.61
+  },
+  {
+   "word": "surging",
+   "base": "surge",
+   "from": 13.9,
+   "to": 12.61
+  },
+  {
+   "word": "surpassingly",
+   "base": "surpassing",
+   "from": 14.62,
+   "to": 13.37
+  },
+  {
+   "word": "survivor",
+   "base": "survive",
+   "from": 11.57,
+   "to": 11.0
+  },
+  {
+   "word": "suspender",
+   "base": "suspend",
+   "from": 14.1,
+   "to": 12.4
+  },
+  {
+   "word": "sustained",
+   "base": "sustain",
+   "from": 12.69,
+   "to": 11.86
+  },
+  {
+   "word": "sweeping",
+   "base": "sweep",
+   "from": 12.51,
+   "to": 11.68
+  },
+  {
+   "word": "swelling",
+   "base": "swell",
+   "from": 13.28,
+   "to": 12.57
+  },
+  {
+   "word": "swiftness",
+   "base": "swift",
+   "from": 14.09,
+   "to": 13.12
+  },
+  {
+   "word": "symbolize",
+   "base": "symbol",
+   "from": 12.71,
+   "to": 11.81
+  },
+  {
+   "word": "teller",
+   "base": "tell",
+   "from": 13.44,
+   "to": 10.94
+  },
+  {
+   "word": "temporarily",
+   "base": "temporary",
+   "from": 12.37,
+   "to": 11.93
+  },
+  {
+   "word": "tempting",
+   "base": "tempt",
+   "from": 13.09,
+   "to": 12.77
+  },
+  {
+   "word": "tendency",
+   "base": "tend",
+   "from": 11.58,
+   "to": 11.03
+  },
+  {
+   "word": "tender",
+   "base": "tend",
+   "from": 11.98,
+   "to": 10.53
+  },
+  {
+   "word": "tenderness",
+   "base": "tender",
+   "from": 13.46,
+   "to": 10.96
+  },
+  {
+   "word": "theoretically",
+   "base": "theoretical",
+   "from": 13.0,
+   "to": 12.2
+  },
+  {
+   "word": "thousandfold",
+   "base": "thousand",
+   "from": 14.12,
+   "to": 11.62
+  },
+  {
+   "word": "threadlike",
+   "base": "thread",
+   "from": 14.11,
+   "to": 12.62
+  },
+  {
+   "word": "threateningly",
+   "base": "threatening",
+   "from": 14.11,
+   "to": 11.61
+  },
+  {
+   "word": "tilted",
+   "base": "tilt",
+   "from": 13.55,
+   "to": 12.63
+  },
+  {
+   "word": "torturous",
+   "base": "torture",
+   "from": 14.06,
+   "to": 13.28
+  },
+  {
+   "word": "touched",
+   "base": "touch",
+   "from": 11.89,
+   "to": 10.49
+  },
+  {
+   "word": "touching",
+   "base": "touch",
+   "from": 13.19,
+   "to": 10.69
+  },
+  {
+   "word": "towering",
+   "base": "tower",
+   "from": 13.22,
+   "to": 11.55
+  },
+  {
+   "word": "transmitter",
+   "base": "transmit",
+   "from": 13.36,
+   "to": 12.76
+  },
+  {
+   "word": "trapper",
+   "base": "trap",
+   "from": 14.0,
+   "to": 12.3
+  },
+  {
+   "word": "troubling",
+   "base": "trouble",
+   "from": 12.91,
+   "to": 10.41
+  },
+  {
+   "word": "trumpeter",
+   "base": "trumpet",
+   "from": 14.05,
+   "to": 13.66
+  },
+  {
+   "word": "unadorned",
+   "base": "adorned",
+   "from": 14.08,
+   "to": 13.69
+  },
+  {
+   "word": "unaided",
+   "base": "aided",
+   "from": 14.06,
+   "to": 13.34
+  },
+  {
+   "word": "unbearable",
+   "base": "bearable",
+   "from": 13.36,
+   "to": 11.67
+  },
+  {
+   "word": "unbecoming",
+   "base": "becoming",
+   "from": 14.06,
+   "to": 11.56
+  },
+  {
+   "word": "unbiased",
+   "base": "biased",
+   "from": 14.01,
+   "to": 12.65
+  },
+  {
+   "word": "unbridgeable",
+   "base": "bridgeable",
+   "from": 14.11,
+   "to": 11.73
+  },
+  {
+   "word": "unbroken",
+   "base": "broken",
+   "from": 13.77,
+   "to": 11.81
+  },
+  {
+   "word": "uncharted",
+   "base": "charted",
+   "from": 14.04,
+   "to": 12.13
+  },
+  {
+   "word": "unconsolidated",
+   "base": "consolidated",
+   "from": 14.11,
+   "to": 13.53
+  },
+  {
+   "word": "unconventional",
+   "base": "conventional",
+   "from": 13.32,
+   "to": 11.73
+  },
+  {
+   "word": "unconvincing",
+   "base": "convincing",
+   "from": 14.05,
+   "to": 11.71
+  },
+  {
+   "word": "uncover",
+   "base": "cover",
+   "from": 12.13,
+   "to": 9.63
+  },
+  {
+   "word": "underdeveloped",
+   "base": "developed",
+   "from": 14.08,
+   "to": 11.58
+  },
+  {
+   "word": "underestimate",
+   "base": "estimate",
+   "from": 12.67,
+   "to": 11.32
+  },
+  {
+   "word": "underestimated",
+   "base": "estimated",
+   "from": 13.47,
+   "to": 11.62
+  },
+  {
+   "word": "undergraduate",
+   "base": "graduate",
+   "from": 12.23,
+   "to": 11.56
+  },
+  {
+   "word": "underground",
+   "base": "ground",
+   "from": 12.4,
+   "to": 9.9
+  },
+  {
+   "word": "underpass",
+   "base": "pass",
+   "from": 14.07,
+   "to": 11.57
+  },
+  {
+   "word": "underscore",
+   "base": "score",
+   "from": 12.53,
+   "to": 10.57
+  },
+  {
+   "word": "undertake",
+   "base": "take",
+   "from": 11.99,
+   "to": 9.49
+  },
+  {
+   "word": "undertaking",
+   "base": "undertake",
+   "from": 13.24,
+   "to": 10.74
+  },
+  {
+   "word": "underwater",
+   "base": "water",
+   "from": 13.19,
+   "to": 10.69
+  },
+  {
+   "word": "undeserved",
+   "base": "deserved",
+   "from": 14.05,
+   "to": 11.83
+  },
+  {
+   "word": "undifferentiated",
+   "base": "differentiated",
+   "from": 14.08,
+   "to": 13.36
+  },
+  {
+   "word": "undistorted",
+   "base": "distorted",
+   "from": 14.12,
+   "to": 13.42
+  },
+  {
+   "word": "undisturbed",
+   "base": "disturbed",
+   "from": 13.72,
+   "to": 12.87
+  },
+  {
+   "word": "unearth",
+   "base": "earth",
+   "from": 13.42,
+   "to": 11.16
+  },
+  {
+   "word": "unemployed",
+   "base": "employed",
+   "from": 12.66,
+   "to": 11.65
+  },
+  {
+   "word": "uneven",
+   "base": "even",
+   "from": 13.01,
+   "to": 10.51
+  },
+  {
+   "word": "unevenly",
+   "base": "evenly",
+   "from": 14.28,
+   "to": 11.78
+  },
+  {
+   "word": "unexplored",
+   "base": "explored",
+   "from": 14.16,
+   "to": 11.66
+  },
+  {
+   "word": "unfair",
+   "base": "fair",
+   "from": 12.15,
+   "to": 10.94
+  },
+  {
+   "word": "unfavorable",
+   "base": "favorable",
+   "from": 13.61,
+   "to": 12.64
+  },
+  {
+   "word": "uniformity",
+   "base": "uniform",
+   "from": 13.82,
+   "to": 12.48
+  },
+  {
+   "word": "uninhabited",
+   "base": "inhabited",
+   "from": 13.9,
+   "to": 13.28
+  },
+  {
+   "word": "uniqueness",
+   "base": "unique",
+   "from": 13.58,
+   "to": 11.16
+  },
+  {
+   "word": "unlikely",
+   "base": "likely",
+   "from": 11.4,
+   "to": 9.69
+  },
+  {
+   "word": "unload",
+   "base": "load",
+   "from": 12.83,
+   "to": 11.91
+  },
+  {
+   "word": "unmatched",
+   "base": "matched",
+   "from": 14.12,
+   "to": 11.66
+  },
+  {
+   "word": "unpack",
+   "base": "pack",
+   "from": 13.52,
+   "to": 11.56
+  },
+  {
+   "word": "unparalleled",
+   "base": "paralleled",
+   "from": 13.81,
+   "to": 13.23
+  },
+  {
+   "word": "unpromising",
+   "base": "promising",
+   "from": 14.11,
+   "to": 11.61
+  },
+  {
+   "word": "unquestioning",
+   "base": "questioning",
+   "from": 14.1,
+   "to": 11.6
+  },
+  {
+   "word": "unrestrained",
+   "base": "restrained",
+   "from": 14.05,
+   "to": 13.46
+  },
+  {
+   "word": "unrestricted",
+   "base": "restricted",
+   "from": 13.74,
+   "to": 12.5
+  },
+  {
+   "word": "unsatisfactory",
+   "base": "satisfactory",
+   "from": 13.91,
+   "to": 13.45
+  },
+  {
+   "word": "unselfish",
+   "base": "selfish",
+   "from": 14.05,
+   "to": 13.28
+  },
+  {
+   "word": "unshaken",
+   "base": "shaken",
+   "from": 14.11,
+   "to": 13.56
+  },
+  {
+   "word": "unsophisticated",
+   "base": "sophisticated",
+   "from": 14.06,
+   "to": 12.0
+  },
+  {
+   "word": "unspoiled",
+   "base": "spoiled",
+   "from": 14.06,
+   "to": 13.37
+  },
+  {
+   "word": "unstable",
+   "base": "stable",
+   "from": 12.82,
+   "to": 11.91
+  },
+  {
+   "word": "untapped",
+   "base": "tapped",
+   "from": 14.21,
+   "to": 12.18
+  },
+  {
+   "word": "untouched",
+   "base": "touched",
+   "from": 13.17,
+   "to": 10.89
+  },
+  {
+   "word": "unwarranted",
+   "base": "warranted",
+   "from": 13.95,
+   "to": 13.27
+  },
+  {
+   "word": "urbanism",
+   "base": "urban",
+   "from": 14.06,
+   "to": 11.56
+  },
+  {
+   "word": "urbanization",
+   "base": "urbanize",
+   "from": 13.82,
+   "to": 12.14
+  },
+  {
+   "word": "urbanize",
+   "base": "urban",
+   "from": 14.69,
+   "to": 12.19
+  },
+  {
+   "word": "utilization",
+   "base": "utilize",
+   "from": 13.31,
+   "to": 12.98
+  },
+  {
+   "word": "vanishing",
+   "base": "vanish",
+   "from": 13.84,
+   "to": 12.26
+  },
+  {
+   "word": "vaporize",
+   "base": "vapor",
+   "from": 14.17,
+   "to": 13.64
+  },
+  {
+   "word": "varied",
+   "base": "vary",
+   "from": 12.66,
+   "to": 11.52
+  },
+  {
+   "word": "vastness",
+   "base": "vast",
+   "from": 14.23,
+   "to": 11.73
+  },
+  {
+   "word": "vaulted",
+   "base": "vault",
+   "from": 13.83,
+   "to": 13.37
+  },
+  {
+   "word": "veining",
+   "base": "vein",
+   "from": 14.11,
+   "to": 12.61
+  },
+  {
+   "word": "victorious",
+   "base": "victory",
+   "from": 13.53,
+   "to": 11.42
+  },
+  {
+   "word": "violently",
+   "base": "violent",
+   "from": 12.96,
+   "to": 11.39
+  },
+  {
+   "word": "violinist",
+   "base": "violin",
+   "from": 13.79,
+   "to": 13.32
+  },
+  {
+   "word": "virtuous",
+   "base": "virtue",
+   "from": 13.64,
+   "to": 12.63
+  },
+  {
+   "word": "vitality",
+   "base": "vital",
+   "from": 13.07,
+   "to": 12.42
+  },
+  {
+   "word": "warily",
+   "base": "wary",
+   "from": 13.87,
+   "to": 12.87
+  },
+  {
+   "word": "warrantable",
+   "base": "warrant",
+   "from": 15.65,
+   "to": 13.17
+  },
+  {
+   "word": "weariness",
+   "base": "weary",
+   "from": 14.05,
+   "to": 13.14
+  },
+  {
+   "word": "weathering",
+   "base": "weather",
+   "from": 13.92,
+   "to": 11.42
+  },
+  {
+   "word": "weaver",
+   "base": "weave",
+   "from": 13.78,
+   "to": 12.77
+  },
+  {
+   "word": "wholesaler",
+   "base": "wholesale",
+   "from": 13.82,
+   "to": 13.35
+  },
+  {
+   "word": "woolly",
+   "base": "wool",
+   "from": 14.05,
+   "to": 12.76
+  },
+  {
+   "word": "worldly",
+   "base": "world",
+   "from": 13.42,
+   "to": 10.92
+  }
+ ],
+ "filled": [
+  {
+   "word": "indiscrimination",
+   "base": "discrimination",
+   "penalty": 1.0,
+   "difficulty": 12.64
+  },
+  {
+   "word": "nonrelevant",
+   "base": "relevant",
+   "penalty": 0.4,
+   "difficulty": 11.87
+  },
+  {
+   "word": "oversecretion",
+   "base": "secretion",
+   "penalty": 0.5,
+   "difficulty": 14.59
+  },
+  {
+   "word": "overtire",
+   "base": "tire",
+   "penalty": 0.5,
+   "difficulty": 11.99
+  },
+  {
+   "word": "platelike",
+   "base": "plate",
+   "penalty": 0.4,
+   "difficulty": 10.98
+  },
+  {
+   "word": "semiliterate",
+   "base": "literate",
+   "penalty": 0.6,
+   "difficulty": 14.2
+  },
+  {
+   "word": "semimolten",
+   "base": "molten",
+   "penalty": 0.6,
+   "difficulty": 14.34
+  },
+  {
+   "word": "subduct",
+   "base": "duct",
+   "penalty": 0.8,
+   "difficulty": 13.9
+  }
+ ],
+ "unresolved": [
+  "antiquate",
+  "asperse",
+  "bereave",
+  "contemn",
+  "edentate",
+  "emaciate",
+  "endotherm",
+  "foreshorten",
+  "frowzy",
+  "kymograph",
+  "locomote",
+  "locoweed",
+  "rarefy",
+  "stereophotograph",
+  "weaverbird"
+ ]
+}
