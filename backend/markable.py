@@ -2,7 +2,6 @@
 cursor can hover and mark them (§11). The backend owns the deck and the
 inflection mapping; the frontend only moves a cursor over given spans."""
 
-import json
 import re
 
 from backend import config

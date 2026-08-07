@@ -4,6 +4,7 @@ import asyncio
 import json
 import os
 import random
+import time
 
 from openai import AsyncOpenAI
 
@@ -12,7 +13,8 @@ from backend import config
 PROVIDERS = {
     "gemini": {
         "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
-        "default_model": "gemini-2.0-flash",
+        # free tier: flash-lite has a much higher daily quota than flash
+        "default_model": "gemini-2.5-flash-lite",
     },
     "groq": {
         "base_url": "https://api.groq.com/openai/v1",
@@ -22,9 +24,12 @@ PROVIDERS = {
 
 
 class FixtureProvider:
-    """Replays pre-recorded questions when no API key is configured."""
+    """Replays pre-recorded, fully validated question payloads when no API
+    key is configured. Not a chat provider: the orchestrator detects it and
+    skips generation entirely."""
 
     name = "fixture"
+    model = "fixture"
 
     def __init__(self):
         self._store: dict[str, list[dict]] = {}
@@ -32,20 +37,19 @@ class FixtureProvider:
             self._store = json.loads(config.FIXTURES_PATH.read_text())
         self._cursors: dict[str, int] = {}
 
-    async def complete_json(self, question_type: str, system: str,
-                            user: str) -> dict:
+    def take_questions(self, question_type: str, n: int) -> list[dict]:
         pool = self._store.get(question_type, [])
         if not pool:
-            raise RuntimeError(
-                f"no fixtures for question type '{question_type}' "
-                f"(and no LLM API key configured)")
-        i = self._cursors.get(question_type, random.randrange(len(pool)))
-        self._cursors[question_type] = (i + 1) % len(pool)
-        return dict(pool[i])
+            return []
+        start = self._cursors.get(question_type,
+                                  random.randrange(len(pool)))
+        out = [dict(pool[(start + i) % len(pool)]) for i in range(n)]
+        self._cursors[question_type] = (start + n) % len(pool)
+        return out
 
-    @property
-    def model(self) -> str:
-        return "fixture"
+    async def complete_json(self, question_type: str, system: str,
+                            user: str) -> dict:
+        raise RuntimeError("fixture provider does not generate")
 
 
 class OpenAICompatProvider:
@@ -55,6 +59,19 @@ class OpenAICompatProvider:
         self._client = AsyncOpenAI(
             api_key=api_key, base_url=PROVIDERS[name]["base_url"])
         self._semaphore = asyncio.Semaphore(config.MAX_CONCURRENCY)
+        self._request_times: list[float] = []
+        self._pace_lock = asyncio.Lock()
+
+    async def _pace(self) -> None:
+        """Keep under MAX_RPM requests per minute (free-tier limits)."""
+        async with self._pace_lock:
+            now = time.monotonic()
+            self._request_times = [t for t in self._request_times
+                                   if now - t < 60]
+            if len(self._request_times) >= config.MAX_RPM:
+                wait = 60 - (now - self._request_times[0]) + 0.1
+                await asyncio.sleep(wait)
+            self._request_times.append(time.monotonic())
 
     async def complete_json(self, question_type: str, system: str,
                             user: str) -> dict:
@@ -62,6 +79,7 @@ class OpenAICompatProvider:
         for attempt in range(config.MAX_RETRIES + 1):
             try:
                 async with self._semaphore:
+                    await self._pace()
                     resp = await self._client.chat.completions.create(
                         model=self.model,
                         messages=[{"role": "system", "content": system},
@@ -72,7 +90,10 @@ class OpenAICompatProvider:
                 return json.loads(resp.choices[0].message.content)
             except Exception as exc:  # noqa: BLE001 - retry then surface
                 last_error = exc
-                await asyncio.sleep(2 ** attempt + random.random())
+                backoff = 2 ** attempt + random.random()
+                if "429" in str(exc):
+                    backoff = 20 * (attempt + 1)
+                await asyncio.sleep(backoff)
         raise RuntimeError(f"LLM call failed after retries: {last_error}")
 
 

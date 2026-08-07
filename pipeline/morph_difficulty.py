@@ -28,10 +28,9 @@ import json
 import math
 from pathlib import Path
 
+from merge import coca_ranks, fit_zipf_to_rank
 from nltk.corpus import wordnet as wn
 from wordfreq import zipf_frequency
-
-from merge import coca_ranks, fit_zipf_to_rank
 
 BASE = Path(__file__).resolve().parent.parent
 VOCAB = BASE / "data" / "vocabulary.json"

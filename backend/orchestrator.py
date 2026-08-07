@@ -7,8 +7,18 @@ import random
 import time
 import uuid
 
-from backend import (config, db, distractor, generator, grader, markable,
-                     rating, sampler, state, validator)
+from backend import (
+    config,
+    db,
+    distractor,
+    generator,
+    grader,
+    markable,
+    rating,
+    sampler,
+    state,
+    validator,
+)
 
 LETTERS = "ABCDE"
 
@@ -157,6 +167,13 @@ async def generate_quiz(quiz_id: str) -> None:
     user_id, qtype, total = (quiz["user_id"], quiz["question_type"],
                              quiz["total"])
     quiz["questions"].extend(_bank_take(user_id, qtype, total))
+
+    if _provider.name == "fixture":
+        need = total - len(quiz["questions"])
+        if need > 0:
+            quiz["questions"].extend(_provider.take_questions(qtype, need))
+        quiz["total"] = len(quiz["questions"])
+        return
 
     user = _conn.execute("SELECT * FROM users WHERE id=?",
                          (user_id,)).fetchone()

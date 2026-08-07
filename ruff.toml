@@ -1,0 +1,7 @@
+line-length = 88
+
+[lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]
+[lint.per-file-ignores]
+"pipeline/merge.py" = ["B007", "B905", "E741"]

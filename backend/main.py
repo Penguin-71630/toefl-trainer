@@ -46,6 +46,17 @@ class SubmitRequest(BaseModel):
     marked_item_ids: list[int] = []
 
 
+@app.get("/health")
+def health():
+    conn = app.state.conn
+    return {
+        "vocabulary": conn.execute(
+            "SELECT COUNT(*) AS n FROM vocabulary").fetchone()["n"],
+        "grammar_points": conn.execute(
+            "SELECT COUNT(*) AS n FROM grammar_points").fetchone()["n"],
+    }
+
+
 @app.post("/users")
 def create_user(req: UserRequest):
     conn = app.state.conn
@@ -104,10 +115,10 @@ def submit_quiz(quiz_id: str, req: SubmitRequest):
         return orchestrator.submit(
             quiz_id, [a.model_dump() for a in req.answers],
             req.marked_item_ids)
-    except KeyError:
-        raise HTTPException(404, "quiz not found or expired")
+    except KeyError as exc:
+        raise HTTPException(404, "quiz not found or expired") from exc
     except ValueError as exc:
-        raise HTTPException(409, str(exc))
+        raise HTTPException(409, str(exc)) from exc
 
 
 @app.post("/quizzes/{quiz_id}/abandon")

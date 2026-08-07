@@ -62,5 +62,6 @@ MARKABLE_MIN_DIFFICULTY = 10.0
 
 # --- llm (§8) ---
 MAX_CONCURRENCY = 4
+MAX_RPM = 12
 MAX_RETRIES = 2
 GENERATION_ATTEMPTS = 2            # per question, before fallback

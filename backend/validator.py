@@ -120,7 +120,7 @@ def _build_display(correct_version: str, segments: list[str],
         cursor = pos + len(seg)
 
     display, offsets, shift = correct_version, [], 0
-    for i, ((start, end), shown) in enumerate(zip(spans, segments)):
+    for i, ((start, end), shown) in enumerate(zip(spans, segments, strict=True)):
         start += shift
         end += shift
         if i == wrong_index:

@@ -20,7 +20,7 @@ def k_factor(exams_done: int) -> int:
 
 
 def quiz_delta(scores: list[float], expecteds: list[float], exams_done: int) -> float:
-    return k_factor(exams_done) * sum(s - e for s, e in zip(scores, expecteds))
+    return k_factor(exams_done) * sum(s - e for s, e in zip(scores, expecteds, strict=True))
 
 
 def clamp_rating(rating: float) -> float:

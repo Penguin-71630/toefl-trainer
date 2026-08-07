@@ -13,9 +13,8 @@ import math
 import re
 from pathlib import Path
 
-from wordfreq import zipf_frequency
-
 from merge import coca_ranks, fit_zipf_to_rank
+from wordfreq import zipf_frequency
 
 BASE = Path(__file__).resolve().parent.parent
 VOCAB = BASE / "data" / "vocabulary.json"

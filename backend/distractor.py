@@ -114,7 +114,7 @@ def _sample_words(weighted: list[tuple[str, float]], n: int) -> list[str]:
         total = sum(wt for _, wt in pool)
         r = random.uniform(0, total)
         acc = 0.0
-        for i, (word, wt) in enumerate(pool):
+        for word, wt in pool:
             acc += wt
             if acc >= r:
                 picked.append(word)
