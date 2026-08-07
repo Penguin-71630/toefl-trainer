@@ -65,7 +65,7 @@ def split_rest(line: str, rest_start: int, phr_off: int):
             phrases.append(chunk)
         else:
             for s in re.split(r"[;；]", chunk):
-                for t in s.split(","):
+                for t in re.split(r"[,/]", s):
                     t = t.strip()
                     if t and is_ascii_chunk(t):
                         synonyms.append(t)

@@ -84,6 +84,10 @@ def synonym_options(conn, target: dict) -> tuple[list[str], int]:
         used.add(trap.lower())
 
     pos = sense.get("part_of_speech") or ""
+    if pos in ("", "phr"):
+        # phrase targets have no single-word POS peers; match the POS of
+        # the correct answer instead so distractors stay plausible
+        pos = _word_pos(conn, correct) or pos
     thesaurus = {t.lower() for t in sense["thesaurus"]}
     weighted = []
     for cand in _candidate_rows(conn, target):
@@ -105,6 +109,24 @@ def synonym_options(conn, target: dict) -> tuple[list[str], int]:
     options = distractors[:3] + [correct]
     random.shuffle(options)
     return options, options.index(correct)
+
+
+def _word_pos(conn, word: str) -> str | None:
+    """POS of a word: its own vocabulary entry if present, else the most
+    common POS among senses that list it as a thesaurus synonym."""
+    row = conn.execute(
+        "SELECT senses FROM vocabulary WHERE lower(word) = lower(?)",
+        (word,)).fetchone()
+    if row:
+        return json.loads(row["senses"])[0].get("part_of_speech")
+    votes: dict[str, int] = {}
+    for r in conn.execute("SELECT senses FROM vocabulary WHERE senses LIKE ?",
+                          (f'%"{word}"%',)):
+        for s in json.loads(r["senses"]):
+            p = s.get("part_of_speech")
+            if p and p != "phr" and word in (s.get("thesaurus") or []):
+                votes[p] = votes.get(p, 0) + 1
+    return max(votes, key=votes.get) if votes else None
 
 
 def _sample_words(weighted: list[tuple[str, float]], n: int) -> list[str]:
@@ -133,13 +155,15 @@ def _fallback_pool(conn, target: dict, pos: str, exclude: set[str],
         (target["item_id"], target["difficulty"])).fetchall()
     out = []
     lowered = {e.lower() for e in exclude}
-    for row in rows:
-        if row["word"].lower() in lowered:
-            continue
-        if any(s.get("part_of_speech") == pos
-               for s in json.loads(row["senses"])):
+    for strict in (True, False):
+        for row in rows:
+            if row["word"].lower() in lowered:
+                continue
+            if strict and not any(s.get("part_of_speech") == pos
+                                  for s in json.loads(row["senses"])):
+                continue
             out.append(row["word"])
             lowered.add(row["word"].lower())
             if len(out) >= n:
-                break
+                return out
     return out

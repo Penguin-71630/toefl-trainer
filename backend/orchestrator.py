@@ -95,6 +95,8 @@ async def _build_vocab_question(target: dict, question_type: str) -> dict | None
         options, answer_index = distractor.cloze_options(_conn, target)
     else:
         options, answer_index = distractor.synonym_options(_conn, target)
+    if len(options) != 4:
+        return None
     reason = ""
     for _ in range(config.GENERATION_ATTEMPTS):
         raw = await generator.generate(_provider, target, options,
