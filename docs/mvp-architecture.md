@@ -178,9 +178,10 @@ toefl  = clamp(627 + (rating - 2100) / 6, 310, 677)   # 顯示用推估分數
 | Grandmaster | 2400–2699 | 677+ | 超出 ITP 上限 |
 | Native Speaker | 2700+ | — | 需更大詞庫才支援 |
 
-MVP 將 rating 上限 clamp 在 **2500**（`RATING_CAP`）——現有 7,439 字詞庫學完
-約 10–11k 總詞彙量，不足以支援 Grandmaster 以上的區間（Native Speaker 需 20k+）。
-未來要考 TOEFL iBT / IELTS 再擴詞庫並拉高上限。
+MVP 將 rating 上限 clamp 在 **2500**（`RATING_CAP`），但實際上現有詞庫最難的字
+只到 2250（見下），所以 Grandmaster 以上在 MVP 內幾乎不可達——這是刻意的：
+詞庫學完約 10–11k 總詞彙量，不足以認定 Grandmaster（Native Speaker 需 20k+）。
+未來要考 TOEFL iBT / IELTS 再擴詞庫，新字從 2250 往上延伸。
 
 ### 單字 rating（以百分位映射，seed 時算好存欄位）
 
@@ -189,34 +190,50 @@ MVP 將 rating 上限 clamp 在 **2500**（`RATING_CAP`）——現有 7,439 字
 改用**百分位（quantile）映射**，讓相同數量的字佔相同的 rating 區間：
 
 ```python
-# seed 時計算並寫入 vocabulary.rating（静態欄位，之後不再重算）
+# seed 時計算並寫入 vocabulary.rating（靜態欄位，之後不再重算）
 pct         = 該字 difficulty 在詞庫中的百分位          # 0.0 ~ 1.0
-rating_word = 1100 + 1300 * pct                        # 1100 ~ 2400
+rating_word = 1100 + 1150 * pct                        # 1100 ~ 2250
 ```
 
 | difficulty | 11 | 12 | 13（中位） | 13.5 | 14 | 14.5 | 15.68 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 百分位 | 9% | 23% | 50% | 67% | 84% | 99.5% | 100% |
-| rating | 1216 | 1401 | 1749 | 1969 | 2185 | 2394 | 2400 |
+| rating | 1203 | 1366 | 1674 | 1868 | 2060 | 2245 | 2250 |
 
-difficulty 為 NULL 的 38 字用中位數 1749。
+difficulty 為 NULL 的 38 字用中位數 1674。
+
+**頂端為何是 2250（Master 上緣）而不是 2400（Grandmaster）**：現有詞庫學完
+約 10–11k 總詞彙量，而 677 / Grandmaster 本來就應該**超出這個詞庫**。
+讓詞庫頂端只到 2250，才不會讓「本詞庫全通」被誤讀成「已達 677」。
 
 **一致性檢查**（這組數字的意義很直接：rating 對應「你會詞庫的多少 %」）：
 
 | rating | 段位 | 詞庫百分位 | 累計字數 |
 | --- | --- | --- | --- |
-| 1200 | Pupil | 7.7% | 569 |
-| 1400 | Specialist | 23% | 1,707 |
-| 1600 | Expert | 38% | 2,846 |
-| 1900 | Candidate Master | 62% | 4,554 |
-| **2100** | **Master（目標，≈ TOEFL 627）** | **77%** | **5,693** |
-| 2400 | Grandmaster（≈ 677） | 100% | 7,401 |
+| 1200 | Pupil | 8.7% | 644 |
+| 1400 | Specialist | 26% | 1,924 |
+| 1600 | Expert | 44% | 3,219 |
+| 1900 | Candidate Master | 70% | 5,151 |
+| **2100** | **Master（目標，≈ TOEFL 627）** | **87%** | **6,439** |
+| 2250 | Master 上緣 | 100% | 7,401（全詞庫） |
+| 2400 | Grandmaster（≈ 677） | — | 需擴詞庫 |
 
-2100 → 詞庫的 77%（5,693 字）加上一般基礎字彙 ≈ 10–11k 總詞彙量，
-與估算吻合；2400 = 全詞庫通過，對應 677 滿分。
+2100 → 詞庫的 87%（6,439 字）加上一般基礎字彙 ≈ 10k words，大致落在
+CEFR C1 的 receptive vocabulary 量級（B2 ≈ 5,000 word families、C1 ≈ 8,000），
+且留有緩衝。
+
+### 這個 anchor 是可校準的猜測
+
+rating 只量測**本系統練的字彙＋文法題表現**；ITP 的 Listening（50 題）完全沒練、
+Reading（50 題）也只間接相關。因此 UI 文案要寫成「字彙／文法部分相當於
+≈ XXX 分的水準」，**不是分數預測**。
+
+待使用者考過一次真的 ITP（或完整模擬考）後，記下實際分數並調整 anchor 常數
+（`TOEFL_ANCHOR_SCORE` / `TOEFL_ANCHOR_RATING`）即可；因為 `reviews` 是 append-only，
+rating 歷史可整條重算，不會遺失資料。
 
 百分位映射的唯一代價：它依賴當前詞庫。因此 rating **在 seed 時算好寫進資料庫就凍結**，
-未來擴詞庫時新字從 2400 往上延伸，而不是把舊字重新縮放（否則歷史 rating
+未來擴詞庫時新字從 2250 往上延伸，而不是把舊字重新縮放（否則歷史 rating
 就不可比）。
 
 ### 預期答對率（含猜對修正）
@@ -289,7 +306,7 @@ heat map 的顯示標記。
 
 ## 5. Sampler（`sampler.py`）
 
-候選池：同詞性／可出當前題型、`rating_word` 在 `rating_user ± 400` 內
+候選池：同詞性／可出當前題型、`rating_word` 在 `rating_user ± 350` 內
 （≈ 詞庫的 30% 寬度）、未在本 session 出現過。不再用「近 50 筆答對平均難度」
 這種 heuristic，一律以 `rating_user` 為基準（見 §3）。
 
@@ -297,9 +314,9 @@ heat map 的顯示標記。
 w_prof       = 1 + 3 * (1 - p_eff)                     # 1 ~ 4
 w_unfamiliar = 1 + 0.5 * unfamiliar_score              # 標記加成，會自然衰退
 w_recency    = min(1.0, 0.2 + 0.8 * days_since / 14)   # 0.2 → 1.0（14 天）
-w_level      = exp(-((rating_word - rating_user) / 200) ** 2)
+w_level      = exp(-((rating_word - rating_user) / 175) ** 2)
                                                        # 鐘形，貼合當前程度；
-                                                       # sigma 200 ≈ 詞庫的 15%
+                                                       # sigma 175 ≈ 詞庫的 15%
 weight       = (w_prof * w_unfamiliar * w_recency * w_level) ** TEMPERATURE  # T=1
 ```
 
