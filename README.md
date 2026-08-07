@@ -2,6 +2,20 @@
 
 LLM 輔助英文學習系統（TOEFL ITP + 台大資工英文）。
 
+## 快速開始
+
+```bash
+pip install -r requirements.txt
+python init.py        # 建 DB（從 data/*.json seed）＋ 建 .env
+python run.py         # 同時啟動 backend（uvicorn :8000）與 Textual CLI
+```
+
+- 沒有 API key 也能跑：`.env` 留空或 `LLM_PROVIDER=mock` 時，題目來自
+  `data/fixtures/questions.json`（40 題預先驗證過的 fixture）。
+- 要用真 LLM 出題：在 `.env` 填 `LLM_API_KEY`（Gemini 或 Groq key，自動判別），
+  預設 model 是 `gemini-2.5-flash-lite`（免費層額度最高）。
+- `python run.py backend` 只跑 backend（開發用，API 文件在 http://127.0.0.1:8000/docs）。
+
 ## Repo 結構
 
 ```text
@@ -28,10 +42,15 @@ toefl-trainer/
                               #   merge_conflicts.json、fill reports
 ```
 
-規劃中：`backend/`（FastAPI：orchestrator、sampler、distractor、LLM gateway）、
-`frontend/`（Textual CLI，之後換 React）。`data/vocabulary.json` 與
-`data/grammar.json` 是 pipeline 與 backend 的交接點（seed script 從這裡灌 SQLite）。
-架構規格見 `docs/mvp-architecture.md`。
+另有 `backend/`（FastAPI：db/seed、Elo rating、sampler、distractor、
+LLM gateway、generator、validator、grader、orchestrator）、`frontend/`
+（Textual CLI：STARTUP → WELCOME → MENU → QUIZ → RESULT 等九個畫面）、
+`pipeline/handmade_fixtures.py` / `make_fixtures.py`（fixture 生成）。
+`data/vocabulary.json` 與 `data/grammar.json` 是 pipeline 與 backend 的
+交接點（`init.py` 從這裡 seed SQLite，單字 Elo rating 依難度百分位在
+seed 時凍結）。架構規格見 `docs/mvp-architecture.md`。
+
+Lint：`python -m ruff check .`
 
 ## M0 Content Pipeline
 

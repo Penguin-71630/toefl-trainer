@@ -314,7 +314,8 @@ def abandon_to_bank(quiz_id: str) -> int:
     quiz = store.get(quiz_id)
     if quiz is None or quiz["submitted"] or not quiz["questions"]:
         return 0
+    count = len(quiz["questions"])
     bank_put(quiz["user_id"], quiz["question_type"], quiz["questions"])
     quiz["questions"] = []
     quiz["submitted"] = True
-    return len(quiz["questions"])
+    return count

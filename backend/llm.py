@@ -52,10 +52,25 @@ class FixtureProvider:
         raise RuntimeError("fixture provider does not generate")
 
 
+def _extract_json(content: str) -> dict:
+    """Parse a JSON object from a completion, tolerating markdown fences
+    and surrounding prose (models without JSON mode, e.g. Gemma)."""
+    try:
+        return json.loads(content)
+    except json.JSONDecodeError:
+        start = content.find("{")
+        end = content.rfind("}")
+        if start == -1 or end <= start:
+            raise
+        return json.loads(content[start:end + 1])
+
+
 class OpenAICompatProvider:
     def __init__(self, name: str, api_key: str, model: str):
         self.name = name
         self.model = model
+        # Gemma models on the Gemini API don't support JSON mode
+        self.supports_json_mode = not model.startswith("gemma")
         self._client = AsyncOpenAI(
             api_key=api_key, base_url=PROVIDERS[name]["base_url"])
         self._semaphore = asyncio.Semaphore(config.MAX_CONCURRENCY)
@@ -80,14 +95,20 @@ class OpenAICompatProvider:
             try:
                 async with self._semaphore:
                     await self._pace()
+                    kwargs = {}
+                    if self.supports_json_mode:
+                        kwargs["response_format"] = {"type": "json_object"}
+                    else:
+                        user = (user + "\n\nRespond with a single JSON "
+                                "object only — no markdown, no commentary.")
                     resp = await self._client.chat.completions.create(
                         model=self.model,
                         messages=[{"role": "system", "content": system},
                                   {"role": "user", "content": user}],
-                        response_format={"type": "json_object"},
                         temperature=0.9,
+                        **kwargs,
                     )
-                return json.loads(resp.choices[0].message.content)
+                return _extract_json(resp.choices[0].message.content)
             except Exception as exc:  # noqa: BLE001 - retry then surface
                 last_error = exc
                 backoff = 2 ** attempt + random.random()
