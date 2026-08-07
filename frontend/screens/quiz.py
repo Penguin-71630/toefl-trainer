@@ -129,7 +129,6 @@ class QuizScreen(Screen):
         cursor; up/down picks the horizontally nearest word on the
         nearest other line."""
         width = self._wrap_width()
-        prefix_lines = 2 if q["question_type"] == "synonym" else 0
         per_line = 2 if q["question_type"] == "written_expression" else 1
         lines = wrap_with_offsets(q["sentence"], width)
         items = []
@@ -140,10 +139,12 @@ class QuizScreen(Screen):
                     items.append({
                         "where": "s", "span": (s, e),
                         "item_id": m["item_id"],
-                        "line": prefix_lines + li * per_line,
+                        "line": li * per_line,
                         "col": (max(s, ls) + min(e, le)) / 2 - ls})
                     break
-        base = prefix_lines + len(lines) * per_line + 2
+        base = len(lines) * per_line + 2
+        if q["question_type"] == "synonym":
+            base += 2                       # the closest-in-meaning prompt
         for oi, opt_marks in enumerate(q.get("options_markable") or []):
             for m in opt_marks:
                 s, e = m["span"]
@@ -191,10 +192,6 @@ class QuizScreen(Screen):
         return spans
 
     def _render_question(self, q: dict) -> Text:
-        prefix = Text()
-        if q["question_type"] == "synonym":
-            prefix.append(f'The word "{q["word"]}" is closest in meaning '
-                          "to:\n\n")
         styles = self._mark_spans(q, "s")
         if q["question_type"] == "written_expression":
             body = render_written_expression(
@@ -213,11 +210,14 @@ class QuizScreen(Screen):
                         line.stylize(style, s - ls, e - ls)
                 body.append(line)
                 body.append("\n")
-        return prefix + body
+        return body
 
     def _render_options(self, q: dict) -> Text:
         chosen = self.answers.get(self.current)
         out = Text("\n")
+        if q["question_type"] == "synonym":
+            out.append(f'The word "{q["word"]}" is closest in meaning '
+                       "to:\n\n")
         options = q.get("options") or list("ABCD")
         labels = ([f"({LETTERS[i]}) {o}" for i, o in enumerate(options)]
                   if q.get("options")

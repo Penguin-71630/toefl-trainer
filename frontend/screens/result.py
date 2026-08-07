@@ -49,9 +49,6 @@ class ResultScreen(Screen):
                 lines.append(f"[green]<Question {n}: Correct>[/green]")
             else:
                 lines.append(f"[red]<Question {n}: Wrong>[/red]")
-            if q["question_type"] == "synonym" and q.get("word"):
-                lines.append(f'  The word [bold]"{q["word"]}"[/bold] '
-                             "is closest in meaning to:")
             if q["question_type"] == "written_expression" and \
                     q.get("segment_offsets"):
                 text = render_written_expression(
@@ -60,6 +57,9 @@ class ResultScreen(Screen):
                     "  " + ln for ln in text.markup.split("\n")))
             else:
                 lines.append(f"  {q['sentence']}")
+            if q["question_type"] == "synonym" and q.get("word"):
+                lines.append(f'  The word [bold]"{q["word"]}"[/bold] '
+                             "is closest in meaning to:")
             if q.get("options"):
                 lines.append("  " + "   ".join(
                     f"({LETTERS[i]}) {o}" for i, o in enumerate(q["options"])))

@@ -52,9 +52,6 @@ def render_review_entry(number: int, entry: dict) -> str:
     """One wrong-answer entry as Rich markup (for the review list page)."""
     lines = [f"[red]<{number}. {entry['question_type']}  "
              f"{entry['answered_at'][:16].replace('T', ' ')}>[/red]"]
-    if entry["question_type"] == "synonym" and entry.get("word"):
-        lines.append(f'  The word [bold]"{entry["word"]}"[/bold] '
-                     "is closest in meaning to:")
     sentence = entry.get("sentence") or ""
     if entry["question_type"] == "written_expression" and \
             entry.get("segment_offsets"):
@@ -64,6 +61,9 @@ def render_review_entry(number: int, entry: dict) -> str:
         lines.append(indented)
     else:
         lines.append(f"  {sentence}")
+    if entry["question_type"] == "synonym" and entry.get("word"):
+        lines.append(f'  The word [bold]"{entry["word"]}"[/bold] '
+                     "is closest in meaning to:")
     if entry.get("options"):
         opts = "   ".join(f"({LETTERS[i]}) {o}"
                           for i, o in enumerate(entry["options"]))
