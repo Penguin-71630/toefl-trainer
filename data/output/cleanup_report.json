@@ -1,0 +1,257 @@
+{
+ "renamed": [
+  {
+   "from": "at one sessio",
+   "to": "at one session",
+   "difficulty": [
+    null,
+    11.0
+   ]
+  },
+  {
+   "from": "be acquaint with",
+   "to": "be acquainted with",
+   "difficulty": [
+    14.07,
+    13.31
+   ]
+  },
+  {
+   "from": "down the drai",
+   "to": "down the drain",
+   "difficulty": [
+    14.12,
+    12.36
+   ]
+  },
+  {
+   "from": "equestria",
+   "to": "equestrian",
+   "difficulty": [
+    14.1,
+    14.07
+   ]
+  },
+  {
+   "from": "express trai",
+   "to": "express train",
+   "difficulty": [
+    14.1,
+    11.46
+   ]
+  },
+  {
+   "from": "in commo",
+   "to": "in common",
+   "difficulty": [
+    14.11,
+    9.64
+   ]
+  },
+  {
+   "from": "labor unio",
+   "to": "labor union",
+   "difficulty": [
+    14.12,
+    11.24
+   ]
+  },
+  {
+   "from": "log cabi",
+   "to": "log cabin",
+   "difficulty": [
+    14.11,
+    12.6
+   ]
+  },
+  {
+   "from": "now and the",
+   "to": "now and then",
+   "difficulty": [
+    6.48,
+    7.59
+   ]
+  },
+  {
+   "from": "pack dow",
+   "to": "pack down",
+   "difficulty": [
+    13.18,
+    11.17
+   ]
+  },
+  {
+   "from": "presidential electio",
+   "to": "presidential election",
+   "difficulty": [
+    null,
+    11.65
+   ]
+  },
+  {
+   "from": "pry ope",
+   "to": "pry open",
+   "difficulty": [
+    14.07,
+    13.83
+   ]
+  },
+  {
+   "from": "social distinctio",
+   "to": "social distinction",
+   "difficulty": [
+    null,
+    12.32
+   ]
+  },
+  {
+   "from": "torrential rai",
+   "to": "torrential rain",
+   "difficulty": [
+    14.04,
+    13.97
+   ]
+  },
+  {
+   "from": "distent",
+   "to": "distended",
+   "difficulty": [
+    null,
+    14.09
+   ]
+  },
+  {
+   "from": "hestiant",
+   "to": "hesitant",
+   "difficulty": [
+    null,
+    13.24
+   ]
+  },
+  {
+   "from": "improvision",
+   "to": "improvisation",
+   "difficulty": [
+    null,
+    13.32
+   ]
+  },
+  {
+   "from": "inpractical",
+   "to": "impractical",
+   "difficulty": [
+    null,
+    13.73
+   ]
+  },
+  {
+   "from": "malfunctional",
+   "to": "multifunctional",
+   "difficulty": [
+    null,
+    14.08
+   ]
+  },
+  {
+   "from": "morphololgy",
+   "to": "morphology",
+   "difficulty": [
+    null,
+    14.22
+   ]
+  },
+  {
+   "from": "ploished",
+   "to": "polished",
+   "difficulty": [
+    null,
+    12.91
+   ]
+  },
+  {
+   "from": "victuosity",
+   "to": "virtuosity",
+   "difficulty": [
+    null,
+    14.06
+   ]
+  },
+  {
+   "from": "ma’am",
+   "to": "ma'am",
+   "difficulty": [
+    null,
+    11.24
+   ]
+  }
+ ],
+ "merged": [
+  {
+   "from": "incorpoarate",
+   "into": "incorporate"
+  },
+  {
+   "from": "melodie",
+   "into": "melody"
+  },
+  {
+   "from": "mounmental",
+   "into": "monumental"
+  },
+  {
+   "from": "propery",
+   "into": "property"
+  },
+  {
+   "from": "romote",
+   "into": "remote"
+  }
+ ],
+ "deleted": [
+  "acqua"
+ ],
+ "glosses": [
+  {
+   "word": "illegitimate",
+   "sense": 1,
+   "from": "非嫡出子,庶子v",
+   "to": "非嫡出子,庶子"
+  },
+  {
+   "word": "plot",
+   "sense": 2,
+   "from": "密謀,策劃v",
+   "to": "密謀,策劃"
+  },
+  {
+   "word": "refresh",
+   "sense": 1,
+   "from": "提起精神,恢復精神,吃點心,喝飲料v",
+   "to": "提起精神,恢復精神,吃點心,喝飲料"
+  },
+  {
+   "word": "smell",
+   "sense": 1,
+   "from": "聞,探出,察覺,發出. . . 的味道v",
+   "to": "聞,探出,察覺,發出. . . 的味道"
+  },
+  {
+   "word": "supposedly",
+   "sense": 0,
+   "from": "按說，應該i",
+   "to": "按說，應該"
+  },
+  {
+   "word": "to and fro",
+   "sense": 0,
+   "from": "來來回回i",
+   "to": "來來回回"
+  },
+  {
+   "word": "traverse",
+   "sense": 1,
+   "from": "橫過,穿過,經過,在. . . 來回移動,反對vi",
+   "to": "橫過,穿過,經過,在. . . 來回移動,反對"
+  }
+ ]
+}

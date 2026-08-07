@@ -3330,32 +3330,6 @@
   "phrase_attribute": null
  },
  {
-  "word": "acqua",
-  "sources": [
-   "wym"
-  ],
-  "senses": [
-   {
-    "part_of_speech": "interj",
-    "gloss": "熟悉",
-    "thesaurus": [
-     "inform about",
-     "acquaint with"
-    ],
-    "_gloss_origin": "wym"
-   }
-  ],
-  "difficulty": 14.11,
-  "_rank": 17626,
-  "_rank_source": "zipf",
-  "word_family_id": null,
-  "id": 122,
-  "exam_tags": [
-   "toefl_itp"
-  ],
-  "phrase_attribute": null
- },
- {
   "word": "acquaint",
   "sources": [
    "wym",
@@ -15784,7 +15758,7 @@
   }
  },
  {
-  "word": "at one sessio",
+  "word": "at one session",
   "sources": [
    "wym"
   ],
@@ -15796,7 +15770,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 11.0,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -20048,7 +20022,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "be acquaint with",
+  "word": "be acquainted with",
   "sources": [
    "wym"
   ],
@@ -20060,7 +20034,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 14.07,
+  "difficulty": 13.31,
   "_rank": 17232,
   "_rank_source": "zipf",
   "word_family_id": null,
@@ -61908,7 +61882,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "distent",
+  "word": "distended",
   "sources": [
    "wym"
   ],
@@ -61920,7 +61894,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 14.09,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": 1109,
@@ -64058,7 +64032,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "down the drai",
+  "word": "down the drain",
   "sources": [
    "wym"
   ],
@@ -64072,7 +64046,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 14.12,
+  "difficulty": 12.36,
   "_rank": 17805,
   "_rank_source": "zipf",
   "word_family_id": null,
@@ -71864,7 +71838,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "equestria",
+  "word": "equestrian",
   "sources": [
    "wym"
   ],
@@ -71876,7 +71850,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 14.1,
+  "difficulty": 14.07,
   "_rank": 17531,
   "_rank_source": "zipf",
   "word_family_id": null,
@@ -76222,7 +76196,7 @@
   }
  },
  {
-  "word": "express trai",
+  "word": "express train",
   "sources": [
    "wym"
   ],
@@ -76234,7 +76208,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 14.1,
+  "difficulty": 11.46,
   "_rank": 17594,
   "_rank_source": "zipf",
   "word_family_id": null,
@@ -94942,7 +94916,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "hestiant",
+  "word": "hesitant",
   "sources": [
    "wym"
   ],
@@ -94957,7 +94931,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 13.24,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -98800,7 +98774,7 @@
    },
    {
     "part_of_speech": "n",
-    "gloss": "非嫡出子,庶子v",
+    "gloss": "非嫡出子,庶子",
     "thesaurus": [],
     "_gloss_origin": "toefl_txt"
    }
@@ -101150,7 +101124,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "improvision",
+  "word": "improvisation",
   "sources": [
    "wym"
   ],
@@ -101165,7 +101139,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 13.32,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": 878,
@@ -101470,7 +101444,7 @@
   }
  },
  {
-  "word": "in commo",
+  "word": "in common",
   "sources": [
    "wym"
   ],
@@ -101482,7 +101456,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 14.11,
+  "difficulty": 9.64,
   "_rank": 17707,
   "_rank_source": "zipf",
   "word_family_id": null,
@@ -102771,36 +102745,10 @@
   "phrase_attribute": null
  },
  {
-  "word": "incorpoarate",
-  "sources": [
-   "wym"
-  ],
-  "senses": [
-   {
-    "part_of_speech": "v",
-    "gloss": "合併，併入；包含",
-    "thesaurus": [
-     "merge",
-     "unite",
-     "contain"
-    ],
-    "_gloss_origin": "wym"
-   }
-  ],
-  "difficulty": null,
-  "_rank": null,
-  "_rank_source": "none",
-  "word_family_id": null,
-  "id": 3640,
-  "exam_tags": [
-   "toefl_itp"
-  ],
-  "phrase_attribute": null
- },
- {
   "word": "incorporate",
   "sources": [
-   "toefl_txt"
+   "toefl_txt",
+   "wym"
   ],
   "senses": [
    {
@@ -102813,6 +102761,16 @@
     ],
     "_gloss_origin": "toefl_txt",
     "_thesaurus_origin": "wordnet"
+   },
+   {
+    "part_of_speech": "v",
+    "gloss": "合併，併入；包含",
+    "thesaurus": [
+     "merge",
+     "unite",
+     "contain"
+    ],
+    "_gloss_origin": "wym"
    }
   ],
   "difficulty": 11.36,
@@ -105904,7 +105862,7 @@
   }
  },
  {
-  "word": "inpractical",
+  "word": "impractical",
   "sources": [
    "wym"
   ],
@@ -105916,7 +105874,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 13.73,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": 824,
@@ -112848,7 +112806,7 @@
   }
  },
  {
-  "word": "labor unio",
+  "word": "labor union",
   "sources": [
    "wym"
   ],
@@ -112860,7 +112818,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 14.12,
+  "difficulty": 11.24,
   "_rank": 17758,
   "_rank_source": "zipf",
   "word_family_id": null,
@@ -117429,7 +117387,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "log cabi",
+  "word": "log cabin",
   "sources": [
    "wym"
   ],
@@ -117447,7 +117405,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 14.11,
+  "difficulty": 12.6,
   "_rank": 17704,
   "_rank_source": "zipf",
   "word_family_id": null,
@@ -119626,7 +119584,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "malfunctional",
+  "word": "multifunctional",
   "sources": [
    "wym"
   ],
@@ -119638,7 +119596,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 14.08,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": 656,
@@ -121675,7 +121633,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "ma’am",
+  "word": "ma'am",
   "sources": [
    "l6"
   ],
@@ -121687,7 +121645,7 @@
     "_gloss_origin": "llm_generated"
    }
   ],
-  "difficulty": null,
+  "difficulty": 11.24,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -122534,29 +122492,6 @@
   "phrase_attribute": null
  },
  {
-  "word": "melodie",
-  "sources": [
-   "toefl_txt"
-  ],
-  "senses": [
-   {
-    "part_of_speech": "n",
-    "gloss": "小旋律歌曲",
-    "thesaurus": [],
-    "_gloss_origin": "toefl_txt"
-   }
-  ],
-  "difficulty": 14.11,
-  "_rank": 17682,
-  "_rank_source": "zipf",
-  "word_family_id": null,
-  "id": 4348,
-  "exam_tags": [
-   "toefl_itp"
-  ],
-  "phrase_attribute": null
- },
- {
   "word": "melodious",
   "sources": [
    "wym"
@@ -122614,8 +122549,8 @@
  {
   "word": "melody",
   "sources": [
-   "wym",
-   "toefl_txt"
+   "toefl_txt",
+   "wym"
   ],
   "senses": [
    {
@@ -122625,6 +122560,12 @@
      "tune"
     ],
     "_gloss_origin": "wym"
+   },
+   {
+    "part_of_speech": "n",
+    "gloss": "小旋律歌曲",
+    "thesaurus": [],
+    "_gloss_origin": "toefl_txt"
    }
   ],
   "difficulty": 12.46,
@@ -126443,7 +126384,8 @@
  {
   "word": "monumental",
   "sources": [
-   "toefl_txt"
+   "toefl_txt",
+   "wym"
   ],
   "senses": [
    {
@@ -126454,6 +126396,14 @@
     ],
     "_gloss_origin": "toefl_txt",
     "_thesaurus_origin": "wordnet"
+   },
+   {
+    "part_of_speech": "adj",
+    "gloss": "傑出的，不朽的",
+    "thesaurus": [
+     "outstanding"
+    ],
+    "_gloss_origin": "wym"
    }
   ],
   "difficulty": 13.04,
@@ -126602,7 +126552,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "morphololgy",
+  "word": "morphology",
   "sources": [
    "wym"
   ],
@@ -126614,7 +126564,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 14.22,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -127125,31 +127075,6 @@
   "_rank_source": "coca",
   "word_family_id": null,
   "id": 4520,
-  "exam_tags": [
-   "toefl_itp"
-  ],
-  "phrase_attribute": null
- },
- {
-  "word": "mounmental",
-  "sources": [
-   "wym"
-  ],
-  "senses": [
-   {
-    "part_of_speech": "adj",
-    "gloss": "傑出的，不朽的",
-    "thesaurus": [
-     "outstanding"
-    ],
-    "_gloss_origin": "wym"
-   }
-  ],
-  "difficulty": null,
-  "_rank": null,
-  "_rank_source": "none",
-  "word_family_id": null,
-  "id": 4521,
   "exam_tags": [
    "toefl_itp"
   ],
@@ -130816,7 +130741,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "now and the",
+  "word": "now and then",
   "sources": [
    "wym"
   ],
@@ -130832,7 +130757,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 6.48,
+  "difficulty": 7.59,
   "_rank": 89,
   "_rank_source": "zipf",
   "word_family_id": null,
@@ -136761,7 +136686,7 @@
   }
  },
  {
-  "word": "pack dow",
+  "word": "pack down",
   "sources": [
    "wym"
   ],
@@ -136775,7 +136700,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 13.18,
+  "difficulty": 11.17,
   "_rank": 9273,
   "_rank_source": "zipf",
   "word_family_id": null,
@@ -143491,7 +143416,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "ploished",
+  "word": "polished",
   "sources": [
    "wym"
   ],
@@ -143506,7 +143431,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 12.91,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -143542,7 +143467,7 @@
    },
    {
     "part_of_speech": "v",
-    "gloss": "密謀,策劃v",
+    "gloss": "密謀,策劃",
     "thesaurus": [
      "diagram"
     ],
@@ -147459,7 +147384,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "presidential electio",
+  "word": "presidential election",
   "sources": [
    "wym"
   ],
@@ -147471,7 +147396,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 11.65,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -150305,8 +150230,8 @@
  {
   "word": "property",
   "sources": [
-   "wym",
-   "toefl_txt"
+   "toefl_txt",
+   "wym"
   ],
   "senses": [
    {
@@ -150318,24 +150243,7 @@
      "charactersitics"
     ],
     "_gloss_origin": "wym"
-   }
-  ],
-  "difficulty": 9.96,
-  "_rank": 996,
-  "_rank_source": "coca",
-  "word_family_id": 870,
-  "id": 5352,
-  "exam_tags": [
-   "toefl_itp"
-  ],
-  "phrase_attribute": null
- },
- {
-  "word": "propery",
-  "sources": [
-   "wym"
-  ],
-  "senses": [
+   },
    {
     "part_of_speech": "n",
     "gloss": "財產，所有權",
@@ -150343,11 +150251,11 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 15.12,
-  "_rank": 35558,
-  "_rank_source": "zipf",
+  "difficulty": 9.96,
+  "_rank": 996,
+  "_rank_source": "coca",
   "word_family_id": 870,
-  "id": 5353,
+  "id": 5352,
   "exam_tags": [
    "toefl_itp"
   ],
@@ -151572,7 +151480,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "pry ope",
+  "word": "pry open",
   "sources": [
    "wym"
   ],
@@ -151584,7 +151492,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 14.07,
+  "difficulty": 13.83,
   "_rank": 17232,
   "_rank_source": "zipf",
   "word_family_id": null,
@@ -157413,7 +157321,7 @@
    },
    {
     "part_of_speech": "v",
-    "gloss": "提起精神,恢復精神,吃點心,喝飲料v",
+    "gloss": "提起精神,恢復精神,吃點心,喝飲料",
     "thesaurus": [
      "review"
     ],
@@ -159533,7 +159441,8 @@
  {
   "word": "remote",
   "sources": [
-   "toefl_txt"
+   "toefl_txt",
+   "wym"
   ],
   "senses": [
    {
@@ -159550,6 +159459,16 @@
     "gloss": "遠端",
     "thesaurus": [],
     "_gloss_origin": "toefl_txt"
+   },
+   {
+    "part_of_speech": "adj",
+    "gloss": "遙遠的，偏僻的",
+    "thesaurus": [
+     "isolated",
+     "outlying",
+     "distant"
+    ],
+    "_gloss_origin": "wym"
    }
   ],
   "difficulty": 11.45,
@@ -164605,33 +164524,6 @@
   "_rank_source": "coca",
   "word_family_id": null,
   "id": 5849,
-  "exam_tags": [
-   "toefl_itp"
-  ],
-  "phrase_attribute": null
- },
- {
-  "word": "romote",
-  "sources": [
-   "wym"
-  ],
-  "senses": [
-   {
-    "part_of_speech": "adj",
-    "gloss": "遙遠的，偏僻的",
-    "thesaurus": [
-     "isolated",
-     "outlying",
-     "distant"
-    ],
-    "_gloss_origin": "wym"
-   }
-  ],
-  "difficulty": null,
-  "_rank": null,
-  "_rank_source": "none",
-  "word_family_id": null,
-  "id": 5850,
   "exam_tags": [
    "toefl_itp"
   ],
@@ -175691,7 +175583,7 @@
    },
    {
     "part_of_speech": "v",
-    "gloss": "聞,探出,察覺,發出. . . 的味道v",
+    "gloss": "聞,探出,察覺,發出. . . 的味道",
     "thesaurus": [],
     "_gloss_origin": "toefl_txt"
    }
@@ -176409,7 +176301,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "social distinctio",
+  "word": "social distinction",
   "sources": [
    "wym"
   ],
@@ -176421,7 +176313,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 12.32,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
@@ -187412,7 +187304,7 @@
   "senses": [
    {
     "part_of_speech": "adv",
-    "gloss": "按說，應該i",
+    "gloss": "按說，應該",
     "thesaurus": [
      "seemingly",
      "presumably"
@@ -194066,7 +193958,7 @@
   "senses": [
    {
     "part_of_speech": "phr",
-    "gloss": "來來回回i",
+    "gloss": "來來回回",
     "thesaurus": [],
     "_gloss_origin": "wym"
    }
@@ -194573,7 +194465,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "torrential rai",
+  "word": "torrential rain",
   "sources": [
    "wym"
   ],
@@ -194585,7 +194477,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": 14.04,
+  "difficulty": 13.97,
   "_rank": 16875,
   "_rank_source": "zipf",
   "word_family_id": null,
@@ -196083,7 +195975,7 @@
    },
    {
     "part_of_speech": "v",
-    "gloss": "橫過,穿過,經過,在. . . 來回移動,反對vi",
+    "gloss": "橫過,穿過,經過,在. . . 來回移動,反對",
     "thesaurus": [
      "track",
      "cover",
@@ -204466,7 +204358,7 @@
   "phrase_attribute": null
  },
  {
-  "word": "victuosity",
+  "word": "virtuosity",
   "sources": [
    "wym"
   ],
@@ -204478,7 +204370,7 @@
     "_gloss_origin": "wym"
    }
   ],
-  "difficulty": null,
+  "difficulty": 14.06,
   "_rank": null,
   "_rank_source": "none",
   "word_family_id": null,
