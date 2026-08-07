@@ -31,6 +31,7 @@ toefl-trainer/
 │   ├── validator.py          # 驗證 LLM 輸出
 │   ├── grader.py             # 批改（客觀題本地、翻譯題送 LLM）
 │   ├── state.py              # proficiency / streak / unfamiliar 更新
+│   ├── rating.py             # Elo：單字 rating、預期答對率、段位、TOEFL 推估
 │   ├── llm.py                # LLM gateway：provider 切換、fixture、節流重試
 │   ├── db.py                 # SQLite 連線、DDL、seed
 │   └── config.py             # 所有可調係數
@@ -63,6 +64,7 @@ CREATE TABLE vocabulary (
     id             INTEGER PRIMARY KEY,
     word           TEXT    NOT NULL,
     difficulty     REAL,                    -- log2(rank)，可為 NULL
+    rating         REAL    NOT NULL,         -- Elo（seed 時由 difficulty 百分位算出）
     word_family_id INTEGER,
     phrase_head    TEXT,                    -- phrase_attribute.head，單字為 NULL
     phrase_particles TEXT,                   -- JSON array，單字為 NULL
@@ -71,7 +73,7 @@ CREATE TABLE vocabulary (
     senses         TEXT NOT NULL             -- JSON array（含 pos/gloss/thesaurus/
                                              --   definition_en/examples）
 );
-CREATE INDEX idx_vocab_difficulty ON vocabulary(difficulty);
+CREATE INDEX idx_vocab_rating ON vocabulary(rating);
 
 CREATE TABLE grammar_points (
     id             INTEGER PRIMARY KEY,
@@ -87,7 +89,17 @@ CREATE TABLE grammar_points (
 CREATE TABLE users (
     id         INTEGER PRIMARY KEY AUTOINCREMENT,
     username   TEXT NOT NULL UNIQUE,
+    rating     REAL    NOT NULL DEFAULT 1400,   -- Elo（見 §3）
+    exams_done INTEGER NOT NULL DEFAULT 0,      -- 決定 K-factor
     created_at TEXT NOT NULL
+);
+
+CREATE TABLE rating_history (                -- 每場 exam 一筆，畫成長曲線
+    id         INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id    INTEGER NOT NULL,
+    rating     REAL    NOT NULL,
+    delta      REAL    NOT NULL,
+    recorded_at TEXT   NOT NULL
 );
 
 CREATE TABLE user_items (                    -- 字彙狀態快取
@@ -139,15 +151,121 @@ CREATE INDEX idx_reviews_item ON reviews(item_id);
 
 ---
 
-## 3. 狀態更新公式（`state.py`）
+## 3. 使用者能力估計（Elo rating，`rating.py`）
+
+採 Codeforces 式設計：**題目（單字）rating 固定**（由語料頻率標定，執行期不浮動），
+只有**使用者 rating 浮動**；一場 exam（10 題）= 一場 contest，結算一次。
+單一使用者的資料量不足以修正單字難度，讓它浮動只會把「這字難」與
+「今天忘了」混在一起。
+
+### 尺度錨定
+
+兩個 anchor：TOEFL ITP **627 → 2100**（Master，C1 下限）、**677 → 2400**（Grandmaster）。
+
+```python
+rating = 2100 + (toefl - 627) * 6        # 每 1 分 TOEFL = 6 rating
+toefl  = clamp(627 + (rating - 2100) / 6, 310, 677)   # 顯示用推估分數
+```
+
+| 段位 | rating | ≈ TOEFL | CEFR |
+| --- | --- | --- | --- |
+| Newbie | < 1200 | < 477 | A2 / B1 低 |
+| Pupil | 1200–1399 | 477–510 | B1 |
+| Specialist | 1400–1599 | 510–543 | B1 高 |
+| Expert | 1600–1899 | 543–593 | B2（1600 即 B2 下限） |
+| Candidate Master | 1900–2099 | 593–627 | B2 高 |
+| Master | 2100–2399 | 627–677 | C1（目標） |
+| Grandmaster | 2400–2699 | 677+ | 超出 ITP 上限 |
+| Native Speaker | 2700+ | — | 需更大詞庫才支援 |
+
+MVP 將 rating 上限 clamp 在 **2500**（`RATING_CAP`）——現有 7,439 字詞庫學完
+約 10–11k 總詞彙量，不足以支援 Grandmaster 以上的區間（Native Speaker 需 20k+）。
+未來要考 TOEFL iBT / IELTS 再擴詞庫並拉高上限。
+
+### 單字 rating（以百分位映射，seed 時算好存欄位）
+
+不能直接對 `difficulty` 做線性映射：詞庫難度分佈非常密集（八成在 11.1–14.1），
+線性映射會讓 rating 2100 對到詞庫的 99.5 百分位——與 2400（100%）幾乎無法區別。
+改用**百分位（quantile）映射**，讓相同數量的字佔相同的 rating 區間：
+
+```python
+# seed 時計算並寫入 vocabulary.rating（静態欄位，之後不再重算）
+pct         = 該字 difficulty 在詞庫中的百分位          # 0.0 ~ 1.0
+rating_word = 1100 + 1300 * pct                        # 1100 ~ 2400
+```
+
+| difficulty | 11 | 12 | 13（中位） | 13.5 | 14 | 14.5 | 15.68 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 百分位 | 9% | 23% | 50% | 67% | 84% | 99.5% | 100% |
+| rating | 1216 | 1401 | 1749 | 1969 | 2185 | 2394 | 2400 |
+
+difficulty 為 NULL 的 38 字用中位數 1749。
+
+**一致性檢查**（這組數字的意義很直接：rating 對應「你會詞庫的多少 %」）：
+
+| rating | 段位 | 詞庫百分位 | 累計字數 |
+| --- | --- | --- | --- |
+| 1200 | Pupil | 7.7% | 569 |
+| 1400 | Specialist | 23% | 1,707 |
+| 1600 | Expert | 38% | 2,846 |
+| 1900 | Candidate Master | 62% | 4,554 |
+| **2100** | **Master（目標，≈ TOEFL 627）** | **77%** | **5,693** |
+| 2400 | Grandmaster（≈ 677） | 100% | 7,401 |
+
+2100 → 詞庫的 77%（5,693 字）加上一般基礎字彙 ≈ 10–11k 總詞彙量，
+與估算吻合；2400 = 全詞庫通過，對應 677 滿分。
+
+百分位映射的唯一代價：它依賴當前詞庫。因此 rating **在 seed 時算好寫進資料庫就凍結**，
+未來擴詞庫時新字從 2400 往上延伸，而不是把舊字重新縮放（否則歷史 rating
+就不可比）。
+
+### 預期答對率（含猜對修正）
+
+```python
+E_raw = 1 / (1 + 10 ** ((rating_word - rating_user) / 400))
+E     = 0.25 + 0.75 * E_raw    # 四選一的 guessing floor（cloze/synonym/structure/WE）
+E     = E_raw                  # 翻譯題無猜對空間，不修正
+```
+
+這便是新字的 `p_init`，取代原本手調的線性公式（3-parameter IRT 的 guessing
+參數簡化版）。
+
+### 更新（一場 exam 結算一次）
+
+```python
+delta = K * sum(score_i - E_i for i in exam)          # 10 題一起結算
+K     = 12 if exams_done < 10 else (8 if exams_done < 40 else 4)
+rating_user = clamp(rating_user + delta, 0, RATING_CAP)
+```
+
+`score` 可以是小數（翻譯題的部分分數），Elo 的 S 值本來就允許 [0,1]，
+不需特別處理。K 遞減是西洋棋/Codeforces 慣例：初期大步收斂，
+積累資料後小步微調。初始 rating：`1400`（Specialist），或由使用者輸入
+自評 TOEFL 分數換算。
+
+理論依據：這就是 Rasch model / 1-parameter IRT 的線上梯度下降版；
+Klinkenberg et al. (2011) 的 Math Garden 以同樣方式做即時能力估計。
+
+文法題：`grammar_points` 沒有 difficulty，MVP 給固定 rating `1800`
+（`GRAMMAR_DEFAULT_RATING`，約 Expert 中段），之後可依實測答對率手動標定，
+就跟 Codeforces 人工標題目分數一樣。
+
+### 與 proficiency 的分工
+
+Elo rating：**一個數字**，管難度媒合、新字先驗、進度展示。
+`proficiency` / `streak`：**7,439 個數字**，管單字記憶狀態與間隔複習。
+兩者互補，都要保留。
+
+---
+
+## 4. 狀態更新公式（`state.py`）
 
 所有係數在 `config.py`。
 
 ```python
-# 先驗（第一次遇到該字時建立記錄）
-p_init = clamp(0.80 - 0.175 * (difficulty - 11), 0.10, 0.80)
-# difficulty 11→0.80、12→0.63、13（中位）→0.45、14→0.28、15 以上→0.10
-# difficulty 為 NULL 的 38 字用 0.45；文法考點固定用 0.4
+# 先驗（第一次遇到該字時建立記錄）：直接用 Elo 預期答對率
+p_init = E(rating_user, rating_word, question_type)     # 見 §3
+# 文法考點沒有 difficulty，固定用 0.4
 streak = 0
 unfamiliar_score = 0
 
@@ -169,18 +287,19 @@ heat map 的顯示標記。
 
 ---
 
-## 4. Sampler（`sampler.py`）
+## 5. Sampler（`sampler.py`）
 
-候選池：同詞性／可出當前題型、`difficulty` 在使用者水位 ±2.5 內、未在本
-session 出現過。水位 = 近 50 筆答對紀錄的 difficulty 平均（無紀錄時預設 11.5，
-約在分佈的 15 百分位，先從偏易的字開始）。
+候選池：同詞性／可出當前題型、`rating_word` 在 `rating_user ± 400` 內
+（≈ 詞庫的 30% 寬度）、未在本 session 出現過。不再用「近 50 筆答對平均難度」
+這種 heuristic，一律以 `rating_user` 為基準（見 §3）。
 
 ```python
 w_prof       = 1 + 3 * (1 - p_eff)                     # 1 ~ 4
 w_unfamiliar = 1 + 0.5 * unfamiliar_score              # 標記加成，會自然衰退
 w_recency    = min(1.0, 0.2 + 0.8 * days_since / 14)   # 0.2 → 1.0（14 天）
-w_level      = exp(-((difficulty - level) / 1.0) ** 2)  # 鐘形，貼合當前程度
-                                                       # 分母 1.0：分佈密集，2 會失去鑑別力
+w_level      = exp(-((rating_word - rating_user) / 200) ** 2)
+                                                       # 鐘形，貼合當前程度；
+                                                       # sigma 200 ≈ 詞庫的 15%
 weight       = (w_prof * w_unfamiliar * w_recency * w_level) ** TEMPERATURE  # T=1
 ```
 
@@ -191,7 +310,7 @@ weight       = (w_prof * w_unfamiliar * w_recency * w_level) ** TEMPERATURE  # T
 
 ---
 
-## 5. 干擾項（`distractor.py`）
+## 6. 干擾項（`distractor.py`）
 
 候選：同詞性、`difficulty` 在目標 ±1.5。
 
@@ -208,7 +327,7 @@ Synonym 題的**強版本**額外插入一個「目標字其他義項的 thesaur
 
 ---
 
-## 6. 題型與 LLM 契約
+## 7. 題型與 LLM 契約
 
 四種客觀題 + 一種自由作答。LLM 一律回傳 JSON，後端驗證後才採用；
 失敗重試一次，再失敗降級（改出不需生成題幹的題型或換題）。
@@ -296,7 +415,7 @@ LLM 輸出：
 
 ---
 
-## 7. LLM Gateway（`llm.py`）
+## 8. LLM Gateway（`llm.py`）
 
 ```python
 providers = [
@@ -317,7 +436,7 @@ providers = [
 
 ---
 
-## 8. API（`main.py`）
+## 9. API（`main.py`）
 
 | 方法 | 路徑 | 用途 |
 | --- | --- | --- |
@@ -326,7 +445,7 @@ providers = [
 | POST | `/exams/{exam_id}/submit` | `{answers: [{q_index, answer, marked_unfamiliar}]}` → 成績與逐題解析 |
 | POST | `/translations` | `{user_id}` → 一題中翻英 |
 | POST | `/translations/{id}/submit` | `{text}` → LLM 批改結果 |
-| GET | `/stats?user_id=` | 正確率、練習量、弱點字／考點 top-N |
+| GET | `/stats?user_id=` | rating、段位、推估 TOEFL、rating 成長曲線、正確率、練習量、弱點字／考點 top-N |
 | GET | `/heatmap?user_id=` | `{item_id, p_eff, unfamiliar_score}[]`（供之後前端視覺化） |
 
 答案與 explanation 在交卷前不下發。`exam_id` 對應的正解暫存在後端
@@ -334,7 +453,7 @@ providers = [
 
 ---
 
-## 9. 出題流水線（`orchestrator.py`）
+## 10. 出題流水線（`orchestrator.py`）
 
 ```python
 async def build_exam(user_id, question_type, n=10):
@@ -361,7 +480,7 @@ for ans in answers:
 
 ---
 
-## 10. CLI 狀態機（`frontend/`）
+## 11. CLI 狀態機（`frontend/`）
 
 ```
 WELCOME ─username→ MENU ─選題型→ LOADING ─10題→ EXAM ─交卷→ RESULT ─→ REVIEW
@@ -377,7 +496,7 @@ WELCOME ─username→ MENU ─選題型→ LOADING ─10題→ EXAM ─交卷�
 
 ---
 
-## 11. 安裝與啟動
+## 12. 安裝與啟動
 
 `init.py`（純標準庫）：
 1. 檢查 Python ≥ 3.10
@@ -401,7 +520,7 @@ LLM_MODEL=gemini-2.0-flash
 
 ---
 
-## 12. 有意識砍掉的功能（MVP 範圍外）
+## 13. 有意識砍掉的功能（MVP 範圍外）
 
 Auth（密碼）、placement test、完整 FSRS、單字卡與 AI collocation、
 heat map 視覺化、false-positive 以外的標記、Reading／Listening 題型、
