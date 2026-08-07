@@ -5,10 +5,13 @@ LLM 輔助英文學習系統（TOEFL ITP + 台大資工英文）。
 ## 快速開始
 
 ```bash
+python3 -m venv venv && source venv/bin/activate   # macOS/Homebrew Python 必要（PEP 668）
 pip install -r requirements.txt
 python init.py        # 建 DB（從 data/*.json seed）＋ 建 .env
 python run.py         # 同時啟動 backend（uvicorn :8000）與 Textual CLI
 ```
+
+之後每次執行：`source venv/bin/activate && python run.py`。
 
 - 沒有 API key 也能跑：`.env` 留空或 `LLM_PROVIDER=mock` 時，題目來自
   `data/fixtures/questions.json`（40 題預先驗證過的 fixture）。
