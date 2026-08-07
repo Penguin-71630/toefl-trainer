@@ -10,6 +10,7 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent.parent
 INTER = BASE / "data" / "intermediate"
 OUT = BASE / "data" / "output"
+VOCAB = BASE / "data" / "vocabulary.json"
 
 JUNK = {"n"}  # single-letter parse artifacts
 
@@ -19,7 +20,7 @@ def main():
     for f in sorted(INTER.glob("ai_gloss_batch*.json")):
         glosses.update(json.load(open(f)))
 
-    vocab = json.load(open(OUT / "vocabulary.json"))
+    vocab = json.load(open(VOCAB))
     filled, missing = [], []
     kept = []
     for it in vocab:
@@ -40,7 +41,7 @@ def main():
     for i, it in enumerate(kept, start=1):
         it["id"] = i
 
-    json.dump(kept, open(OUT / "vocabulary.json", "w"),
+    json.dump(kept, open(VOCAB, "w"),
               ensure_ascii=False, indent=1)
     json.dump({"filled": sorted(set(filled)), "missing": sorted(set(missing))},
               open(OUT / "gloss_fill_report.json", "w"),

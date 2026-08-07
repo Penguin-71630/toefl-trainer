@@ -17,16 +17,19 @@ toefl-trainer/
 │   ├── apply_ai_gloss.py     # 套用 AI 生成的繁中 gloss
 │   └── quality_report.py     # 產出品質報告
 └── data/
+    ├── vocabulary.json       # 最終詞庫（seed 來源）
+    ├── grammar.json          # 文法考點（seed 來源）
     ├── raw/                  # 來源原始檔（wym.txt、TOEFL.txt、COCA、l6.pdf、
     │                         #   barrons.epub、OG ITP pdf+OCR、Elmetaher epub）
     ├── intermediate/         # 各 parser 的中間 JSON + AI gloss 批次檔（可稽核）
-    └── output/               # vocabulary.json（最終詞庫）、quality_report.md、
-                              #   ai_todo.json、merge_conflicts.json、fill reports
+    └── output/               # quality_report.md、ai_todo.json、
+                              #   merge_conflicts.json、fill reports
 ```
 
-規劃中：`backend/`（FastAPI：auth、sampler、SRS、LLM gateway、DB migrations）、
-`frontend/`（React）、`data/grammar/`（grammar_points seed data）。
-`data/output/` 是 pipeline 與 backend 的交接點（seed script 從這裡灌 DB）。
+規劃中：`backend/`（FastAPI：orchestrator、sampler、distractor、LLM gateway）、
+`frontend/`（Textual CLI，之後換 React）。`data/vocabulary.json` 與
+`data/grammar.json` 是 pipeline 與 backend 的交接點（seed script 從這裡灌 SQLite）。
+架構規格見 `docs/mvp-architecture.md`。
 
 ## M0 Content Pipeline
 
@@ -56,7 +59,7 @@ python3 pipeline/quality_report.py
 ### 輸出
 
 - `data/intermediate/*.json` — 各來源原始 parse 結果（可稽核、可重跑）
-- `data/output/vocabulary.json` — 最終詞庫（schema 見設計文件）
+- `data/vocabulary.json` — 最終詞庫（schema 見設計文件）
 - `data/output/ai_todo.json` — 待 AI 離線生成清單（缺 gloss / 缺 thesaurus）
 - `data/output/merge_conflicts.json` — 合併決策記錄
 - `data/output/gloss_fill_report.json` / `thesaurus_report.json` — AI/WordNet 補全記錄（供抽查）

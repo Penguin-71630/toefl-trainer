@@ -8,7 +8,7 @@ Steps:
    wordfreq Zipf via a linear fit log10(rank) = a - b*zipf.
 4. word_family assignment (shared stem heuristics).
 5. phrase_attribute {head, particles} for phr items.
-6. Emit data/output/vocabulary.json, merge-conflict log, AI-todo lists.
+6. Emit data/vocabulary.json, merge-conflict log, AI-todo lists.
 """
 
 import json
@@ -23,6 +23,7 @@ from wordfreq import zipf_frequency
 BASE = Path(__file__).resolve().parent.parent
 INTER = BASE / "data" / "intermediate"
 OUT = BASE / "data" / "output"
+VOCAB = BASE / "data" / "vocabulary.json"
 
 cc = OpenCC("s2twp")
 
@@ -318,7 +319,7 @@ def main():
         out.append(it)
 
     OUT.mkdir(parents=True, exist_ok=True)
-    json.dump(out, open(OUT / "vocabulary.json", "w"),
+    json.dump(out, open(VOCAB, "w"),
               ensure_ascii=False, indent=1)
     json.dump(conflicts, open(OUT / "merge_conflicts.json", "w"),
               ensure_ascii=False, indent=1)

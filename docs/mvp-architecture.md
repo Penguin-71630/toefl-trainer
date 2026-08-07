@@ -19,9 +19,9 @@ toefl-trainer/
 ├── .gitignore                # venv/  app.db  .env
 ├── pipeline/                 # M0 內容生產線（已完成，與 runtime 無關）
 ├── data/
-│   ├── output/vocabulary.json      # 7,439 items（唯讀內容，進 repo）
-│   ├── grammar/grammar_points.json # 45 考點（唯讀內容，進 repo）
-│   └── fixtures/questions.json     # 預錄題目與批改（無 API key 時回放）
+│   ├── vocabulary.json       # 7,439 items（唯讀內容，進 repo）
+│   ├── grammar.json          # 45 考點（唯讀內容，進 repo）
+│   └── fixtures/questions.json # 預錄題目與批改（無 API key 時回放）
 ├── backend/
 │   ├── main.py               # FastAPI 端點（薄層）
 │   ├── orchestrator.py       # 流程控制：sampler → distractor → generator → validator
@@ -45,6 +45,15 @@ toefl-trainer/
 ---
 
 ## 2. 資料庫（SQLite，`app.db`，runtime 生成）
+
+### difficulty 實際分佈（7,401 字有值、38 字 NULL）
+
+min 6.13、max 15.68、mean 12.77、median 13.00。八成的字集中在 11.1–14.1，
+因此所有與 difficulty 相關的常數都以 **11–15** 這個有效區間為基準（不是理論的 2–17）。
+
+| 區間 | 6–9 | 9–10 | 10–11 | 11–12 | 12–13 | 13–14 | 14–15 | 15–16 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 字數 | 62 | 172 | 429 | 1,049 | 1,980 | 2,485 | 1,205 | 19 |
 
 `vocabulary` 與 `grammar_points` 由 seed script 從 JSON 灌入，執行期唯讀。
 
@@ -136,7 +145,9 @@ CREATE INDEX idx_reviews_item ON reviews(item_id);
 
 ```python
 # 先驗（第一次遇到該字時建立記錄）
-p_init = clamp(0.75 - 0.05 * (difficulty - 8), 0.10, 0.75)   # 文法考點用 0.4
+p_init = clamp(0.80 - 0.175 * (difficulty - 11), 0.10, 0.80)
+# difficulty 11→0.80、12→0.63、13（中位）→0.45、14→0.28、15 以上→0.10
+# difficulty 為 NULL 的 38 字用 0.45；文法考點固定用 0.4
 streak = 0
 unfamiliar_score = 0
 
@@ -160,14 +171,16 @@ heat map 的顯示標記。
 
 ## 4. Sampler（`sampler.py`）
 
-候選池：同詞性／可出當前題型、`difficulty` 在使用者水位 ±4 內、未在本
-session 出現過。水位 = 近 50 筆答對紀錄的 difficulty 平均（無紀錄時預設 10）。
+候選池：同詞性／可出當前題型、`difficulty` 在使用者水位 ±2.5 內、未在本
+session 出現過。水位 = 近 50 筆答對紀錄的 difficulty 平均（無紀錄時預設 11.5，
+約在分佈的 15 百分位，先從偏易的字開始）。
 
 ```python
 w_prof       = 1 + 3 * (1 - p_eff)                     # 1 ~ 4
 w_unfamiliar = 1 + 0.5 * unfamiliar_score              # 標記加成，會自然衰退
 w_recency    = min(1.0, 0.2 + 0.8 * days_since / 14)   # 0.2 → 1.0（14 天）
-w_level      = exp(-((difficulty - level) / 2) ** 2)    # 鐘形，貼合當前程度
+w_level      = exp(-((difficulty - level) / 1.0) ** 2)  # 鐘形，貼合當前程度
+                                                       # 分母 1.0：分佈密集，2 會失去鑑別力
 weight       = (w_prof * w_unfamiliar * w_recency * w_level) ** TEMPERATURE  # T=1
 ```
 

@@ -7,11 +7,12 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent.parent
 OUT = BASE / "data" / "output"
+VOCAB = BASE / "data" / "vocabulary.json"
 INTER = BASE / "data" / "intermediate"
 
 
 def main():
-    vocab = json.load(open(OUT / "vocabulary.json"))
+    vocab = json.load(open(VOCAB))
     todo = {
         "need_meaning": [it["word"] for it in vocab
                          if any(s["gloss"] is None for s in it["senses"])],

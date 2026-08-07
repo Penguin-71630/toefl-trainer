@@ -3,7 +3,7 @@ vocabulary union set (so distractor/synonym pools never leave the deck).
 
 Deterministic and offline. Words WordNet cannot cover stay empty and are
 listed for optional LLM enrichment later.
-Writes data/output/vocabulary.json in place and thesaurus_report.json.
+Writes data/vocabulary.json in place and thesaurus_report.json.
 """
 
 import json
@@ -13,12 +13,13 @@ from nltk.corpus import wordnet as wn
 
 BASE = Path(__file__).resolve().parent.parent
 OUT = BASE / "data" / "output"
+VOCAB = BASE / "data" / "vocabulary.json"
 
 WN_POS = {"n": "n", "v": "v", "adj": "a", "adv": "r"}
 
 
 def main():
-    vocab = json.load(open(OUT / "vocabulary.json"))
+    vocab = json.load(open(VOCAB))
     union = {it["word"] for it in vocab}
 
     filled_words, still_empty = [], []
@@ -46,7 +47,7 @@ def main():
         else:
             still_empty.append(word)
 
-    json.dump(vocab, open(OUT / "vocabulary.json", "w"),
+    json.dump(vocab, open(VOCAB, "w"),
               ensure_ascii=False, indent=1)
     json.dump({"filled": filled_words, "still_empty": still_empty},
               open(OUT / "thesaurus_report.json", "w"),
