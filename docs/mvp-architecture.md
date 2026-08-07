@@ -387,7 +387,7 @@ LLM 輸入：考點 `name` / `description` / `error_patterns` / `example`。
 LLM 輸出：
 ```json
 {"full_sentence": "Mount Kilauea, a volcano located in Hawaii, is one of …",
- "stem": "Mount Kilauea, ______, is one of …",
+ "stem": "Mount Kilauea, ______ in Hawaii, is one of …",
  "correct_option": "a volcano located",
  "wrong_options": [
    {"text": "which a volcano",   "error_pattern": "誤用關係代名詞開頭卻無動詞"},
@@ -416,7 +416,11 @@ LLM 輸出：
 驗證：4 段皆為句子的子字串且互不重疊；把錯段換成 `corrected_segment` 後
 等於 `correct_version`（自我一致性）；`error_pattern` 等於後端指定的那個。
 
-### E. translation（中翻英，LLM 批改）
+### E. translation（中翻英，LLM 批改）——**MVP 暫緩**
+
+> 2026-08 決定：先不做翻譯題。四種客觀題型已足夠支撑 MVP，且拿掉它後
+> 批改完全本地化（LLM 只在出題階段出現）。規格保留備未來實作；
+> 「目標字未用就扣分」的規則屆時要重設計（合理同義表達不應被罰）。
 
 出題 LLM 輸出：
 ```json
@@ -467,15 +471,21 @@ providers = [
 | 方法 | 路徑 | 用途 |
 | --- | --- | --- |
 | POST | `/users` | `{username}` → `{user_id, is_new}`（無密碼，本地單機） |
-| POST | `/exams` | `{user_id, question_type, n=10}` → `{exam_id, questions[]}`（**不含答案**） |
-| POST | `/exams/{exam_id}/submit` | `{answers: [{q_index, answer, marked_unfamiliar}]}` → 成績與逐題解析 |
-| POST | `/translations` | `{user_id}` → 一題中翻英 |
-| POST | `/translations/{id}/submit` | `{text}` → LLM 批改結果 |
-| GET | `/stats?user_id=` | rating、段位、推估 TOEFL、rating 成長曲線、正確率、練習量、弱點字／考點 top-N |
+| POST | `/quizzes` | `{user_id, question_type, n=10}` → `{quiz_id}`（**立即回傳**，背景生成） |
+| GET | `/quizzes/{quiz_id}/status` | `{ready, total, failed}`（LOADING_QUIZ 輪詢用，0.5–1s 一次） |
+| GET | `/quizzes/{quiz_id}` | `{questions[]}`（ready == total 後取題，**不含答案**） |
+| POST | `/quizzes/{quiz_id}/submit` | `{answers: [{q_index, answer, marked_words[]}]}` → 成績與逐題解析 |
+| GET | `/stats?user_id=` | rating、段位、推估 TOEFL、rating 成長曲線、正確率、各題型作答數（USER_PROFILE 用）、弱點字／考點 top-N |
+| GET | `/reviews?user_id=&only_wrong=true` | 錯題記錄（WRONG_ANSWERS_REVIEW 用，從 reviews 表查） |
 | GET | `/heatmap?user_id=` | `{item_id, p_eff, unfamiliar_score}[]`（供之後前端視覺化） |
 
-答案與 explanation 在交卷前不下發。`exam_id` 對應的正解暫存在後端
-（記憶體 dict 或 `exams` 暫存表）。
+答案與 explanation 在交卷前不下發。`quiz_id` 對應的正解暫存在後端記憶體 dict
+（揮發性，TTL 2 小時）。
+
+**題目備用池（避免浪費 API 額度）**：生成完成但未被作答的題目（使用者中途
+離開、或同一場 quiz 未交卷）寫入 SQLite `question_bank` 表
+（`user_id, question_type, payload, created_at`）。下次組同題型的 quiz 時先從
+池裡取，不足的才呼叫 LLM 補齊；題目一旦交卷即從池中刪除。
 
 ---
 
@@ -509,14 +519,26 @@ for ans in answers:
 ## 11. CLI 狀態機（`frontend/`）
 
 ```
-WELCOME ─username→ MENU ─選題型→ LOADING ─10題→ EXAM ─交卷→ RESULT ─→ REVIEW
-                    ▲              │(失敗)                              │
-                    └──────────── ERROR ◀──────────────────────────────┘
+STARTUP ─進度條→ WELCOME ─username→ MENU ┬─選題型→ LOADING_QUIZ ─10題→ QUIZ ─交卷→ RESULT ─q→ MENU
+                                         ├─→ QUIZ_INSTRUCTION     ─q→ MENU
+                                         ├─→ RATING_INSTRUCTION   ─q→ MENU
+                                         ├─→ USER_PROFILE         ─q→ MENU
+                                         └─→ WRONG_ANSWERS_REVIEW ─q→ MENU
 ```
-- 狀態 = Textual `Screen`，轉移 = `push_screen` / `pop_screen`
-- 共用 ctx（username、user_id、exam）掛在 `App` 上
-- LOADING 用 `@work` 背景 worker 呼叫 API，顯示「出題中 n/10」
-- EXAM 內部狀態：目前題號、每題暫存答案、`u` 標記「其實不會」、可前後跳題、交卷確認
+- 狀態 = Textual `Screen`，轉移 = `push_screen` / `pop_screen`；任何 API 失敗進 ERROR 再回 MENU
+- 共用 ctx（username、user_id、quiz）掛在 `App` 上
+- MENU：分群選單（Quiz / User / Rating），上下鍵或 `j`/`k` 導航，hover 項背景提亮
+- LOADING_QUIZ：`@work` 背景 worker 輪詢 `GET /quizzes/{id}/status`，
+  進度條顯示「Preparing Cloze Problems n/10」
+- QUIZ：10 題同屏捲動；選項固定多一個 `(E) I don't know`；右上角計時器；
+  `a`–`e` 作答、`TAB`/`SHIFT+TAB` 跳題、游標在「可標記單語」間移動（`h`/`l`）、
+  `ENTER` 標記／取消標記不熟單語；不允許 `q` 離開；`s` 交卷（確認框預設 NO）
+- 「可標記單語」= 出現在詞庫且 difficulty ≥ 10 的單字／片語；由後端在出題時
+  逐題附上 `markable: [{span, item_id}]`（後端才有詞庫與 lemma 對應能力）
+- RESULT：與 REVIEW 合併，介面同 QUIZ 但逐題顯示對錯、正解、explanation；
+  `q`/`ENTER`/`ESC` 回 MENU
+- USER_PROFILE：Name、Rating（段位、推估 TOEFL）、各題型作答數（`/stats`）
+- WRONG_ANSWERS_REVIEW：錯題記錄（`/reviews?only_wrong=true`）
 - 所有 HTTP 只在 `api.py`；screen 不知道 HTTP 存在
 - 強制 UTF-8 輸出（Windows cp950 相容）；提供 `--plain` 純文字模式備援
 
@@ -549,5 +571,5 @@ LLM_MODEL=gemini-2.0-flash
 ## 13. 有意識砍掉的功能（MVP 範圍外）
 
 Auth（密碼）、placement test、完整 FSRS、單字卡與 AI collocation、
-heat map 視覺化、false-positive 以外的標記、Reading／Listening 題型、
-React 前端、雲端部署。所有 schema 都已為它們留擴充位（見各節備註）。
+heat map 視覺化、false-positive 以外的標記、**翻譯題（規格已寫於 §7-E，暫緩）**、
+Reading／Listening 題型、React 前端、雲端部署。所有 schema 都已為它們留擴充位（見各節備註）。
