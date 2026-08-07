@@ -22,9 +22,18 @@ Rules:
 - The sentence must NOT contain the word "{target['word']}" or any of its inflections.
 - The sentence must NOT contain any of these words: {json.dumps(banned)}.
 - The context must make "{target['word']}" clearly the best fit among typical confusable words.
+- If the word right before the blank would be "a" or "an", write it as "a/an" instead
+  (so the article does not give away the answer's first sound).
 
-Return JSON: {{"sentence": "...", "explanation": "..."}}
-"explanation" is in Traditional Chinese (繁體中文): why the target word fits, and one short note on why each distractor ({json.dumps(banned)}) does not."""
+Return JSON:
+{{"sentence": "...", "translation": "...",
+  "option_notes": {{{', '.join(f'{json.dumps(o)}: "..."' for o in options)}}},
+  "reasoning": "..."}}
+All of "translation", "option_notes" values, and "reasoning" are in Traditional
+Chinese (繁體中文):
+- "translation": 題目句（含正確答案填入後）的中文翻譯。
+- "option_notes": 每個選項單字的簡短中文釋義（詞性＋意思）。
+- "reasoning": 為什麼正確答案最合適、其他選項為何不合適。"""
 
 
 def synonym_prompt(target: dict, options: list[str],
@@ -46,9 +55,15 @@ Rules:
   other senses of the word.
 - The sentence must NOT contain any of these words: {json.dumps(banned + [answer])}.
 
-Return JSON: {{"sentence": "...", "explanation": "..."}}
-"explanation" is in Traditional Chinese (繁體中文): what the word means in this context
-and why "{answer}" is the closest synonym."""
+Return JSON:
+{{"sentence": "...", "translation": "...",
+  "option_notes": {{{', '.join(f'{json.dumps(o)}: "..."' for o in options)}}},
+  "reasoning": "..."}}
+All of "translation", "option_notes" values, and "reasoning" are in Traditional
+Chinese (繁體中文):
+- "translation": 題目句的中文翻譯。
+- "option_notes": 每個選項單字的簡短中文釋義（詞性＋意思）。
+- "reasoning": "{target['word']}" 在此語境的意思，以及為什麼 "{answer}" 是最接近的同義詞。"""
 
 
 def structure_prompt(target: dict) -> str:

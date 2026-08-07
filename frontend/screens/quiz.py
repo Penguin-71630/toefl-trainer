@@ -1,6 +1,7 @@
-"""QUIZ: answer with a-e, TAB between questions, h/l moves the markable-word
-cursor, ENTER marks a word as unfamiliar, s opens submit confirmation.
-q is deliberately NOT bound — you cannot quit mid-quiz."""
+"""QUIZ: answer with a-e, TAB/ENTER between questions, h/j/k/l moves the
+markable-word cursor (sentence and options), m marks a word as unfamiliar,
+s opens submit confirmation. q is deliberately NOT bound — you cannot quit
+mid-quiz."""
 
 import time
 
@@ -12,7 +13,7 @@ from textual.screen import ModalScreen, Screen
 from textual.widgets import Label, Static
 
 from frontend import api
-from frontend.screens.render import render_written_expression
+from frontend.screens.render import render_written_expression, wrap_with_offsets
 
 LETTERS = "ABCDE"
 TYPE_TITLES = {
@@ -67,14 +68,16 @@ class SubmitConfirm(ModalScreen[bool]):
 
 class QuizScreen(Screen):
     BINDINGS = [
-        Binding("tab", "next_q(1)", "Next", priority=True),
-        Binding("shift+tab", "next_q(-1)", "Prev", priority=True),
+        Binding("tab,enter", "next_q(1)", "Next", priority=True),
+        Binding("shift+tab,shift+enter", "next_q(-1)", "Prev", priority=True),
         ("a", "answer('A')", "A"), ("b", "answer('B')", "B"),
         ("c", "answer('C')", "C"), ("d", "answer('D')", "D"),
         ("e", "answer('E')", "E"),
         ("h,left", "cursor(-1)", "Word left"),
         ("l,right", "cursor(1)", "Word right"),
-        ("enter", "mark", "Mark word"),
+        ("k,up", "cursor_v(-1)", "Word up"),
+        ("j,down", "cursor_v(1)", "Word down"),
+        ("m", "mark", "Mark word"),
         ("s", "submit", "Submit"),
     ]
 
@@ -84,8 +87,10 @@ class QuizScreen(Screen):
         self.questions = quiz["questions"]
         self.current = 0
         self.answers: dict[int, str] = {}
-        self.marks: set[tuple[int, int]] = set()     # (q_index, markable idx)
-        self.cursors: dict[int, int] = {}
+        # (q_index, where, span_start) -> item_id; where is "s" (sentence)
+        # or an option index
+        self.marks: dict[tuple[int, str | int, int], int] = {}
+        self.cursors: dict[int, int] = {}            # q_index -> nav index
         self.started = time.monotonic()
 
     # ------------------------------------------------------------ layout
@@ -99,8 +104,8 @@ class QuizScreen(Screen):
         yield Static("", id="quiz-question")
         yield Static("", id="quiz-options")
         yield Static(
-            "[dim]a-e 作答  TAB 跳題  h/l 移動游標  ENTER 標記不熟  "
-            "s 交卷[/dim]", id="quiz-help")
+            "[dim]a-e 作答  TAB/ENTER 下一題  SHIFT+TAB 上一題  "
+            "h/j/k/l 移動游標  m 標記不熟  s 交卷[/dim]", id="quiz-help")
 
     def on_mount(self) -> None:
         self.set_interval(1.0, self._tick)
@@ -110,6 +115,47 @@ class QuizScreen(Screen):
         elapsed = int(time.monotonic() - self.started)
         self.query_one("#quiz-timer", Label).update(
             f"(Time Elapsed: {elapsed // 60:02d}:{elapsed % 60:02d})")
+
+    # ------------------------------------------------------ nav model
+
+    def _wrap_width(self) -> int:
+        return max(self.size.width - 6, 40)
+
+    def _nav(self, q: dict) -> list[dict]:
+        """Markable positions in visual order: sentence words (with their
+        wrapped line/column), then option words. Used by the h/j/k/l
+        cursor; up/down picks the horizontally nearest word on the
+        nearest other line."""
+        width = self._wrap_width()
+        prefix_lines = 2 if q["question_type"] == "synonym" else 0
+        per_line = 2 if q["question_type"] == "written_expression" else 1
+        lines = wrap_with_offsets(q["sentence"], width)
+        items = []
+        for m in q["markable"]:
+            s, e = m["span"]
+            for li, (ls, le) in enumerate(lines):
+                if ls <= s < le:
+                    items.append({
+                        "where": "s", "span": (s, e),
+                        "item_id": m["item_id"],
+                        "line": prefix_lines + li * per_line,
+                        "col": (max(s, ls) + min(e, le)) / 2 - ls})
+                    break
+        base = prefix_lines + len(lines) * per_line + 2
+        for oi, opt_marks in enumerate(q.get("options_markable") or []):
+            for m in opt_marks:
+                s, e = m["span"]
+                items.append({"where": oi, "span": (s, e),
+                              "item_id": m["item_id"],
+                              "line": base + oi, "col": 6 + (s + e) / 2})
+        items.sort(key=lambda it: (it["line"], it["col"]))
+        return items
+
+    def _cursor_item(self, q: dict) -> dict | None:
+        nav = self._nav(q)
+        if not nav:
+            return None
+        return nav[self.cursors.get(self.current, 0) % len(nav)]
 
     # ------------------------------------------------------------ paint
 
@@ -124,17 +170,22 @@ class QuizScreen(Screen):
             self._render_question(q))
         self.query_one("#quiz-options", Static).update(self._render_options(q))
 
-    def _mark_spans(self, q: dict) -> list[tuple[int, int, str]]:
-        """Marked words first, cursor last — user marks win visually, and the
-        cursor is visible on top of both."""
+    def _mark_spans(self, q: dict,
+                    where: str | int) -> list[tuple[int, int, str]]:
+        """Marked words first, cursor last — user marks win visually, and
+        the cursor is visible on top of both."""
         spans = []
-        for m_idx, m in enumerate(q["markable"]):
-            if (self.current, m_idx) in self.marks:
-                spans.append((m["span"][0], m["span"][1], MARK_STYLE))
-        cursor = self.cursors.get(self.current)
-        if cursor is not None and q["markable"]:
-            m = q["markable"][cursor]
-            spans.append((m["span"][0], m["span"][1], CURSOR_STYLE))
+        for (qi, w, start), _item in self.marks.items():
+            if qi != self.current or w != where:
+                continue
+            source = (q["markable"] if where == "s"
+                      else (q.get("options_markable") or [[]])[where])
+            for m in source:
+                if m["span"][0] == start:
+                    spans.append((m["span"][0], m["span"][1], MARK_STYLE))
+        cur = self._cursor_item(q)
+        if cur is not None and cur["where"] == where:
+            spans.append((cur["span"][0], cur["span"][1], CURSOR_STYLE))
         return spans
 
     def _render_question(self, q: dict) -> Text:
@@ -142,15 +193,24 @@ class QuizScreen(Screen):
         if q["question_type"] == "synonym":
             prefix.append(f'The word "{q["word"]}" is closest in meaning '
                           "to:\n\n")
+        styles = self._mark_spans(q, "s")
         if q["question_type"] == "written_expression":
             body = render_written_expression(
                 q["sentence"], q["segment_offsets"],
-                width=max(self.size.width - 6, 40),
-                extra_styles=self._mark_spans(q))
+                width=self._wrap_width(), extra_styles=styles)
         else:
-            body = Text(q["sentence"])
-            for start, end, style in self._mark_spans(q):
-                body.stylize(style, start, end)
+            # wrap manually so the nav model's line/column arithmetic
+            # matches what is displayed
+            body = Text()
+            for ls, le in wrap_with_offsets(q["sentence"],
+                                            self._wrap_width()):
+                line = Text(q["sentence"][ls:le])
+                for start, end, style in styles:
+                    s, e = max(start, ls), min(end, le)
+                    if s < e:
+                        line.stylize(style, s - ls, e - ls)
+                body.append(line)
+                body.append("\n")
         return prefix + body
 
     def _render_options(self, q: dict) -> Text:
@@ -165,6 +225,9 @@ class QuizScreen(Screen):
             line = Text("  " + label)
             if chosen == LETTERS[i]:
                 line.stylize("reverse", 2, len(line))
+            if q.get("options") and i < len(options):
+                for start, end, style in self._mark_spans(q, i):
+                    line.stylize(style, start + 6, end + 6)
             out.append(line)
             out.append("\n")
         return out
@@ -180,26 +243,42 @@ class QuizScreen(Screen):
         self._paint()
 
     def action_cursor(self, step: int) -> None:
-        q = self.questions[self.current]
-        if not q["markable"]:
+        nav = self._nav(self.questions[self.current])
+        if not nav:
             return
-        cursor = self.cursors.get(self.current)
-        if cursor is None:
-            cursor = 0 if step > 0 else len(q["markable"]) - 1
-        else:
-            cursor = (cursor + step) % len(q["markable"])
-        self.cursors[self.current] = cursor
+        cursor = self.cursors.get(self.current, 0)
+        self.cursors[self.current] = (cursor + step) % len(nav)
+        self._paint()
+
+    def action_cursor_v(self, step: int) -> None:
+        """Move to the horizontally nearest word on the nearest line
+        above/below."""
+        nav = self._nav(self.questions[self.current])
+        if not nav:
+            return
+        cursor = self.cursors.get(self.current, 0) % len(nav)
+        here = nav[cursor]
+        other_lines = sorted({it["line"] for it in nav
+                              if (it["line"] - here["line"]) * step > 0},
+                             reverse=(step < 0))
+        if not other_lines:
+            return
+        target_line = other_lines[0]
+        best = min((i for i, it in enumerate(nav)
+                    if it["line"] == target_line),
+                   key=lambda i: abs(nav[i]["col"] - here["col"]))
+        self.cursors[self.current] = best
         self._paint()
 
     def action_mark(self) -> None:
-        cursor = self.cursors.get(self.current)
-        if cursor is None:
+        cur = self._cursor_item(self.questions[self.current])
+        if cur is None:
             return
-        key = (self.current, cursor)
+        key = (self.current, cur["where"], cur["span"][0])
         if key in self.marks:
-            self.marks.discard(key)
+            del self.marks[key]
         else:
-            self.marks.add(key)
+            self.marks[key] = cur["item_id"]
         self._paint()
 
     def action_submit(self) -> None:
@@ -215,9 +294,7 @@ class QuizScreen(Screen):
     async def do_submit(self) -> None:
         answers = [{"q_index": i, "answer": letter}
                    for i, letter in self.answers.items()]
-        marked_ids = sorted({
-            self.questions[qi]["markable"][mi]["item_id"]
-            for qi, mi in self.marks})
+        marked_ids = sorted(set(self.marks.values()))
         elapsed = int(time.monotonic() - self.started)
         try:
             result = await api.submit_quiz(self.quiz["quiz_id"], answers,

@@ -103,6 +103,11 @@ async def _build_vocab_question(target: dict, question_type: str) -> dict | None
         reason = validator.check(raw, target, options, question_type)
         if reason is None:
             sentence = raw["sentence"]
+            notes = "\n".join(
+                f"({LETTERS[i]}) {o}: {raw['option_notes'][o]}"
+                for i, o in enumerate(options))
+            explanation = (f"{raw['translation']}\n\n{notes}\n\n"
+                           f"{raw['reasoning']}")
             return {
                 "question_type": question_type,
                 "item_id": target["item_id"],
@@ -113,7 +118,7 @@ async def _build_vocab_question(target: dict, question_type: str) -> dict | None
                 "sentence": sentence,
                 "options": options,
                 "answer_index": answer_index,
-                "explanation": raw["explanation"],
+                "explanation": explanation,
                 "markable": markable.find_markable(sentence),
                 "generated_by": f"{_provider.name}:{_provider.model}",
             }
@@ -213,6 +218,9 @@ def public_questions(quiz: dict) -> list[dict]:
                "sentence": q["sentence"], "markable": q["markable"]}
         if "options" in q:
             pub["options"] = q["options"]
+            if q["question_type"] in ("cloze", "synonym"):
+                pub["options_markable"] = [
+                    markable.find_markable(o) for o in q["options"]]
         if q["question_type"] == "synonym":
             pub["word"] = q["word"]
         if q["question_type"] == "written_expression":

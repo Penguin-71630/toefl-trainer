@@ -18,21 +18,36 @@ def _contains_word(text: str, word: str, inflections: bool = True) -> bool:
     return re.search(pattern, text.lower()) is not None
 
 
+def _check_vocab_explanation(raw: dict, options: list[str]) -> str | None:
+    if not raw.get("translation"):
+        return "translation is empty"
+    if not raw.get("reasoning"):
+        return "reasoning is empty"
+    notes = raw.get("option_notes")
+    if not isinstance(notes, dict):
+        return "option_notes must be an object"
+    missing = [o for o in options if not notes.get(o)]
+    if missing:
+        return f"option_notes missing entries for {missing}"
+    return None
+
+
 def check_cloze(raw: dict, target: dict, options: list[str]) -> str | None:
     sentence = raw.get("sentence", "")
     if not isinstance(sentence, str) or sentence.count(BLANK) != 1:
         return "sentence must contain exactly one ______ blank"
     if not 8 <= _word_count(sentence) <= 35:
         return "sentence must be 8-35 words"
+    if re.search(rf"\b[Aa]n?\s+{BLANK}", sentence):
+        return ("the article before the blank must be written as 'a/an', "
+                "not 'a' or 'an' (it leaks the answer's first sound)")
     if _contains_word(sentence, target["word"]):
         return f"sentence leaks the target word '{target['word']}'"
     for opt in options:
         if opt != target["word"] and _contains_word(sentence, opt,
                                                     inflections=False):
             return f"sentence contains the distractor '{opt}'"
-    if not raw.get("explanation"):
-        return "explanation is empty"
-    return None
+    return _check_vocab_explanation(raw, options)
 
 
 def check_synonym(raw: dict, target: dict, options: list[str]) -> str | None:
@@ -46,9 +61,7 @@ def check_synonym(raw: dict, target: dict, options: list[str]) -> str | None:
     for opt in options:
         if _contains_word(sentence, opt, inflections=False):
             return f"sentence contains the option '{opt}'"
-    if not raw.get("explanation"):
-        return "explanation is empty"
-    return None
+    return _check_vocab_explanation(raw, options)
 
 
 def check_structure(raw: dict, target: dict) -> str | None:

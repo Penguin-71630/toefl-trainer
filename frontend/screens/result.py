@@ -10,7 +10,11 @@ from frontend.screens.render import LETTERS, render_written_expression
 
 
 class ResultScreen(Screen):
-    BINDINGS = [("q,enter,escape", "back", "Return to menu")]
+    BINDINGS = [
+        ("q,enter,escape", "back", "Return to menu"),
+        ("j,down", "scroll(1)", "Scroll down"),
+        ("k,up", "scroll(-1)", "Scroll up"),
+    ]
 
     def __init__(self, quiz: dict, result: dict, answers: dict, elapsed: int):
         super().__init__()
@@ -28,6 +32,8 @@ class ResultScreen(Screen):
         sign = "+" if rt["delta"] >= 0 else ""
         title = TYPE_TITLES.get(self.quiz["question_type"], "Quiz")
         lines = [
+            "[dim](Q|ENTER|ESC) [RETURN TO MENU]    j/k/↑/↓ 捲動[/dim]",
+            "",
             f"[bold]{title}[/bold]"
             f"{' ' * 4}(Time Used: {self.elapsed // 60:02d}:"
             f"{self.elapsed % 60:02d})",
@@ -66,11 +72,16 @@ class ResultScreen(Screen):
             if q.get("gloss"):
                 lines.append(f"  [dim]{q.get('word', '')}: {q['gloss']}[/dim]")
             if q.get("explanation"):
-                lines.append(f"  [dim]{q['explanation']}[/dim]")
+                body = "\n".join("  " + ln
+                                 for ln in q["explanation"].split("\n"))
+                lines.append(f"[dim]{body}[/dim]")
             lines.append("")
-        lines.append("(Q|ENTER|ESC) [RETURN TO MENU]")
         return "\n".join(lines)
 
     def action_back(self) -> None:
         from frontend.screens.menu import MenuScreen
         self.app.switch_screen(MenuScreen())
+
+    def action_scroll(self, step: int) -> None:
+        body = self.query_one("#result-body", VerticalScroll)
+        body.scroll_relative(y=step * 2, animate=False)
