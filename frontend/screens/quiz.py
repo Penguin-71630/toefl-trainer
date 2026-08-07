@@ -1,7 +1,7 @@
-"""QUIZ: answer with a-e, TAB/ENTER between questions, h/j/k/l moves the
-markable-word cursor (sentence and options), m marks a word as unfamiliar,
-s opens submit confirmation. q is deliberately NOT bound — you cannot quit
-mid-quiz."""
+"""QUIZ: answer with a-e (or ENTER on an option the cursor is on),
+n / SHIFT+TAB between questions, h/j/k/l moves the markable-word cursor
+(sentence and options), m marks a word as unfamiliar, s opens submit
+confirmation. q is deliberately NOT bound — you cannot quit mid-quiz."""
 
 import time
 
@@ -68,8 +68,9 @@ class SubmitConfirm(ModalScreen[bool]):
 
 class QuizScreen(Screen):
     BINDINGS = [
-        Binding("tab,enter", "next_q(1)", "Next", priority=True),
-        Binding("shift+tab,shift+enter", "next_q(-1)", "Prev", priority=True),
+        ("n", "next_q(1)", "Next"),
+        Binding("shift+tab", "next_q(-1)", "Prev", priority=True),
+        ("enter", "toggle_option", "Toggle option"),
         ("a", "answer('A')", "A"), ("b", "answer('B')", "B"),
         ("c", "answer('C')", "C"), ("d", "answer('D')", "D"),
         ("e", "answer('E')", "E"),
@@ -104,8 +105,9 @@ class QuizScreen(Screen):
         yield Static("", id="quiz-question")
         yield Static("", id="quiz-options")
         yield Static(
-            "[dim]a-e 作答  TAB/ENTER 下一題  SHIFT+TAB 上一題  "
-            "h/j/k/l 移動游標  m 標記不熟  s 交卷[/dim]", id="quiz-help")
+            "[dim]a-e 作答  ENTER 選游標所在選項  n 下一題  "
+            "SHIFT+TAB 上一題  h/j/k/l 移動游標  m 標記不熟  "
+            "s 交卷[/dim]", id="quiz-help")
 
     def on_mount(self) -> None:
         self.set_interval(1.0, self._tick)
@@ -240,6 +242,19 @@ class QuizScreen(Screen):
 
     def action_next_q(self, step: int) -> None:
         self.current = (self.current + step) % len(self.questions)
+        self._paint()
+
+    def action_toggle_option(self) -> None:
+        """ENTER: if the cursor sits on an option's word, toggle that
+        option as the answer; otherwise do nothing."""
+        cur = self._cursor_item(self.questions[self.current])
+        if cur is None or cur["where"] == "s":
+            return
+        letter = LETTERS[cur["where"]]
+        if self.answers.get(self.current) == letter:
+            del self.answers[self.current]
+        else:
+            self.answers[self.current] = letter
         self._paint()
 
     def action_cursor(self, step: int) -> None:
