@@ -38,7 +38,7 @@ def check_cloze(raw: dict, target: dict, options: list[str]) -> str | None:
         return "sentence must contain exactly one ______ blank"
     if not 8 <= _word_count(sentence) <= 35:
         return "sentence must be 8-35 words"
-    if re.search(rf"\b[Aa]n?\s+{BLANK}", sentence):
+    if re.search(rf"(?<![/\w])[Aa]n?\s+{BLANK}", sentence):
         return ("the article before the blank must be written as 'a/an', "
                 "not 'a' or 'an' (it leaks the answer's first sound)")
     if _contains_word(sentence, target["word"]):
