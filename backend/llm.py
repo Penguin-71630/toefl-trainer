@@ -4,6 +4,7 @@ import asyncio
 import json
 import os
 import random
+import re
 import time
 
 from openai import AsyncOpenAI
@@ -53,8 +54,11 @@ class FixtureProvider:
 
 
 def _extract_json(content: str) -> dict:
-    """Parse a JSON object from a completion, tolerating markdown fences
-    and surrounding prose (models without JSON mode, e.g. Gemma)."""
+    """Parse a JSON object from a completion, tolerating markdown fences,
+    <thought> blocks, and surrounding prose (models without JSON mode,
+    e.g. Gemma)."""
+    content = re.sub(r"<thought>.*?</thought>", "", content,
+                     flags=re.DOTALL).strip()
     try:
         return json.loads(content)
     except json.JSONDecodeError:

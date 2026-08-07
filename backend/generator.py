@@ -27,20 +27,28 @@ Return JSON: {{"sentence": "...", "explanation": "..."}}
 "explanation" is in Traditional Chinese (繁體中文): why the target word fits, and one short note on why each distractor ({json.dumps(banned)}) does not."""
 
 
-def synonym_prompt(target: dict) -> str:
+def synonym_prompt(target: dict, options: list[str],
+                   answer_index: int) -> str:
     sense = target["sense"]
+    answer = options[answer_index]
+    banned = [o for o in options if o != answer]
     return f"""Write one sentence that uses the word "{target['word']}" in this specific sense:
 
 Sense: {sense.get('part_of_speech', '')} — {sense.get('gloss', '')}
 {f"English definition: {sense['definition_en']}" if sense.get('definition_en') else ''}
+The correct answer of this synonym question will be "{answer}" — in your sentence,
+"{target['word']}" must be replaceable by "{answer}" with the meaning preserved.
 
 Rules:
 - The sentence must contain "{target['word']}" (inflected forms allowed).
 - 8 to 35 words, TOEFL ITP register.
-- The context must clearly force THIS sense and rule out other senses of the word.
+- The context must clearly force the sense synonymous with "{answer}" and rule out
+  other senses of the word.
+- The sentence must NOT contain any of these words: {json.dumps(banned + [answer])}.
 
 Return JSON: {{"sentence": "...", "explanation": "..."}}
-"explanation" is in Traditional Chinese (繁體中文): what the word means in this context."""
+"explanation" is in Traditional Chinese (繁體中文): what the word means in this context
+and why "{answer}" is the closest synonym."""
 
 
 def structure_prompt(target: dict) -> str:
@@ -92,11 +100,11 @@ Return JSON:
 
 
 def build_prompt(target: dict, options: list[str] | None,
-                 question_type: str) -> str:
+                 question_type: str, answer_index: int | None = None) -> str:
     if question_type == "cloze":
         return cloze_prompt(target, options)
     if question_type == "synonym":
-        return synonym_prompt(target)
+        return synonym_prompt(target, options, answer_index)
     if question_type == "structure":
         return structure_prompt(target)
     if question_type == "written_expression":
@@ -105,8 +113,9 @@ def build_prompt(target: dict, options: list[str] | None,
 
 
 async def generate(provider, target: dict, options: list[str] | None,
-                   question_type: str, retry_hint: str = "") -> dict:
-    prompt = build_prompt(target, options, question_type)
+                   question_type: str, retry_hint: str = "",
+                   answer_index: int | None = None) -> dict:
+    prompt = build_prompt(target, options, question_type, answer_index)
     if retry_hint:
         prompt += f"\n\nYour previous attempt was rejected: {retry_hint}. Fix it."
     return await provider.complete_json(question_type, SYSTEM, prompt)

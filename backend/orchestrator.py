@@ -98,7 +98,8 @@ async def _build_vocab_question(target: dict, question_type: str) -> dict | None
     reason = ""
     for _ in range(config.GENERATION_ATTEMPTS):
         raw = await generator.generate(_provider, target, options,
-                                       question_type, retry_hint=reason)
+                                       question_type, retry_hint=reason,
+                                       answer_index=answer_index)
         reason = validator.check(raw, target, options, question_type)
         if reason is None:
             sentence = raw["sentence"]

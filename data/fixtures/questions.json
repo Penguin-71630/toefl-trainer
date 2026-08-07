@@ -2,1509 +2,1221 @@
  "cloze": [
   {
    "question_type": "cloze",
-   "item_id": 2393,
+   "item_id": 5770,
    "sense_index": 0,
-   "word": "eligible",
-   "gloss": "合格的，有資格的",
-   "item_rating": 1465.6,
-   "sentence": "Only students who have completed all core courses are ______ for the advanced seminar in the spring term.",
+   "word": "retail",
+   "gloss": "零售的",
+   "item_rating": 1368.3,
+   "sentence": "The difference between the wholesale cost and the ______ price reflects the profit margin for the store owner.",
    "options": [
-    "melodious",
-    "noisy",
-    "detrimental",
-    "eligible"
+    "retail",
+    "culinary",
+    "reminiscent",
+    "expressive"
    ],
-   "answer_index": 3,
-   "explanation": "eligible「有資格的」符合語境：完成必修課程才「有資格」修進階課。melodious 是「悅耳的」、noisy 是「吵鬧的」、detrimental 是「有害的」，皆與資格無關。",
+   "answer_index": 0,
+   "explanation": "「retail」在此指「零售的」，與文中的「wholesale」（批發的）形成對比，符合描述產品銷售價格的商業語境。而「culinary」（烹飪的）、「reminiscent」（令人回想起的）以及「expressive」（富有表現力的）在語義上與價格或利潤完全不相關。",
    "markable": [
     {
      "span": [
-      23,
-      32
+      27,
+      36
      ],
-     "item_id": 1354
+     "item_id": 7366
     },
     {
      "span": [
-      37,
-      41
+      83,
+      89
      ],
-     "item_id": 1617
+     "item_id": 4282
+    }
+   ],
+   "generated_by": "gemini:gemma-4-31b-it"
+  },
+  {
+   "question_type": "cloze",
+   "item_id": 366,
+   "sense_index": 2,
+   "word": "angle",
+   "gloss": "使轉動角度",
+   "item_rating": 1314.9,
+   "sentence": "To capture the best light for the portrait, the photographer had to ______ the camera slightly toward the window.",
+   "options": [
+    "remark",
+    "angle",
+    "dispatch",
+    "predominate"
+   ],
+   "answer_index": 1,
+   "explanation": "在此句中，angle 作為動詞，意為「調整角度」或「使轉向」，符合攝影師調整相機位置以獲取光線的語境。remark（評論）、dispatch（派遣/發送）及 predominate（佔主導地位）在語義上均無法與調整相機位置的動作相匹配。",
+   "markable": [
+    {
+     "span": [
+      34,
+      42
+     ],
+     "item_id": 5157
+    },
+    {
+     "span": [
+      86,
+      94
+     ],
+     "item_id": 6207
+    }
+   ],
+   "generated_by": "gemini:gemma-4-31b-it"
+  },
+  {
+   "question_type": "cloze",
+   "item_id": 127,
+   "sense_index": 0,
+   "word": "acquisition",
+   "gloss": "獲得",
+   "item_rating": 1401.7,
+   "sentence": "The rapid ______ of a second language often depends on the learner's exposure to native speakers and consistent practice.",
+   "options": [
+    "dismay",
+    "acquisition",
+    "immigration",
+    "ceramic"
+   ],
+   "answer_index": 1,
+   "explanation": "此處需填入表示「習得」或「獲得」的名詞，acquisition 常與 language 連用形成「語言習得」之學術術語。dismay (沮喪)、immigration (移民) 與 ceramic (陶瓷) 在語義上均無法與學習語言的過程相匹配。",
+   "markable": [
+    {
+     "span": [
+      44,
+      51
+     ],
+     "item_id": 1943
     },
     {
      "span": [
       69,
       77
      ],
-     "item_id": 195
+     "item_id": 2694
     },
     {
      "span": [
-      78,
-      85
+      101,
+      111
      ],
-     "item_id": 6039
+     "item_id": 1506
     }
    ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   },
   {
    "question_type": "cloze",
-   "item_id": 6000,
+   "item_id": 5178,
    "sense_index": 0,
-   "word": "seasoning",
-   "gloss": "調味品，調料",
-   "item_rating": 1189.4,
-   "sentence": "The chef insisted that fresh herbs, rather than any packaged ______, gave the soup its distinctive flavor.",
+   "word": "postmaster",
+   "gloss": "郵局局長",
+   "item_rating": 1301.1,
+   "sentence": "In small rural towns during the nineteenth century, the ______ often served as a central figure who managed all official communications.",
    "options": [
-    "mushroom",
-    "seasoning",
-    "accompaniment",
-    "secret"
+    "reference",
+    "debate",
+    "postmaster",
+    "hostility"
    ],
-   "answer_index": 1,
-   "explanation": "seasoning「調味料」與新鮮香草對比。mushroom 是「蘑菇」、accompaniment 是「伴隨物」、secret 是「祕密」，都無法與 packaged 搭配表達調味料。",
+   "answer_index": 2,
+   "explanation": "根據句意，此處需要一個負責管理官方通訊（郵件）的職稱，因此『postmaster』（郵局局長）最為適合。而 reference（參考/推薦）、debate（辯論）和 hostility（敵意）均非指稱人物的職位，無法在句中扮演管理者的角色。",
    "markable": [
     {
      "span": [
-      4,
-      8
-     ],
-     "item_id": 1125
-    },
-    {
-     "span": [
       9,
-      17
+      14
      ],
-     "item_id": 3766
+     "item_id": 5877
     },
     {
      "span": [
-      29,
-      34
+      121,
+      135
      ],
-     "item_id": 3347
+     "item_id": 1320
+    }
+   ],
+   "generated_by": "gemini:gemma-4-31b-it"
+  },
+  {
+   "question_type": "cloze",
+   "item_id": 4037,
+   "sense_index": 0,
+   "word": "launch",
+   "gloss": "發動",
+   "item_rating": 1200.4,
+   "sentence": "The government decided to ______ a comprehensive investigation into the cause of the environmental disaster.",
+   "options": [
+    "blast",
+    "embrace",
+    "scratch",
+    "launch"
+   ],
+   "answer_index": 3,
+   "explanation": "launch 在此意為「發動」或「啟動」，與 investigation (調查) 搭配表示正式開始一項行動。blast 指爆炸或強風，不適用於調查；embrace 指採納或擁抱，不符合啟動程序的語境；scratch 指取消或從頭開始，與此句啟動調查的意圖相反。",
+   "markable": [
+    {
+     "span": [
+      35,
+      48
+     ],
+     "item_id": 1377
     },
     {
      "span": [
-      52,
-      60
+      49,
+      62
      ],
-     "item_id": 4867
-    },
-    {
-     "span": [
-      87,
-      98
-     ],
-     "item_id": 2194
+     "item_id": 3892
     },
     {
      "span": [
       99,
-      105
+      107
      ],
-     "item_id": 2890
+     "item_id": 2099
     }
    ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   },
   {
    "question_type": "cloze",
-   "item_id": 1489,
+   "item_id": 753,
    "sense_index": 0,
-   "word": "consensus",
-   "gloss": "一致,交感",
-   "item_rating": 1351.4,
-   "sentence": "After hours of debate, the committee finally reached a ______ on the budget proposal for next year.",
+   "word": "belt",
+   "gloss": "地帶; 腰帶",
+   "item_rating": 1260.6,
+   "sentence": "Astronomers have identified a dense ______ of asteroids orbiting the sun between the orbits of Mars and Jupiter.",
    "options": [
-    "chunk",
-    "consensus",
-    "duration",
-    "undergraduate"
+    "circumstance",
+    "belt",
+    "obsession",
+    "temple"
    ],
    "answer_index": 1,
-   "explanation": "reach a consensus「達成共識」是固定搭配。chunk 是「大塊」、duration 是「持續時間」、undergraduate 是「大學生」，皆不合語意。",
+   "explanation": "此處指「地帶」，asteroid belt（小行星帶）是天文學專有名詞。circumstance（情況）指環境或條件；obsession（痴迷）指心理狀態；temple（寺廟）指建築物，三者均不符合描述天體空間分布的語境。",
    "markable": [
     {
      "span": [
-      15,
-      21
+      0,
+      11
      ],
-     "item_id": 1819
+     "item_id": 554
     },
     {
      "span": [
-      27,
-      36
+      30,
+      35
      ],
-     "item_id": 1312
+     "item_id": 1933
     },
     {
      "span": [
-      69,
-      75
+      46,
+      55
      ],
-     "item_id": 924
+     "item_id": 545
     },
     {
      "span": [
-      76,
-      84
+      56,
+      64
      ],
-     "item_id": 5358
+     "item_id": 4759
+    },
+    {
+     "span": [
+      85,
+      91
+     ],
+     "item_id": 4759
+    },
+    {
+     "span": [
+      95,
+      99
+     ],
+     "item_id": 4279
+    },
+    {
+     "span": [
+      104,
+      111
+     ],
+     "item_id": 3978
     }
    ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   },
   {
    "question_type": "cloze",
-   "item_id": 4831,
+   "item_id": 3598,
    "sense_index": 0,
-   "word": "overcrowd",
-   "gloss": "使過度擁擠",
-   "item_rating": 1330.1,
-   "sentence": "City officials worry that the new stadium will ______ the narrow streets of the historic district on game days.",
+   "word": "inability",
+   "gloss": "無能，無力",
+   "item_rating": 1508.9,
+   "sentence": "The species faced extinction due to its ______ to adapt to the rapidly changing climate of the region.",
    "options": [
-    "overcrowd",
-    "endanger",
-    "erupt",
-    "embarrass"
+    "inability",
+    "ripple",
+    "forage",
+    "drama"
    ],
    "answer_index": 0,
-   "explanation": "overcrowd「使過度擁擠」符合球賽日街道壅塞的語境。endanger 是「危及」、erupt 是「爆發」、embarrass 是「使尷尬」。",
-   "markable": [
-    {
-     "span": [
-      34,
-      41
-     ],
-     "item_id": 6405
-    },
-    {
-     "span": [
-      89,
-      97
-     ],
-     "item_id": 2207
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "cloze",
-   "item_id": 2759,
-   "sense_index": 0,
-   "word": "faithful",
-   "gloss": "信徒",
-   "item_rating": 1498.5,
-   "sentence": "Every Sunday morning, the ______ gather at the small chapel on the hill to attend the service together.",
-   "options": [
-    "liaison",
-    "violation",
-    "faithful",
-    "flock"
-   ],
-   "answer_index": 2,
-   "explanation": "the faithful「信徒（總稱）」與教堂禮拜的語境相符。liaison 是「聯絡」、violation 是「違反」、flock 雖可指教區信眾但需說 the flock of...，此處 the ______ gather 以 the faithful 最自然。",
-   "markable": [
-    {
-     "span": [
-      53,
-      59
-     ],
-     "item_id": 1105
-    },
-    {
-     "span": [
-      75,
-      81
-     ],
-     "item_id": 575
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "cloze",
-   "item_id": 4329,
-   "sense_index": 0,
-   "word": "mechanics",
-   "gloss": "機械學，力學",
-   "item_rating": 1477.5,
-   "sentence": "Students in the engineering program must master the basic principles of ______ before studying bridge design.",
-   "options": [
-    "apology",
-    "melody",
-    "mechanics",
-    "precedent"
-   ],
-   "answer_index": 2,
-   "explanation": "mechanics「力學」是橋梁設計的基礎學科。apology 是「道歉」、melody 是「旋律」、precedent 是「先例」。",
-   "markable": [
-    {
-     "span": [
-      58,
-      68
-     ],
-     "item_id": 5284
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "cloze",
-   "item_id": 6331,
-   "sense_index": 0,
-   "word": "spectacle",
-   "gloss": "奇觀；展示，景象",
-   "item_rating": 1570.2,
-   "sentence": "The annual fireworks display over the harbor is a ______ that attracts thousands of visitors every summer.",
-   "options": [
-    "staircase",
-    "steak",
-    "friction",
-    "spectacle"
-   ],
-   "answer_index": 3,
-   "explanation": "spectacle「奇觀」形容煙火表演。staircase 是「樓梯」、steak 是「牛排」、friction 是「摩擦」。",
+   "explanation": "此處需要一個名詞來描述該物種『無法』適應環境的狀態，因此 inability (無能/無力) 最為合適。ripple (波紋)、forage (尋找食物) 以及 drama (戲劇) 在語義上均與生物適應力及滅絕的脈絡完全不符。",
    "markable": [
     {
      "span": [
       4,
-      10
+      11
      ],
-     "item_id": 382
+     "item_id": 6324
     },
     {
      "span": [
-      21,
+      18,
       28
      ],
-     "item_id": 2156
+     "item_id": 2713
     },
     {
      "span": [
-      38,
-      44
+      29,
+      32
      ],
-     "item_id": 3280
+     "item_id": 2311
+    },
+    {
+     "span": [
+      50,
+      55
+     ],
+     "item_id": 149
+    },
+    {
+     "span": [
+      80,
+      87
+     ],
+     "item_id": 1214
+    }
+   ],
+   "generated_by": "gemini:gemma-4-31b-it"
+  },
+  {
+   "question_type": "cloze",
+   "item_id": 6684,
+   "sense_index": 0,
+   "word": "sweat",
+   "gloss": "汗(水)",
+   "item_rating": 1387.5,
+   "sentence": "During intense physical exercise, the body produces ______ to regulate its internal temperature and prevent overheating.",
+   "options": [
+    "custom",
+    "dresser",
+    "shortcoming",
+    "sweat"
+   ],
+   "answer_index": 3,
+   "explanation": "在此句中，描述身體在劇烈運動時為了調節體溫而產生的物質，因此『sweat』（汗水）是最合適的答案。而『custom』（習俗）、『dresser』（梳妝台）以及『shortcoming』（缺點）在生理功能的語境下完全不合邏輯。",
+   "markable": [
+    {
+     "span": [
+      7,
+      14
+     ],
+     "item_id": 3814
     },
     {
      "span": [
       62,
       70
      ],
-     "item_id": 581
+     "item_id": 5620
+    },
+    {
+     "span": [
+      75,
+      83
+     ],
+     "item_id": 3841
+    },
+    {
+     "span": [
+      84,
+      95
+     ],
+     "item_id": 6776
+    },
+    {
+     "span": [
+      100,
+      107
+     ],
+     "item_id": 5270
     }
    ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   },
   {
    "question_type": "cloze",
-   "item_id": 5420,
+   "item_id": 1534,
    "sense_index": 0,
-   "word": "pure",
-   "gloss": "純潔的; 純淨的; 完全的",
-   "item_rating": 1259.4,
-   "sentence": "The laboratory requires ______ samples of the mineral, since even tiny impurities can distort the results.",
+   "word": "consultant",
+   "gloss": "顧問，諮詢者",
+   "item_rating": 1264.3,
+   "sentence": "To improve its operational efficiency, the university brought in an outside ______ to evaluate its current administrative processes.",
    "options": [
-    "formal",
-    "pure",
-    "primary",
-    "composed"
+    "consultant",
+    "colleague",
+    "ribbon",
+    "corruption"
    ],
-   "answer_index": 1,
-   "explanation": "pure「純淨的」與後文 impurities（雜質）呼應。formal 是「正式的」、primary 是「主要的」、composed 是「鎮定的」。",
+   "answer_index": 0,
+   "explanation": "此處需要一個指稱專業外部專家的名詞，『consultant』（顧問）最為適合。而『colleague』指同事，通常非外部聘請；『ribbon』指緞帶，與語境無關；『corruption』指腐敗，詞性與語意均不符。",
    "markable": [
     {
      "span": [
-      4,
-      14
+      27,
+      37
      ],
-     "item_id": 4003
-    },
-    {
-     "span": [
-      31,
-      38
-     ],
-     "item_id": 5899
-    },
-    {
-     "span": [
-      46,
-      53
-     ],
-     "item_id": 4425
-    },
-    {
-     "span": [
-      66,
-      70
-     ],
-     "item_id": 6868
-    },
-    {
-     "span": [
-      71,
-      81
-     ],
-     "item_id": 3589
+     "item_id": 2366
     },
     {
      "span": [
       86,
-      93
+      94
      ],
-     "item_id": 2199
+     "item_id": 2590
+    },
+    {
+     "span": [
+      107,
+      121
+     ],
+     "item_id": 174
     }
    ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   },
   {
    "question_type": "cloze",
-   "item_id": 3472,
+   "item_id": 2634,
    "sense_index": 0,
-   "word": "identical",
-   "gloss": "同一的；完全相同的",
-   "item_rating": 1399.4,
-   "sentence": "The two manuscripts are nearly ______ in wording, which suggests that one was copied directly from the other.",
+   "word": "exclude",
+   "gloss": "把…排除在外，排斥",
+   "item_rating": 1365.6,
+   "sentence": "The researchers decided to ______ certain participants from the study because their health conditions did not meet the strict criteria.",
    "options": [
-    "devoted",
-    "literary",
-    "identical",
-    "indigenous"
+    "glide",
+    "mar",
+    "embody",
+    "exclude"
    ],
-   "answer_index": 2,
-   "explanation": "identical「完全相同的」與 copied directly 呼應。devoted 是「忠誠的」、literary 是「文學的」、indigenous 是「本土的」。",
+   "answer_index": 3,
+   "explanation": "根據句意，研究人員因為參與者的健康狀況不符合標準而將其『排除』在研究之外，因此 exclude 最為恰當。glide (滑行)、mar (損毀) 與 embody (體現) 在語義上完全不符合此情境。",
    "markable": [
     {
      "span": [
-      8,
-      19
+      42,
+      54
      ],
-     "item_id": 4276
+     "item_id": 4906
     },
     {
      "span": [
-      78,
-      84
+      119,
+      125
      ],
-     "item_id": 1613
+     "item_id": 6512
     }
    ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "cloze",
-   "item_id": 2584,
-   "sense_index": 0,
-   "word": "ethnic",
-   "gloss": "種族的",
-   "item_rating": 1199.0,
-   "sentence": "The museum's new exhibit celebrates the ______ diversity of the region through costumes, music, and food.",
-   "options": [
-    "sectional",
-    "ethnic",
-    "prime",
-    "square"
-   ],
-   "answer_index": 1,
-   "explanation": "ethnic diversity「族群多樣性」為固定搭配，與服飾、音樂、食物的展覽內容相符。sectional 是「部分的」、prime 是「主要的」、square 是「方形的」。",
-   "markable": [
-    {
-     "span": [
-      17,
-      24
-     ],
-     "item_id": 2656
-    },
-    {
-     "span": [
-      25,
-      35
-     ],
-     "item_id": 1069
-    },
-    {
-     "span": [
-      47,
-      56
-     ],
-     "item_id": 2221
-    },
-    {
-     "span": [
-      79,
-      87
-     ],
-     "item_id": 1641
-    }
-   ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   }
  ],
  "synonym": [
   {
    "question_type": "synonym",
-   "item_id": 1635,
+   "item_id": 4844,
    "sense_index": 0,
-   "word": "corruption",
-   "gloss": "腐敗，貪汙，墮落",
-   "item_rating": 1389.2,
-   "sentence": "The journalist spent two years documenting the corruption that had spread through the city's licensing offices.",
+   "word": "oversee",
+   "gloss": "監督，管理",
+   "item_rating": 1418.1,
+   "sentence": "The project director was hired to oversee the daily operations of the laboratory and ensure all protocols were followed.",
    "options": [
-    "graph",
-    "fraud",
-    "rectangle",
-    "mistress"
+    "drill",
+    "manage",
+    "infuse",
+    "confuse"
    ],
    "answer_index": 1,
-   "explanation": "corruption 在此指「貪腐」，與 fraud（欺詐、舞弊）意思最接近。graph 是「圖表」、rectangle 是「長方形」、mistress 是「女主人」。",
+   "explanation": "oversee 在此句中意為「監督」或「管理」，指負責掌控實驗室的日常運作。在此語境下，它與 manage（管理）的意思最為接近，均表示對組織、人員或流程的掌控與領導。",
    "markable": [
     {
      "span": [
-      4,
-      14
+      34,
+      41
      ],
-     "item_id": 3965
+     "item_id": 4844
     },
     {
      "span": [
-      31,
-      42
-     ],
-     "item_id": 2234
-    },
-    {
-     "span": [
-      47,
-      57
-     ],
-     "item_id": 1635
-    },
-    {
-     "span": [
-      67,
-      73
-     ],
-     "item_id": 6380
-    },
-    {
-     "span": [
-      93,
-      102
-     ],
-     "item_id": 4100
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "synonym",
-   "item_id": 5950,
-   "sense_index": 0,
-   "word": "schedule",
-   "gloss": "時間表；計劃表",
-   "item_rating": 1236.1,
-   "sentence": "The printed schedule on the station wall lists every departure between six in the morning and midnight.",
-   "options": [
-    "agenda",
-    "arrange",
-    "spectacle",
-    "reference"
-   ],
-   "answer_index": 0,
-   "explanation": "schedule 指「時刻表」，agenda（議程表）意思最接近。arrange 是動詞「安排」、spectacle 是「奇觀」、reference 是「參考」。",
-   "markable": [
-    {
-     "span": [
-      12,
-      20
-     ],
-     "item_id": 5950
-    },
-    {
-     "span": [
-      53,
-      62
-     ],
-     "item_id": 1942
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "synonym",
-   "item_id": 3408,
-   "sense_index": 0,
-   "word": "horizontal",
-   "gloss": "水平的",
-   "item_rating": 1579.2,
-   "sentence": "The painter used a ruler to keep the horizontal lines of the fence perfectly straight across the canvas.",
-   "options": [
-    "moderate",
-    "generic",
-    "mobile",
-    "level"
-   ],
-   "answer_index": 3,
-   "explanation": "horizontal「水平的」與 level（平的、水平的）最接近。moderate 是「適度的」、generic 是「通用的」、mobile 是「可移動的」。",
-   "markable": [
-    {
-     "span": [
-      37,
-      47
-     ],
-     "item_id": 3408
-    },
-    {
-     "span": [
-      97,
-      103
-     ],
-     "item_id": 989
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "synonym",
-   "item_id": 2872,
-   "sense_index": 0,
-   "word": "fixed",
-   "gloss": "固定的；不變的",
-   "item_rating": 1442.4,
-   "sentence": "Residents of the dormitory pay a fixed monthly fee that does not change with the amount of electricity they use.",
-   "options": [
-    "subtle",
-    "accessible",
-    "established",
-    "relevant"
-   ],
-   "answer_index": 2,
-   "explanation": "fixed 在此指「固定不變的」，established（既定的）最接近。subtle 是「微妙的」、accessible 是「可達的」、relevant 是「相關的」。",
-   "markable": [
-    {
-     "span": [
-      0,
-      9
-     ],
-     "item_id": 5733
-    },
-    {
-     "span": [
-      17,
-      26
-     ],
-     "item_id": 2260
-    },
-    {
-     "span": [
-      33,
-      38
-     ],
-     "item_id": 2872
-    },
-    {
-     "span": [
-      91,
-      102
-     ],
-     "item_id": 2382
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "synonym",
-   "item_id": 909,
-   "sense_index": 0,
-   "word": "bronze",
-   "gloss": "青銅；銅像",
-   "item_rating": 1489.3,
-   "sentence": "Archaeologists uncovered several tools made of bronze buried beneath the foundations of the ancient temple.",
-   "options": [
-    "circulation",
-    "dolphin",
-    "Bronze Age",
-    "absorption"
-   ],
-   "answer_index": 2,
-   "explanation": "bronze「青銅」對應 Bronze Age 相關詞彙；此處選項中 Bronze Age（青銅時代）最直接相關。circulation 是「流通」、dolphin 是「海豚」、absorption 是「吸收」。",
-   "markable": [
-    {
-     "span": [
-      47,
-      53
-     ],
-     "item_id": 909
-    },
-    {
-     "span": [
-      61,
-      68
-     ],
-     "item_id": 754
-    },
-    {
-     "span": [
-      92,
-      99
-     ],
-     "item_id": 361
-    },
-    {
-     "span": [
-      100,
-      106
-     ],
-     "item_id": 6777
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "synonym",
-   "item_id": 5326,
-   "sense_index": 0,
-   "word": "projecting",
-   "gloss": "突出的，伸出的",
-   "item_rating": 1320.0,
-   "sentence": "Sailors tied their ropes to the projecting beams that extended well beyond the edge of the old wooden pier.",
-   "options": [
-    "periodic",
-    "protruding",
-    "subjected",
-    "enduring"
-   ],
-   "answer_index": 1,
-   "explanation": "projecting「突出的」與 protruding（突出的）同義。periodic 是「週期的」、subjected 是「受支配的」、enduring 是「持久的」。",
-   "markable": [
-    {
-     "span": [
-      32,
-      42
-     ],
-     "item_id": 5326
-    },
-    {
-     "span": [
-      43,
-      48
-     ],
-     "item_id": 726
-    },
-    {
-     "span": [
-      54,
-      62
-     ],
-     "item_id": 2704
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "synonym",
-   "item_id": 2253,
-   "sense_index": 0,
-   "word": "donate",
-   "gloss": "捐贈",
-   "item_rating": 1420.1,
-   "sentence": "Local businesses agreed to donate computers and desks to the elementary school after the flood damaged its classrooms.",
-   "options": [
-    "grant",
-    "rip",
-    "interrogate",
-    "isolate"
-   ],
-   "answer_index": 0,
-   "explanation": "donate「捐贈」與 grant（授予、給予）最接近。rip 是「撕裂」、interrogate 是「審問」、isolate 是「隔離」。",
-   "markable": [
-    {
-     "span": [
-      27,
-      33
-     ],
-     "item_id": 2253
-    },
-    {
-     "span": [
-      61,
-      71
-     ],
-     "item_id": 2388
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "synonym",
-   "item_id": 5091,
-   "sense_index": 0,
-   "word": "plantation",
-   "gloss": "種植園",
-   "item_rating": 1560.4,
-   "sentence": "During the eighteenth century, the coastal plantation produced rice and indigo for export to European markets.",
-   "options": [
-    "torrent",
-    "farm",
-    "adobe",
-    "stray"
-   ],
-   "answer_index": 1,
-   "explanation": "plantation「種植園」本質上是大型農場，與 farm 最接近。torrent 是「激流」、adobe 是「土磚」、stray 是「流浪的」。",
-   "markable": [
-    {
-     "span": [
-      43,
-      53
-     ],
-     "item_id": 5091
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "synonym",
-   "item_id": 6314,
-   "sense_index": 0,
-   "word": "spare",
-   "gloss": "多餘的，備用的",
-   "item_rating": 1463.6,
-   "sentence": "Wise travelers always carry a spare battery for their cameras when hiking in remote mountain areas.",
-   "options": [
-    "avid",
-    "extra",
-    "interconnected",
-    "save"
-   ],
-   "answer_index": 1,
-   "explanation": "spare「備用的」與 extra（額外的）最接近。avid 是「熱切的」、interconnected 是「互聯的」、save 是動詞「節省」。",
-   "markable": [
-    {
-     "span": [
-      30,
-      35
-     ],
-     "item_id": 6314
-    },
-    {
-     "span": [
-      36,
-      43
-     ],
-     "item_id": 714
-    },
-    {
-     "span": [
-      67,
-      73
-     ],
-     "item_id": 3372
-    },
-    {
-     "span": [
-      77,
-      83
-     ],
-     "item_id": 5676
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "synonym",
-   "item_id": 3613,
-   "sense_index": 0,
-   "word": "incentive",
-   "gloss": "動機",
-   "item_rating": 1288.9,
-   "sentence": "The company offered a cash bonus as an incentive for employees who proposed ways to reduce waste.",
-   "options": [
-    "trout",
-    "code",
-    "perception",
-    "motivation"
-   ],
-   "answer_index": 3,
-   "explanation": "incentive「誘因、動機」與 motivation（動機）最接近。trout 是「鱒魚」、code 是「代碼」、perception 是「感知」。",
-   "markable": [
-    {
-     "span": [
-      27,
-      32
-     ],
-     "item_id": 838
-    },
-    {
-     "span": [
-      39,
-      48
-     ],
-     "item_id": 3613
-    },
-    {
-     "span": [
-      67,
-      75
-     ],
-     "item_id": 5359
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  }
- ],
- "structure": [
-  {
-   "question_type": "structure",
-   "grammar_point_id": 33,
-   "grammar_point": "another / other / the other",
-   "item_rating": 1800,
-   "sentence": "After the merger failed, the board decided to pursue ______ for entering the Asian market.",
-   "options": [
-    "another strategy",
-    "another strategies",
-    "the another strategy",
-    "other strategy"
-   ],
-   "answer_index": 0,
-   "explanation": "another 後必須接單數可數名詞，故 another strategy 正確。(B) another 不可接複數；(C) other 接單數需加冠詞；(D) another 前不可再加 the。",
-   "markable": [
-    {
-     "span": [
-      10,
-      16
-     ],
-     "item_id": 4376
-    },
-    {
-     "span": [
-      46,
-      52
-     ],
-     "item_id": 5428
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "structure",
-   "grammar_point_id": 18,
-   "grammar_point": "間接問句語序",
-   "item_rating": 1800,
-   "sentence": "The tour guide explained ______ during the excavation.",
-   "options": [
-    "where were the ancient artifacts discovered they",
-    "where the ancient artifacts had been discovered",
-    "where did the ancient artifacts be discovered",
-    "where had the ancient artifacts been discovered"
-   ],
-   "answer_index": 1,
-   "explanation": "間接問句用直述語序：疑問詞 + 主詞 + 動詞。(B) 誤用倒裝；(C) 殘留助動詞 did；(D) 倒裝且句尾多出代名詞。",
-   "markable": [
-    {
-     "span": [
-      43,
-      53
-     ],
-     "item_id": 2618
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "structure",
-   "grammar_point_id": 30,
-   "grammar_point": "代名詞一致與指涉",
-   "item_rating": 1800,
-   "sentence": "Each of the laboratory technicians must submit ______ safety report before leaving the building.",
-   "options": [
-    "him or her",
-    "their",
-    "his or her",
-    "they"
-   ],
-   "answer_index": 2,
-   "explanation": "each 為單數先行詞，ITP 規範要求用 his or her。(B) their 是複數；(C)(D) 需要所有格而非受格/主格。",
-   "markable": [
-    {
-     "span": [
-      12,
-      22
+      70,
+      80
      ],
      "item_id": 4003
-    },
-    {
-     "span": [
-      40,
-      46
-     ],
-     "item_id": 6554
     }
    ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   },
   {
-   "question_type": "structure",
-   "grammar_point_id": 16,
-   "grammar_point": "關係子句減化",
-   "item_rating": 1800,
-   "sentence": "The bridge, ______ by a famous Swiss engineer, has carried traffic across the river for over a century.",
+   "question_type": "synonym",
+   "item_id": 4741,
+   "sense_index": 0,
+   "word": "opposing",
+   "gloss": "相反的，對立的",
+   "item_rating": 1257.2,
+   "sentence": "The legal team struggled to reconcile the opposing testimonies provided by the two main witnesses during the trial.",
    "options": [
-    "was designed",
-    "designing",
-    "designed",
-    "is designed"
-   ],
-   "answer_index": 2,
-   "explanation": "關係子句 which was designed 減化後只留過去分詞 designed。(B)(D) 殘留 be 動詞造成雙動詞；(C) 橋是「被設計」，需被動分詞。",
-   "markable": [],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "structure",
-   "grammar_point_id": 41,
-   "grammar_point": "名詞單複數形式",
-   "item_rating": 1800,
-   "sentence": "The Grand Canyon is one of the most spectacular natural ______ in North America.",
-   "options": [
-    "phenomena's",
-    "phenomenon",
-    "phenomenons",
-    "phenomena"
+    "linear",
+    "unbridgeable",
+    "minor",
+    "conflicting"
    ],
    "answer_index": 3,
-   "explanation": "one of the + 複數名詞；phenomenon 的複數是不規則的 phenomena。(B) 單數；(C) 錯誤複數形；(D) 誤加所有格。",
+   "explanation": "在此句中，opposing 指的是兩名證人提供的證詞相互矛盾或不一致。因為這些證詞在內容上產生衝突，無法調和，因此 conflicting（衝突的、矛盾的）是最接近的同義詞。",
    "markable": [
     {
      "span": [
-      4,
-      9
+      28,
+      37
      ],
-     "item_id": 3197
+     "item_id": 5561
     },
     {
      "span": [
-      10,
-      16
+      42,
+      50
      ],
-     "item_id": 990
+     "item_id": 4741
     },
     {
      "span": [
-      36,
-      47
+      51,
+      62
      ],
-     "item_id": 6332
+     "item_id": 6815
+    },
+    {
+     "span": [
+      88,
+      97
+     ],
+     "item_id": 7390
     }
    ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   },
   {
-   "question_type": "structure",
-   "grammar_point_id": 21,
-   "grammar_point": "wish / as if 的假設語氣",
-   "item_rating": 1800,
-   "sentence": "Many commuters wish that the subway system ______ farther into the northern suburbs.",
+   "question_type": "synonym",
+   "item_id": 5225,
+   "sense_index": 0,
+   "word": "predominant",
+   "gloss": "支配的，主要的",
+   "item_rating": 1482.0,
+   "sentence": "English has become the predominant language of international business and diplomacy in the modern era.",
    "options": [
-    "extended",
-    "is extending",
-    "extends",
-    "will extend"
+    "parliamentary",
+    "rhythmical",
+    "dominant",
+    "interpersonal"
    ],
-   "answer_index": 0,
-   "explanation": "wish 表達與現在事實相反的願望，子句用過去式 extended。(B)(C)(D) 皆為現在／未來式，不符假設語氣。",
+   "answer_index": 2,
+   "explanation": "在此句子中，predominant 指的是最主要且最具影響力的，意指英語在國際商務和外交中佔主導地位，因此 dominant 是最貼切的同義詞。",
    "markable": [
     {
      "span": [
-      5,
-      14
+      23,
+      34
      ],
-     "item_id": 1324
+     "item_id": 5225
     },
     {
      "span": [
-      29,
-      35
+      74,
+      83
      ],
-     "item_id": 6584
+     "item_id": 2083
+    },
+    {
+     "span": [
+      98,
+      101
+     ],
+     "item_id": 2551
+    }
+   ],
+   "generated_by": "gemini:gemma-4-31b-it"
+  },
+  {
+   "question_type": "synonym",
+   "item_id": 243,
+   "sense_index": 0,
+   "word": "aggressiveness",
+   "gloss": "侵略；爭鬥",
+   "item_rating": 1351.4,
+   "sentence": "Historians argue that the empire's inherent aggressiveness was the primary cause of the prolonged conflict with its surrounding city-states.",
+   "options": [
+    "transit",
+    "aggression",
+    "dart",
+    "proceeding"
+   ],
+   "answer_index": 1,
+   "explanation": "在此句中，aggressiveness 指的是帝國對外擴張的侵略行為，與 aggression（侵略、挑釁）意思完全相同，而非指商業上的積極或個人野心。",
+   "markable": [
+    {
+     "span": [
+      35,
+      43
+     ],
+     "item_id": 3731
+    },
+    {
+     "span": [
+      44,
+      58
+     ],
+     "item_id": 243
+    },
+    {
+     "span": [
+      67,
+      74
+     ],
+     "item_id": 5277
+    },
+    {
+     "span": [
+      88,
+      97
+     ],
+     "item_id": 5334
+    },
+    {
+     "span": [
+      98,
+      106
+     ],
+     "item_id": 1451
+    }
+   ],
+   "generated_by": "gemini:gemma-4-31b-it"
+  },
+  {
+   "question_type": "synonym",
+   "item_id": 2330,
+   "sense_index": 0,
+   "word": "dynamic",
+   "gloss": "動力的；動態的",
+   "item_rating": 1410.4,
+   "sentence": "Despite the obstacles, the activist continued her dynamic efforts to secure equal rights for marginalized communities across the country.",
+   "options": [
+    "counterclockwise",
+    "reciprocal",
+    "bitter",
+    "vigorous"
+   ],
+   "answer_index": 3,
+   "explanation": "在此句中，dynamic 表示「精力充沛的」或「強而有力的」，用來形容其努力過程非常積極且充滿能量，因此與 vigorous 的意思最為接近。",
+   "markable": [
+    {
+     "span": [
+      12,
+      21
+     ],
+     "item_id": 4695
+    },
+    {
+     "span": [
+      50,
+      57
+     ],
+     "item_id": 2330
+    },
+    {
+     "span": [
+      69,
+      75
+     ],
+     "item_id": 6014
     },
     {
      "span": [
       76,
-      83
+      81
      ],
-     "item_id": 6579
+     "item_id": 2537
     }
    ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   },
   {
-   "question_type": "structure",
-   "grammar_point_id": 10,
-   "grammar_point": "語態：been 與 being",
-   "item_rating": 1800,
-   "sentence": "The old lighthouse ______ into a maritime museum that attracts many tourists.",
+   "question_type": "synonym",
+   "item_id": 3106,
+   "sense_index": 1,
+   "word": "generous",
+   "gloss": "大量的",
+   "item_rating": 1404.0,
+   "sentence": "Despite the drought, the region received a generous amount of rainfall during the autumn months, ensuring a successful harvest.",
    "options": [
-    "has being converted",
-    "has been converted",
-    "is been converted",
-    "has been converting"
-   ],
-   "answer_index": 1,
-   "explanation": "現在完成被動語態為 has been + 過去分詞。(B) has 後不可接 being；(C) is 後不可接 been；(D) 主動進行式不符「被改建」語意。",
-   "markable": [
-    {
-     "span": [
-      33,
-      41
-     ],
-     "item_id": 4286
-    },
-    {
-     "span": [
-      54,
-      62
-     ],
-     "item_id": 581
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "structure",
-   "grammar_point_id": 3,
-   "grammar_point": "片語與子句的區辨",
-   "item_rating": 1800,
-   "sentence": "______, grain prices rose sharply throughout the region.",
-   "options": [
-    "Because the unusually poor harvest",
-    "Because of the harvest was unusually poor",
-    "Because of being the harvest unusually poor",
-    "Because the harvest was unusually poor"
+    "statistical",
+    "solid",
+    "magnanimous",
+    "plentiful"
    ],
    "answer_index": 3,
-   "explanation": "because 是連接詞，後接完整子句。(B) because of 是介系詞，不可接子句；(C) because 後不可只接名詞片語；(D) 結構錯亂。",
+   "explanation": "在此句中，generous 指的是雨量的「大量」或「充足」，而非指人的慷慨。由於是用於描述自然資源的數量，因此 plentiful（豐富的、充足的）是最接近的同義詞。",
    "markable": [
     {
      "span": [
-      8,
-      13
+      12,
+      19
      ],
-     "item_id": 3196
+     "item_id": 2305
     },
     {
      "span": [
-      26,
-      33
+      43,
+      51
      ],
-     "item_id": 6088
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "structure",
-   "grammar_point_id": 1,
-   "grammar_point": "完整句的基本要素：主詞與動詞",
-   "item_rating": 1800,
-   "sentence": "The recent discovery of water ice on the moon ______ interest in lunar exploration.",
-   "options": [
-    "renewing",
-    "has renewed it is",
-    "has renewed",
-    "it has renewed"
-   ],
-   "answer_index": 2,
-   "explanation": "句子需要限定動詞 has renewed。(B) 分詞不能當主要動詞；(C) it 與主詞重複；(D) 出現兩個限定動詞。",
-   "markable": [
+     "item_id": 3106
+    },
     {
      "span": [
-      65,
+      62,
       70
      ],
-     "item_id": 4199
+     "item_id": 5481
     },
     {
      "span": [
-      71,
-      82
+      108,
+      118
      ],
-     "item_id": 2686
+     "item_id": 6585
+    },
+    {
+     "span": [
+      119,
+      126
+     ],
+     "item_id": 3297
     }
    ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   },
   {
-   "question_type": "structure",
-   "grammar_point_id": 26,
-   "grammar_point": "比較對象的對稱",
-   "item_rating": 1800,
-   "sentence": "The climate of southern Spain is much milder than ______.",
+   "question_type": "synonym",
+   "item_id": 5004,
+   "sense_index": 0,
+   "word": "persistent",
+   "gloss": "堅持不懈的",
+   "item_rating": 1519.9,
+   "sentence": "Despite facing numerous setbacks throughout her research, the scientist remained persistent in her quest to find a cure for the rare disease.",
    "options": [
-    "those of northern Scotland",
-    "it is northern Scotland",
-    "that of northern Scotland",
-    "northern Scotland"
+    "raucous",
+    "meaningful",
+    "refined",
+    "tenacious"
+   ],
+   "answer_index": 3,
+   "explanation": "在此句中，persistent 表示儘管面對困難仍堅持不懈地追求目標，這與 tenacious（韌性的、堅持不懈的）在描述意志堅定、不輕言放棄方面的含義完全一致。",
+   "markable": [
+    {
+     "span": [
+      15,
+      23
+     ],
+     "item_id": 4664
+    },
+    {
+     "span": [
+      24,
+      32
+     ],
+     "item_id": 6071
+    },
+    {
+     "span": [
+      81,
+      91
+     ],
+     "item_id": 5004
+    },
+    {
+     "span": [
+      99,
+      104
+     ],
+     "item_id": 5452
+    },
+    {
+     "span": [
+      128,
+      132
+     ],
+     "item_id": 5495
+    }
+   ],
+   "generated_by": "gemini:gemma-4-31b-it"
+  },
+  {
+   "question_type": "synonym",
+   "item_id": 2991,
+   "sense_index": 0,
+   "word": "fountain",
+   "gloss": "噴泉",
+   "item_rating": 1519.9,
+   "sentence": "The remote village relied on a natural fountain bubbling from the limestone cliffs for its primary source of drinking water.",
+   "options": [
+    "polish",
+    "illustration",
+    "spring",
+    "subsidy"
    ],
    "answer_index": 2,
-   "explanation": "氣候要與氣候比較：that of = the climate of。(B) 拿氣候比地區；(C) that 指單數 climate，不可用 those；(D) 結構錯誤。",
+   "explanation": "這裡的 fountain 指的是自然湧出的水源，而非人工噴泉。在這種語境下，它與 spring（泉水/泉源）的意思完全相同，均指地下水自然湧出地表的現象。",
    "markable": [
     {
      "span": [
       4,
-      11
+      10
      ],
-     "item_id": 1214
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  }
- ],
- "written_expression": [
-  {
-   "question_type": "written_expression",
-   "grammar_point_id": 33,
-   "grammar_point": "another / other / the other",
-   "item_rating": 1800,
-   "sentence": "The curator plans to exhibit another paintings from the museum's permanent collection next month.",
-   "segments": [
-    "plans to exhibit",
-    "another paintings",
-    "permanent collection",
-    "next month"
-   ],
-   "segment_offsets": [
-    [
-     12,
-     28
-    ],
-    [
-     29,
-     46
-    ],
-    [
-     65,
-     85
-    ],
-    [
-     86,
-     96
-    ]
-   ],
-   "corrected_segment": "another painting",
-   "answer_index": 1,
-   "explanation": "another 後必須接單數可數名詞：another paintings 應改為 another painting。",
-   "markable": [
-    {
-     "span": [
-      4,
-      11
-     ],
-     "item_id": 1763
+     "item_id": 5676
     },
     {
      "span": [
-      21,
-      28
+      39,
+      47
      ],
-     "item_id": 2656
+     "item_id": 2991
     },
     {
      "span": [
-      37,
-      46
+      48,
+      56
      ],
-     "item_id": 4876
+     "item_id": 918
     },
     {
      "span": [
-      65,
-      74
+      66,
+      75
      ],
-     "item_id": 4989
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "written_expression",
-   "grammar_point_id": 18,
-   "grammar_point": "間接問句語序",
-   "item_rating": 1800,
-   "sentence": "The report does not specify when did the committee reach its final decision on the funding request.",
-   "segments": [
-    "does not specify",
-    "when did the committee reach",
-    "its final decision",
-    "funding request"
-   ],
-   "segment_offsets": [
-    [
-     11,
-     27
-    ],
-    [
-     28,
-     56
-    ],
-    [
-     57,
-     75
-    ],
-    [
-     83,
-     98
-    ]
-   ],
-   "corrected_segment": "when the committee reached",
-   "answer_index": 1,
-   "explanation": "間接問句用直述語序：when did the committee reach 應改為 when the committee reached。",
-   "markable": [
-    {
-     "span": [
-      20,
-      27
-     ],
-     "item_id": 6328
+     "item_id": 4115
     },
     {
      "span": [
-      41,
-      50
+      76,
+      82
      ],
-     "item_id": 1312
+     "item_id": 1213
     },
     {
      "span": [
       91,
       98
      ],
-     "item_id": 5720
+     "item_id": 5277
     }
    ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   },
   {
-   "question_type": "written_expression",
-   "grammar_point_id": 30,
-   "grammar_point": "代名詞一致與指涉",
-   "item_rating": 1800,
-   "sentence": "Every student in the physics course must bring their own calculator to the final examination.",
-   "segments": [
-    "Every student",
-    "must bring",
-    "their own calculator",
-    "final examination"
+   "question_type": "synonym",
+   "item_id": 4477,
+   "sense_index": 0,
+   "word": "mold",
+   "gloss": "塑造",
+   "item_rating": 1586.7,
+   "sentence": "The sculptor spent hours trying to mold the wet clay into a lifelike representation of the human form.",
+   "options": [
+    "frame",
+    "inquire",
+    "model",
+    "flee"
    ],
-   "segment_offsets": [
-    [
-     0,
-     13
-    ],
-    [
-     36,
-     46
-    ],
-    [
-     47,
-     67
-    ],
-    [
-     75,
-     92
-    ]
-   ],
-   "corrected_segment": "his or her own calculator",
    "answer_index": 2,
-   "explanation": "every 為單數先行詞，依 ITP 規範代名詞用 his or her，不可用 their。",
+   "explanation": "在此句子中，mold 意為「塑造」或「將...塑造成形」。由於是指透過物理手段將黏土形塑成特定樣貌，因此 model（塑造、建模）是最接近的同義詞。",
    "markable": [
     {
      "span": [
-      57,
-      67
+      4,
+      12
      ],
-     "item_id": 971
+     "item_id": 5984
+    },
+    {
+     "span": [
+      25,
+      31
+     ],
+     "item_id": 6994
+    },
+    {
+     "span": [
+      35,
+      39
+     ],
+     "item_id": 4477
+    },
+    {
+     "span": [
+      48,
+      52
+     ],
+     "item_id": 1204
+    },
+    {
+     "span": [
+      69,
+      83
+     ],
+     "item_id": 5707
     }
    ],
-   "generated_by": "handmade:fixture"
+   "generated_by": "gemini:gemma-4-31b-it"
   },
+  {
+   "question_type": "synonym",
+   "item_id": 2441,
+   "sense_index": 0,
+   "word": "emphasize",
+   "gloss": "強調, 著重",
+   "item_rating": 1223.3,
+   "sentence": "The study's findings emphasize the necessity of rigorous peer review to ensure the validity of scientific research.",
+   "options": [
+    "accuse",
+    "assemble",
+    "underscore",
+    "designate"
+   ],
+   "answer_index": 2,
+   "explanation": "在此句中，emphasize 指的是透過研究結果來「強調」或「突顯」同儕審查的必要性。underscore 在此情境下具有相同的「強調」或「強化」之意，是最貼切的同義詞。",
+   "markable": [
+    {
+     "span": [
+      21,
+      30
+     ],
+     "item_id": 2441
+    },
+    {
+     "span": [
+      48,
+      56
+     ],
+     "item_id": 5825
+    },
+    {
+     "span": [
+      57,
+      61
+     ],
+     "item_id": 4952
+    },
+    {
+     "span": [
+      62,
+      68
+     ],
+     "item_id": 5795
+    },
+    {
+     "span": [
+      83,
+      91
+     ],
+     "item_id": 7173
+    }
+   ],
+   "generated_by": "gemini:gemma-4-31b-it"
+  }
+ ],
+ "structure": [
+  {
+   "question_type": "structure",
+   "grammar_point_id": 34,
+   "grammar_point": "冠詞的使用",
+   "item_rating": 1800,
+   "explanation": "本題考查冠詞用法。'attempt' 為單數可數名詞，前面必須有限定詞，故不能省略（排除 honest attempt）。'honest' 的發音以母音 /ɒ/ 開頭（h 不發音），因此應使用 'an' 而非 'a'（排除 a honest attempt）。最後，'patience' 為泛指的不可數名詞，在此情境下不應加上定冠詞 'the'（排除 the patience）。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The psychologist argued that ______ is crucial for personal growth.",
+   "options": [
+    "honest attempt",
+    "the patience",
+    "an honest attempt",
+    "a honest attempt"
+   ],
+   "answer_index": 2,
+   "markable": [
+    {
+     "span": [
+      39,
+      46
+     ],
+     "item_id": 1723
+    }
+   ]
+  },
+  {
+   "question_type": "structure",
+   "grammar_point_id": 36,
+   "grammar_point": "副詞與形容詞的位置",
+   "item_rating": 1800,
+   "explanation": "本題測驗副詞與形容詞的位置。頻率副詞 (often) 應置於 be 動詞 (are) 之後，且在最高級形容詞 (the most stable) 之前。此外，enough 修飾形容詞時必須置於形容詞之後 (例如 stable enough)，而非之前。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The atmospheric conditions in the stratosphere ______.",
+   "options": [
+    "are often the most stable",
+    "are enough stable",
+    "often are the most stable",
+    "are the most often stable"
+   ],
+   "answer_index": 0,
+   "markable": []
+  },
+  {
+   "question_type": "structure",
+   "grammar_point_id": 43,
+   "grammar_point": "字彙語意搭配（collocation 正誤）",
+   "item_rating": 1800,
+   "explanation": "本題考查字彙搭配（Collocation）。在英文中，「做研究」的固定搭配是 'do research'，而非 'make research'。選項中的 'rise' 是不及物動詞，不能接賓語 'a great deal of research'；而 'effect' 在此處將名詞誤用為動詞，或其動詞義（實現）不符合本句語意。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "Students are encouraged to ______ a great deal of research before writing their final thesis.",
+   "options": [
+    "effect",
+    "rise",
+    "make",
+    "do"
+   ],
+   "answer_index": 3,
+   "markable": [
+    {
+     "span": [
+      13,
+      23
+     ],
+     "item_id": 2459
+    },
+    {
+     "span": [
+      86,
+      92
+     ],
+     "item_id": 6835
+    }
+   ]
+  },
+  {
+   "question_type": "structure",
+   "grammar_point_id": 21,
+   "grammar_point": "wish / as if 的假設語氣",
+   "item_rating": 1800,
+   "explanation": "本句表達與過去事實相反的願望（由 before the project started 可知為過去時間），因此 wish 後的子句應使用過去完成式 (had + p.p.)。選項 hires, has hired, is hiring 均為現在時態，不符合假設語氣之時態要求。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The manager wishes he ______ more experienced staff before the project started.",
+   "options": [
+    "hires",
+    "has hired",
+    "had hired",
+    "is hiring"
+   ],
+   "answer_index": 2,
+   "markable": []
+  },
+  {
+   "question_type": "structure",
+   "grammar_point_id": 1,
+   "grammar_point": "完整句的基本要素：主詞與動詞",
+   "item_rating": 1800,
+   "explanation": "本題考查完整句的基本結構。一個完整句子必須包含一個主詞（Subject）與一個限定動詞（Finite Verb）。\n1. 正確選項 (has become) 為限定動詞，與主詞 The depletion 搭配，構成完整句子。\n2. becoming 為現在分詞，不能單獨作為限定動詞，會導致句子缺乏動詞 (選項造成句子缺動詞)。\n3. has become is 同時出現兩個限定動詞且無連接詞，不符合語法 (選項造成雙動詞（兩個限定動詞無連接詞）)。\n4. it has become 中，it 與原本的主詞 The depletion 重複 (主詞重複（名詞 + 代名詞疊用）)。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The depletion of the ozone layer ______ a major concern among scientists.",
+   "options": [
+    "it has become",
+    "has become is",
+    "becoming",
+    "has become"
+   ],
+   "answer_index": 3,
+   "markable": [
+    {
+     "span": [
+      21,
+      26
+     ],
+     "item_id": 4862
+    },
+    {
+     "span": [
+      27,
+      32
+     ],
+     "item_id": 4048
+    }
+   ]
+  },
+  {
+   "question_type": "structure",
+   "grammar_point_id": 17,
+   "grammar_point": "名詞子句",
+   "item_rating": 1800,
+   "explanation": "本題考查名詞子句作主詞。正確答案為 'What the scientists discovered'，其中 what 相當於 the thing that，在子句中擔任及物動詞 discovered 的受詞。選項 'That the scientists discovered' 錯誤，因為 that 引導的名詞子句內部必須結構完整，而 discovered 在此缺少受詞，應使用 what（that/what 混用）；其餘兩個選項則將名詞子句誤用為疑問句語序（助動詞 did 置於主詞前），而名詞子句必須使用直述句語序。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "______ during the experiment was groundbreaking.",
+   "options": [
+    "How did the scientists discover",
+    "What did the scientists discover",
+    "That the scientists discovered",
+    "What the scientists discovered"
+   ],
+   "answer_index": 3,
+   "markable": []
+  },
+  {
+   "question_type": "structure",
+   "grammar_point_id": 23,
+   "grammar_point": "倒裝：條件句省略 if",
+   "item_rating": 1800,
+   "explanation": "本題考查假設語氣條件句省略 if 的倒裝結構。在對過去事實的假設中，若省略 if，須將助動詞 Had 移至主詞之前，形成「Had + 主詞 + 過去分詞」的結構。選項 (A) 缺乏倒裝且無 if，導致句子結構錯誤；選項 (B) 與 (C) 則使用了不符合文法的助動詞。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "______ about the contamination, they would have restarted the experiment.",
+   "options": [
+    "Should the researchers known",
+    "Had the researchers known",
+    "The researchers had known",
+    "Were the researchers known"
+   ],
+   "answer_index": 1,
+   "markable": [
+    {
+     "span": [
+      17,
+      30
+     ],
+     "item_id": 1544
+    }
+   ]
+  },
+  {
+   "question_type": "structure",
+   "grammar_point_id": 32,
+   "grammar_point": "可數/不可數與量詞",
+   "item_rating": 1800,
+   "explanation": "equipment 是不可數名詞，因此必須搭配用於不可數名詞的量詞 amount of，且不可使用 many 或 number of（僅用於可數複數名詞），也不可在名詞後方加上複數字尾 -s。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The company provided ______ for the research team.",
+   "options": [
+    "a large amount of equipments",
+    "many equipment",
+    "a large amount of equipment",
+    "a large number of equipment"
+   ],
+   "answer_index": 2,
+   "markable": []
+  },
+  {
+   "question_type": "structure",
+   "grammar_point_id": 25,
+   "grammar_point": "比較級與最高級的形式",
+   "item_rating": 1800,
+   "explanation": "本題考查形容詞的比較級用法。'large' 為短形容詞，其比較級形式為 'larger'，且在比較兩者時，比較級應與 'than' 連用。選項 (A) 錯誤地將 'more' 與 '-er' 疊用；選項 (B) 將最高級 'the largest' 與比較級標誌 'than' 混用；選項 (C) 則將比較級 'larger' 與 'as' 錯誤配對。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The new library is ______ the old one.",
+   "options": [
+    "larger than",
+    "the largest than",
+    "larger as",
+    "more larger than"
+   ],
+   "answer_index": 0,
+   "markable": []
+  },
+  {
+   "question_type": "structure",
+   "grammar_point_id": 8,
+   "grammar_point": "時間/條件副詞子句用現在式代未來",
+   "item_rating": 1800,
+   "explanation": "在 by, when, before, after, as soon as, if 等引導的時間或條件副詞子句中，即使是指未來的時間，動詞也必須使用現在式而非未來式。本句中 after 引導的子句應使用現在式 reviews。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The project manager will sign the contract after the legal team ______ the documents.",
+   "options": [
+    "will review",
+    "will have reviewed",
+    "reviews",
+    "will be reviewing"
+   ],
+   "answer_index": 2,
+   "markable": [
+    {
+     "span": [
+      34,
+      42
+     ],
+     "item_id": 1567
+    },
+    {
+     "span": [
+      75,
+      84
+     ],
+     "item_id": 2234
+    }
+   ]
+  }
+ ],
+ "written_expression": [
   {
    "question_type": "written_expression",
    "grammar_point_id": 16,
    "grammar_point": "關係子句減化",
    "item_rating": 1800,
-   "sentence": "The novel was written by the young author quickly became one of the best sellers of the decade.",
+   "explanation": "此句中的 scrolls（卷軸）是被發現的，因此應使用過去分詞 discovered 作為被動的關係子句減化，而非使用現在分詞 discovering（主動）。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The ancient scrolls discovering in the cave provided valuable insights into the early civilization of the region.",
    "segments": [
-    "The novel",
-    "was written by",
-    "quickly became",
-    "of the decade"
+    "The ancient scrolls",
+    "discovering in the cave",
+    "provided valuable insights",
+    "into the early civilization of the region."
    ],
    "segment_offsets": [
     [
      0,
-     9
+     19
     ],
     [
-     10,
-     24
+     20,
+     43
     ],
     [
-     42,
-     56
+     44,
+     70
     ],
     [
-     81,
-     94
+     71,
+     113
     ]
    ],
-   "corrected_segment": "written by",
+   "corrected_segment": "discovered in the cave",
    "answer_index": 1,
-   "explanation": "關係子句減化後不可殘留 be 動詞：was written by 應改為 written by。",
-   "markable": [
-    {
-     "span": [
-      4,
-      9
-     ],
-     "item_id": 4652
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "written_expression",
-   "grammar_point_id": 41,
-   "grammar_point": "名詞單複數形式",
-   "item_rating": 1800,
-   "sentence": "Yellowstone is home to several active geyser, making it one of the most studied volcanic areas on Earth.",
-   "segments": [
-    "is home to",
-    "several active geyser",
-    "most studied",
-    "on Earth"
-   ],
-   "segment_offsets": [
-    [
-     12,
-     22
-    ],
-    [
-     23,
-     44
-    ],
-    [
-     67,
-     79
-    ],
-    [
-     95,
-     103
-    ]
-   ],
-   "corrected_segment": "several active geysers",
-   "answer_index": 1,
-   "explanation": "several 後接複數名詞：several active geyser 應改為 several active geysers。",
-   "markable": [
-    {
-     "span": [
-      31,
-      37
-     ],
-     "item_id": 138
-    },
-    {
-     "span": [
-      80,
-      88
-     ],
-     "item_id": 7289
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "written_expression",
-   "grammar_point_id": 21,
-   "grammar_point": "wish / as if 的假設語氣",
-   "item_rating": 1800,
-   "sentence": "Many farmers wish that the drought has ended before the planting season began in April.",
-   "segments": [
-    "Many farmers",
-    "wish that",
-    "the drought has ended",
-    "season began"
-   ],
-   "segment_offsets": [
-    [
-     0,
-     12
-    ],
-    [
-     13,
-     22
-    ],
-    [
-     23,
-     44
-    ],
-    [
-     65,
-     77
-    ]
-   ],
-   "corrected_segment": "the drought had ended",
-   "answer_index": 2,
-   "explanation": "wish 對過去事實相反的願望用過去完成式：has ended 應改為 had ended。",
-   "markable": [
-    {
-     "span": [
-      27,
-      34
-     ],
-     "item_id": 2305
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "written_expression",
-   "grammar_point_id": 10,
-   "grammar_point": "語態：been 與 being",
-   "item_rating": 1800,
-   "sentence": "The ancient manuscript has being preserved in a climate-controlled vault since its discovery in 1947.",
-   "segments": [
-    "ancient manuscript",
-    "has being preserved",
-    "climate-controlled vault",
-    "its discovery"
-   ],
-   "segment_offsets": [
-    [
-     4,
-     22
-    ],
-    [
-     23,
-     42
-    ],
-    [
-     48,
-     72
-    ],
-    [
-     79,
-     92
-    ]
-   ],
-   "corrected_segment": "has been preserved",
-   "answer_index": 1,
-   "explanation": "現在完成被動語態為 has been + 過去分詞：has being preserved 應改為 has been preserved。",
    "markable": [
     {
      "span": [
@@ -1516,38 +1228,228 @@
     {
      "span": [
       12,
-      22
+      19
      ],
-     "item_id": 4276
+     "item_id": 5974
     },
     {
      "span": [
-      48,
-      55
+      62,
+      70
      ],
-     "item_id": 1214
+     "item_id": 3763
     },
     {
      "span": [
-      67,
-      72
+      86,
+      98
      ],
-     "item_id": 7197
+     "item_id": 1188
     }
-   ],
-   "generated_by": "handmade:fixture"
+   ]
   },
   {
    "question_type": "written_expression",
-   "grammar_point_id": 3,
-   "grammar_point": "片語與子句的區辨",
+   "grammar_point_id": 41,
+   "grammar_point": "名詞單複數形式",
    "item_rating": 1800,
-   "sentence": "Despite the heavy rainfall was, the outdoor concert continued as scheduled until nearly midnight.",
+   "explanation": "在英文語法中，'one of the' 後方必須接複數名詞，用以表示從多個對象中選擇其中之一。因此，'discovery' 應改為複數形式 'discoveries'。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The theory of relativity is considered one of the most influential discovery in the history of modern physics.",
    "segments": [
-    "Despite the heavy rainfall was",
-    "outdoor concert",
-    "as scheduled",
-    "nearly midnight"
+    "The theory of relativity",
+    "is considered one of the",
+    "most influential discovery",
+    "in the history of modern physics."
+   ],
+   "segment_offsets": [
+    [
+     0,
+     24
+    ],
+    [
+     25,
+     49
+    ],
+    [
+     50,
+     76
+    ],
+    [
+     77,
+     110
+    ]
+   ],
+   "corrected_segment": "most influential discoveries",
+   "answer_index": 2,
+   "markable": [
+    {
+     "span": [
+      55,
+      66
+     ],
+     "item_id": 3712
+    }
+   ]
+  },
+  {
+   "question_type": "written_expression",
+   "grammar_point_id": 24,
+   "grammar_point": "倒裝：only 與地方副詞開頭",
+   "item_rating": 1800,
+   "explanation": "當 Only 引導的副詞子句（或片語）置於句首時，倒裝應發生在「主句」而非「副詞子句」內。在本句中，Only after 引導的是副詞子句，應使用正常語序 the results were published，而將倒裝結構 (did + 主詞 + 原型動詞) 放在主句中。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "Only after were the results published did the scientific community recognize the importance of the study.",
+   "segments": [
+    "Only after",
+    "were the results published",
+    "did the scientific community recognize",
+    "the importance of the study."
+   ],
+   "segment_offsets": [
+    [
+     0,
+     10
+    ],
+    [
+     11,
+     37
+    ],
+    [
+     38,
+     76
+    ],
+    [
+     77,
+     105
+    ]
+   ],
+   "corrected_segment": "the results were published",
+   "answer_index": 1,
+   "markable": []
+  },
+  {
+   "question_type": "written_expression",
+   "grammar_point_id": 8,
+   "grammar_point": "時間/條件副詞子句用現在式代未來",
+   "item_rating": 1800,
+   "explanation": "在由 after 引導的時間副詞子句中，即使是指未來發生的事情，也應使用現在式 (complete) 而非未來式 (will complete)。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The researchers will publish their findings after they will complete the final stage of the data analysis.",
+   "segments": [
+    "The researchers will publish",
+    "their findings after",
+    "they will complete the final",
+    "stage of the data analysis."
+   ],
+   "segment_offsets": [
+    [
+     0,
+     28
+    ],
+    [
+     29,
+     49
+    ],
+    [
+     50,
+     78
+    ],
+    [
+     79,
+     106
+    ]
+   ],
+   "corrected_segment": "they complete the final",
+   "answer_index": 2,
+   "markable": [
+    {
+     "span": [
+      60,
+      68
+     ],
+     "item_id": 1354
+    }
+   ]
+  },
+  {
+   "question_type": "written_expression",
+   "grammar_point_id": 29,
+   "grammar_point": "相關字組的對稱與一致",
+   "item_rating": 1800,
+   "explanation": "相關連詞 'not only' 必須與 'but also' 配對，不能與 'and' 配對。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The implementation of the new regulatory framework not only enhances operational efficiency and reduces long-term overhead costs.",
+   "segments": [
+    "The implementation of the new regulatory framework",
+    "not only enhances operational efficiency",
+    "and reduces",
+    "long-term overhead costs."
+   ],
+   "segment_offsets": [
+    [
+     0,
+     50
+    ],
+    [
+     51,
+     91
+    ],
+    [
+     92,
+     103
+    ],
+    [
+     104,
+     129
+    ]
+   ],
+   "corrected_segment": "but also reduces",
+   "answer_index": 2,
+   "markable": [
+    {
+     "span": [
+      30,
+      40
+     ],
+     "item_id": 5622
+    },
+    {
+     "span": [
+      41,
+      50
+     ],
+     "item_id": 3003
+    },
+    {
+     "span": [
+      60,
+      68
+     ],
+     "item_id": 2490
+    },
+    {
+     "span": [
+      81,
+      91
+     ],
+     "item_id": 2366
+    }
+   ]
+  },
+  {
+   "question_type": "written_expression",
+   "grammar_point_id": 25,
+   "grammar_point": "比較級與最高級的形式",
+   "item_rating": 1800,
+   "explanation": "句子中使用了比較級形容詞 'more effective'，其後應接 'than' 用於比較兩個對象，而非 'as'。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The recently developed vaccine is more effective as the previous version in preventing the spread of the virus.",
+   "segments": [
+    "The recently developed vaccine",
+    " is more effective",
+    " as the previous version",
+    " in preventing the spread of the virus."
    ],
    "segment_offsets": [
     [
@@ -1555,168 +1457,317 @@
      30
     ],
     [
-     36,
-     51
-    ],
-    [
-     62,
-     74
-    ],
-    [
-     81,
-     96
-    ]
-   ],
-   "corrected_segment": "Despite the heavy rainfall",
-   "answer_index": 0,
-   "explanation": "despite 是介系詞，後接名詞片語，不可接子句：Despite the heavy rainfall was 應改為 Despite the heavy rainfall。",
-   "markable": [
-    {
-     "span": [
-      18,
-      26
-     ],
-     "item_id": 5481
-    },
-    {
-     "span": [
-      44,
-      51
-     ],
-     "item_id": 1402
-    },
-    {
-     "span": [
-      65,
-      74
-     ],
-     "item_id": 5950
-    }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "written_expression",
-   "grammar_point_id": 1,
-   "grammar_point": "完整句的基本要素：主詞與動詞",
-   "item_rating": 1800,
-   "sentence": "The theory of continental drift it explains why similar fossils appear on continents separated by vast oceans.",
-   "segments": [
-    "The theory of continental drift",
-    "it explains why",
-    "similar fossils",
-    "separated by"
-   ],
-   "segment_offsets": [
-    [
-     0,
-     31
-    ],
-    [
-     32,
-     47
+     30,
+     48
     ],
     [
      48,
-     63
+     72
     ],
     [
-     85,
-     97
+     72,
+     111
     ]
    ],
-   "corrected_segment": "explains why",
-   "answer_index": 1,
-   "explanation": "主詞 The theory 之後不可再用代名詞 it 重複主詞：it explains why 應改為 explains why。",
+   "corrected_segment": " than the previous version",
+   "answer_index": 2,
    "markable": [
     {
      "span": [
-      14,
-      25
+      23,
+      30
      ],
-     "item_id": 1560
-    },
-    {
-     "span": [
-      26,
-      31
-     ],
-     "item_id": 2298
+     "item_id": 7167
     },
     {
      "span": [
       56,
-      63
+      64
      ],
-     "item_id": 2984
+     "item_id": 5273
     },
     {
      "span": [
-      74,
+      65,
+      72
+     ],
+     "item_id": 7226
+    },
+    {
+     "span": [
+      76,
+      86
+     ],
+     "item_id": 5270
+    },
+    {
+     "span": [
+      91,
+      97
+     ],
+     "item_id": 6380
+    },
+    {
+     "span": [
+      105,
+      110
+     ],
+     "item_id": 7269
+    }
+   ]
+  },
+  {
+   "question_type": "written_expression",
+   "grammar_point_id": 33,
+   "grammar_point": "another / other / the other",
+   "item_rating": 1800,
+   "explanation": "another 後面必須接單數可數名詞。在本句中，another 後接了複數名詞 trials，應改為單數 trial。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "While the first experiment provided promising results, the scientists decided to conduct another trials to ensure the validity of their findings.",
+   "segments": [
+    "While the first experiment provided promising results, ",
+    "the scientists decided ",
+    "to conduct another trials ",
+    "to ensure the validity of their findings."
+   ],
+   "segment_offsets": [
+    [
+     0,
+     55
+    ],
+    [
+     55,
+     78
+    ],
+    [
+     78,
+     104
+    ],
+    [
+     104,
+     145
+    ]
+   ],
+   "corrected_segment": "to conduct another trial ",
+   "answer_index": 2,
+   "markable": [
+    {
+     "span": [
+      36,
+      45
+     ],
+     "item_id": 5337
+    },
+    {
+     "span": [
+      81,
+      88
+     ],
+     "item_id": 1428
+    },
+    {
+     "span": [
+      118,
+      126
+     ],
+     "item_id": 7173
+    }
+   ]
+  },
+  {
+   "question_type": "written_expression",
+   "grammar_point_id": 11,
+   "grammar_point": "分詞構句",
+   "item_rating": 1800,
+   "explanation": "句首的分詞構句邏輯主詞為 the ancient ruins（古代遺跡），遺跡是被發現而非主動發現，因此應使用被動分詞 Discovered 而非主動分詞 Discovering。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "Discovering in the mid-twentieth century, the ancient ruins provide valuable insights into early urban planning.",
+   "segments": [
+    "Discovering in the mid-twentieth century,",
+    " the ancient ruins",
+    " provide valuable insights",
+    " into early urban planning."
+   ],
+   "segment_offsets": [
+    [
+     0,
+     41
+    ],
+    [
+     41,
+     59
+    ],
+    [
+     59,
+     85
+    ],
+    [
+     85,
+     112
+    ]
+   ],
+   "corrected_segment": "Discovered in the mid-twentieth century,",
+   "answer_index": 0,
+   "markable": [
+    {
+     "span": [
+      46,
+      53
+     ],
+     "item_id": 361
+    },
+    {
+     "span": [
+      54,
+      59
+     ],
+     "item_id": 5871
+    },
+    {
+     "span": [
+      77,
+      85
+     ],
+     "item_id": 3763
+    },
+    {
+     "span": [
+      97,
+      102
+     ],
+     "item_id": 7140
+    }
+   ]
+  },
+  {
+   "question_type": "written_expression",
+   "grammar_point_id": 30,
+   "grammar_point": "代名詞一致與指涉",
+   "item_rating": 1800,
+   "explanation": "在此句中，代名詞是用來修飾後方的名詞 'final report'，因此必須使用所有格 (possessive case) 'his or her' 而非主格 'he or she'。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "Each researcher must submit he or she final report to the committee before the end of the semester.",
+   "segments": [
+    "Each researcher ",
+    "must submit he or she ",
+    "final report to the committee ",
+    "before the end of the semester."
+   ],
+   "segment_offsets": [
+    [
+     0,
+     16
+    ],
+    [
+     16,
+     38
+    ],
+    [
+     38,
+     68
+    ],
+    [
+     68,
+     99
+    ]
+   ],
+   "corrected_segment": "must submit his or her ",
+   "answer_index": 1,
+   "markable": [
+    {
+     "span": [
+      21,
+      27
+     ],
+     "item_id": 6554
+    },
+    {
+     "span": [
+      58,
+      67
+     ],
+     "item_id": 1312
+    },
+    {
+     "span": [
+      90,
+      98
+     ],
+     "item_id": 6035
+    }
+   ]
+  },
+  {
+   "question_type": "written_expression",
+   "grammar_point_id": 28,
+   "grammar_point": "平行結構",
+   "item_rating": 1800,
+   "explanation": "本句使用了由逗號和 and 連接的並列結構。前兩個並列項 'cognitive function' 和 'emotional stability' 均為名詞短語，因此第三個並列項也必須使用名詞 'concentration' 而非動名詞 'concentrating'，以保持詞性一致。",
+   "generated_by": "gemini:gemma-4-31b-it",
+   "sentence": "The study examined the effects of sleep deprivation on cognitive function, emotional stability, and concentrating.",
+   "segments": [
+    "The study examined the effects of",
+    " sleep deprivation on cognitive function,",
+    " emotional stability,",
+    " and concentrating."
+   ],
+   "segment_offsets": [
+    [
+     0,
+     33
+    ],
+    [
+     33,
+     74
+    ],
+    [
+     74,
+     95
+    ],
+    [
+     95,
+     114
+    ]
+   ],
+   "corrected_segment": " and concentration.",
+   "answer_index": 3,
+   "markable": [
+    {
+     "span": [
+      40,
+      51
+     ],
+     "item_id": 1962
+    },
+    {
+     "span": [
+      55,
+      64
+     ],
+     "item_id": 1254
+    },
+    {
+     "span": [
+      65,
+      73
+     ],
+     "item_id": 3045
+    },
+    {
+     "span": [
+      75,
       84
      ],
-     "item_id": 1559
+     "item_id": 2439
     },
     {
      "span": [
       85,
       94
      ],
-     "item_id": 6055
-    },
-    {
-     "span": [
-      98,
-      102
-     ],
-     "item_id": 7195
+     "item_id": 6401
     }
-   ],
-   "generated_by": "handmade:fixture"
-  },
-  {
-   "question_type": "written_expression",
-   "grammar_point_id": 26,
-   "grammar_point": "比較對象的對稱",
-   "item_rating": 1800,
-   "sentence": "The population of California is considerably larger than any other state in the country.",
-   "segments": [
-    "population of California",
-    "considerably larger",
-    "than any other state",
-    "in the country"
-   ],
-   "segment_offsets": [
-    [
-     4,
-     28
-    ],
-    [
-     32,
-     51
-    ],
-    [
-     52,
-     72
-    ],
-    [
-     73,
-     87
-    ]
-   ],
-   "corrected_segment": "than that of any other state",
-   "answer_index": 2,
-   "explanation": "人口要與人口比較，需用 that of：than any other state 應改為 than that of any other state。",
-   "markable": [
-    {
-     "span": [
-      32,
-      44
-     ],
-     "item_id": 1502
-    }
-   ],
-   "generated_by": "handmade:fixture"
+   ]
   }
  ]
 }
