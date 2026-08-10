@@ -99,6 +99,9 @@ The error MUST be of this pattern (verbatim): {target['error_pattern']}
 Rules:
 - Write a CORRECT sentence (12-30 words, academic register): "correct_version".
 - Choose 4 non-overlapping substrings of it as segments A-D, in left-to-right order.
+- Each segment is a SHORT phrase of 1 to 4 words. Segments must NOT be adjacent:
+  leave at least one plain (non-underlined) word between consecutive segments,
+  and never segment the whole sentence.
 - Pick one segment (index 0-3) and rewrite it INCORRECTLY per the error pattern;
   put the wrong text in "segments" at that index, and the original correct text
   in "corrected_segment".

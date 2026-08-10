@@ -106,6 +106,14 @@ def check_written_expression(raw: dict, target: dict) -> str | None:
         return "error_pattern must equal the assigned one"
     if not raw.get("explanation"):
         return "explanation is empty"
+    for seg in segments:
+        if not isinstance(seg, str) or not seg.strip():
+            return "each segment must be a non-empty string"
+        if len(seg.split()) > 5:
+            return f"segment '{seg}' is too long (max 4-5 words each)"
+    if sum(len(s) for s in segments) > 0.6 * len(correct_version):
+        return ("segments cover too much of the sentence; keep them short "
+                "and leave plain words between them")
 
     # The displayed sentence: correct_version with the wrong segment swapped in.
     display, offsets = _build_display(correct_version, segments, wrong_index,
