@@ -14,6 +14,7 @@ RATING_FLOOR = 0
 WORD_RATING_MIN = 1100
 WORD_RATING_SPAN = 1150            # top of deck = 1100 + 1150 = 2250
 GRAMMAR_DEFAULT_RATING = 1800
+GRAMMAR_RATING_WEIGHT = 0.05       # grammar questions count 5% toward rating
 GUESS_FLOOR = 0.25                 # four-choice guessing floor
 TOEFL_ANCHOR_SCORE = 627
 TOEFL_ANCHOR_RATING = 2100

@@ -3,6 +3,13 @@
 from backend import config
 
 OBJECTIVE_TYPES = {"cloze", "synonym", "structure", "written_expression"}
+GRAMMAR_TYPES = {"structure", "written_expression"}
+
+
+def rating_weight(question_type: str) -> float:
+    if question_type in GRAMMAR_TYPES:
+        return config.GRAMMAR_RATING_WEIGHT
+    return 1.0
 
 
 def expected(rating_user: float, rating_item: float, question_type: str) -> float:
@@ -19,8 +26,11 @@ def k_factor(exams_done: int) -> int:
     raise AssertionError("K_FACTORS must end with a (None, k) entry")
 
 
-def quiz_delta(scores: list[float], expecteds: list[float], exams_done: int) -> float:
-    return k_factor(exams_done) * sum(s - e for s, e in zip(scores, expecteds, strict=True))
+def quiz_delta(scores: list[float], expecteds: list[float],
+               weights: list[float], exams_done: int) -> float:
+    return k_factor(exams_done) * sum(
+        w * (s - e)
+        for s, e, w in zip(scores, expecteds, weights, strict=True))
 
 
 def clamp_rating(rating: float) -> float:

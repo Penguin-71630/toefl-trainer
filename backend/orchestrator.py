@@ -247,7 +247,7 @@ def submit(quiz_id: str, answers: list[dict],
     user_rating = user["rating"]
     answer_by_index = {a["q_index"]: a for a in answers}
 
-    scores, expecteds, results = [], [], []
+    scores, expecteds, weights, results = [], [], [], []
     for i, q in enumerate(quiz["questions"]):
         ans = answer_by_index.get(i, {})
         letter = (ans.get("answer") or "E").strip().upper()
@@ -257,6 +257,7 @@ def submit(quiz_id: str, answers: list[dict],
         marked = bool(ans.get("marked_unfamiliar")) or letter == grader.IDK
         scores.append(score)
         expecteds.append(e_i)
+        weights.append(rating.rating_weight(q["question_type"]))
 
         _conn.execute(
             """INSERT INTO reviews (user_id, item_id, sense_index,
@@ -296,7 +297,7 @@ def submit(quiz_id: str, answers: list[dict],
             state.mark_word(_conn, quiz["user_id"], item_id, True,
                             user_rating, row["rating"])
 
-    delta = rating.quiz_delta(scores, expecteds, user["exams_done"])
+    delta = rating.quiz_delta(scores, expecteds, weights, user["exams_done"])
     new_rating = rating.clamp_rating(user_rating + delta)
     _conn.execute(
         "UPDATE users SET rating=?, exams_done=exams_done+1 WHERE id=?",
