@@ -7,9 +7,12 @@
 ```bash
 git clone git@github.com:Penguin-71630/toefl-trainer.git
 cd toefl-trainer
-python3 -m venv venv && source venv/bin/activate   # 如果使用 macOS 且套件環境是 Homebrew，必須要用 venv
+
+# 如果使用 macOS 且套件環境是 Homebrew，必須要用 venv
+python3 -m venv venv && source venv/bin/activate   
+
 pip install -r requirements.txt
-python init.py        # 建 DB、.env
+python init.py
 ```
 
 ## Launch
