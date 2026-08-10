@@ -7,7 +7,7 @@ import shutil
 import sys
 from pathlib import Path
 
-BASE = Path().resolve().parent
+BASE = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE))
 
 
