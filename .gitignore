@@ -4,3 +4,4 @@ venv/
 app.db
 app.db-*
 .env
+backend.log

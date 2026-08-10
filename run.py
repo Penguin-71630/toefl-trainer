@@ -33,11 +33,16 @@ def main() -> None:
         ToeflApp().run()
         return
 
-    log_level = "info" if mode == "backend" else "warning"
-    backend = subprocess.Popen(
-        [sys.executable, "-m", "uvicorn", "backend.main:app",
-         "--host", "127.0.0.1", "--port", "8000", "--log-level", log_level],
-        cwd=BASE)
+    cmd = [sys.executable, "-m", "uvicorn", "backend.main:app",
+           "--host", "127.0.0.1", "--port", "8000", "--log-level", "info"]
+    if mode == "backend":
+        backend = subprocess.Popen(cmd, cwd=BASE)
+    else:
+        # Textual owns the terminal: send backend logs to a file instead.
+        # Follow along with:  tail -f backend.log
+        log_file = open(BASE / "backend.log", "a", buffering=1)  # noqa: SIM115
+        backend = subprocess.Popen(cmd, cwd=BASE, stdout=log_file,
+                                   stderr=log_file)
     try:
         if mode == "backend":
             backend.wait()
