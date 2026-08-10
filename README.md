@@ -1,4 +1,4 @@
-# toefl-trainer
+# TOEFL Training System
 
 出題訓練系統（以 TOEFL ITP 爲主）。
 
