@@ -1,7 +1,8 @@
 """Start the backend (uvicorn) and the Textual frontend together.
 
 Usage:  python run.py            # backend + frontend
-        python run.py backend    # backend only (for development)
+        python run.py backend    # backend only (shows backend logs)
+        python run.py frontend   # frontend only (backend already running)
 """
 
 import os
@@ -25,14 +26,19 @@ def load_env() -> None:
 
 def main() -> None:
     load_env()
-    backend_only = len(sys.argv) > 1 and sys.argv[1] == "backend"
+    mode = sys.argv[1] if len(sys.argv) > 1 else ""
+
+    if mode == "frontend":
+        from frontend.toefl import ToeflApp
+        ToeflApp().run()
+        return
 
     backend = subprocess.Popen(
         [sys.executable, "-m", "uvicorn", "backend.main:app",
          "--host", "127.0.0.1", "--port", "8000", "--log-level", "warning"],
         cwd=BASE)
     try:
-        if backend_only:
+        if mode == "backend":
             backend.wait()
         else:
             from frontend.toefl import ToeflApp

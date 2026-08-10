@@ -3,6 +3,7 @@ in-memory quiz store, question bank reuse, submit (grade → state → Elo)."""
 
 import asyncio
 import json
+import logging
 import random
 import time
 import uuid
@@ -21,6 +22,7 @@ from backend import (
 )
 
 LETTERS = "ABCDE"
+log = logging.getLogger("uvicorn.error")
 
 
 class QuizStore:
@@ -207,6 +209,9 @@ async def generate_quiz(quiz_id: str) -> None:
                 quiz["questions"].append(res)
             else:
                 quiz["failed"] += 1
+                if isinstance(res, Exception):
+                    log.warning("question generation failed (%s): %s",
+                                qtype, res)
     quiz["total"] = len(quiz["questions"])   # settle even if some failed
 
 
