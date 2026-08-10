@@ -177,6 +177,9 @@ async def generate_quiz(quiz_id: str) -> None:
     user_id, qtype, total = (quiz["user_id"], quiz["question_type"],
                              quiz["total"])
     quiz["questions"].extend(_bank_take(user_id, qtype, total))
+    log.info("quiz %s: generating %d %s questions (%d from bank) via %s:%s",
+             quiz_id[:8], total, qtype, len(quiz["questions"]),
+             _provider.name, _provider.model)
 
     if _provider.name == "fixture":
         need = total - len(quiz["questions"])
@@ -207,12 +210,16 @@ async def generate_quiz(quiz_id: str) -> None:
             attempts += 1
             if isinstance(res, dict):
                 quiz["questions"].append(res)
+                log.info("quiz %s: %d/%d ready", quiz_id[:8],
+                         len(quiz["questions"]), total)
             else:
                 quiz["failed"] += 1
                 if isinstance(res, Exception):
                     log.warning("question generation failed (%s): %s",
                                 qtype, res)
     quiz["total"] = len(quiz["questions"])   # settle even if some failed
+    log.info("quiz %s: done (%d questions, %d failed)", quiz_id[:8],
+             len(quiz["questions"]), quiz["failed"])
 
 
 # ---------------------------------------------------------------- views

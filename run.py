@@ -33,9 +33,10 @@ def main() -> None:
         ToeflApp().run()
         return
 
+    log_level = "info" if mode == "backend" else "warning"
     backend = subprocess.Popen(
         [sys.executable, "-m", "uvicorn", "backend.main:app",
-         "--host", "127.0.0.1", "--port", "8000", "--log-level", "warning"],
+         "--host", "127.0.0.1", "--port", "8000", "--log-level", log_level],
         cwd=BASE)
     try:
         if mode == "backend":
