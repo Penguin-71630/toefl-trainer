@@ -17,6 +17,10 @@
     height: auto;
 }
 
+#menu-help {
+    padding: 1 0 0 0;
+}
+
 .menu-group {
     color: $text-muted;
     padding: 1 0 0 0;

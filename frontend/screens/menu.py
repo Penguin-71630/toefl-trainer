@@ -45,6 +45,10 @@ class MenuScreen(Screen):
                     f"({user['rank']})", id="menu-user")
             with Center():
                 yield Vertical(*self._rows(), id="menu-list")
+            with Center():
+                yield Static(
+                    "[dim]j/k/↑/↓ 移動選單  ENTER 進入該功能  "
+                    "Ctrl+Q 退出[/dim]", id="menu-help")
 
     def _rows(self):
         rows = []
