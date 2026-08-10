@@ -35,9 +35,6 @@ python run.py                              # without `venv`
 ## For Development
 
 ```bash
-python run.py backend
+python run.py frontend
+python run.py backend  # API Doc: http://127.0.0.1:8000/docs
 ```
-
-則只跑 backend，API 文件在 `http://127.0.0.1:8000/docs`。
-
-
