@@ -7,7 +7,7 @@ import shutil
 import sys
 from pathlib import Path
 
-BASE = Path(__file__).resolve().parent
+BASE = Path().resolve().parent
 sys.path.insert(0, str(BASE))
 
 
@@ -25,7 +25,9 @@ def main() -> None:
         "SELECT COUNT(*) AS n FROM grammar_points").fetchone()["n"]
     conn.close()
     print(f"Database ready: {vocab} words, {grammar} grammar points.")
-    print("Start the app with:  python run.py")
+    print("""1. Open the file '.env' and modify LLM_PROVIDER, LLM_API_KEY, LLM_MODEL
+       2. Start the app with:  python run.py
+    """)
 
 
 if __name__ == "__main__":
