@@ -102,6 +102,10 @@ Rules:
 - Each segment is a SHORT phrase of 1 to 4 words. Segments must NOT be adjacent:
   leave at least one plain (non-underlined) word between consecutive segments,
   and never segment the whole sentence.
+- The wrong segment must be UNAMBIGUOUSLY incorrect: a native speaker would mark it
+  as an outright grammatical error. Never rely on a subtle meaning difference, style,
+  or a merely less idiomatic wording — the original and the wrong version must not
+  both be acceptable English.
 - Pick one segment (index 0-3) and rewrite it INCORRECTLY per the error pattern;
   put the wrong text in "segments" at that index, and the original correct text
   in "corrected_segment".
