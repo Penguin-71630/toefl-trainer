@@ -26,7 +26,7 @@ def main() -> None:
     conn.close()
     print(f"Database ready: {vocab} words, {grammar} grammar points.")
     print("""1. Open the file '.env' and modify LLM_PROVIDER, LLM_API_KEY, LLM_MODEL
-       2. Start the app with:  python run.py
+    2. Start the app with:  python run.py
     """)
 
 
